@@ -8,6 +8,7 @@ export default function Home() {
     borderBottomRightRadius: "40px",
     backdropFilter: "blur(40px)",
   };
+
   return (
     <div className="  ">
       {/* First Div */}
@@ -86,7 +87,7 @@ export default function Home() {
         <div className="bg-white text-[#222E52] rounded-3xl p-[10%] h-[250px] w-[330px] flex flex-col relative">
           <p className="text-[40px] font-medium"> 98%</p>
           <div className="absolute -bottom-11 text-[20px] opacity-80 font-medium  right-[11%] left-[11%]">
-            We use verified science and over 3M data points to achieve this
+            We use verified science and over 3M data points to achieve this{" "}
             <span className="font-extrabold"> level of accuracy</span>
           </div>
         </div>
@@ -110,9 +111,10 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Sixth Div */}
-      <div className="grid grid-cols-2 gap-24 mt-6 p-[10%]">
-        <div className="flex flex-col gap-4 mt-20">
+      {/* sixth div */}
+
+      <div className="grid grid-cols-1  md:grid-cols-2 gap-24 mt-6 p-[10%]">
+        <div className="flex flex-col gap-12 mt-12">
           <div className="bg-secondary rounded-[40px] relative h-[670px]">
             <img className="  pt-[10%]" src="checkyourquality.png" alt="" />
             <div className="p-8 flex flex-col gap-4 absolute bg-secondary rounded-b-[40px]  bottom-0">
@@ -123,10 +125,31 @@ export default function Home() {
               </h4>
             </div>
           </div>
-          <div className="bg-green-500 h-16">Item 2</div>
+          <div className="bg-secondary rounded-[40px] relative ">
+            <img
+              className="rounded-[40px]  pt-[10%]"
+              src="https://static.tildacdn.net/tild3639-3538-4033-b039-326364336436/Frame_102_1.jpg"
+              alt=""
+            />
+            <div className="p-8 flex flex-col gap-4 absolute bg-secondary rounded-b-[40px]  bottom-0">
+              <h1 className="text-[#a8acb1] text-[18px]">Step 3</h1>
+              <h4 className="text-gray-800 text-[20px]">
+                Our advanced AI engine quickly and efficiently evaluates the
+                face, identifying more than 15 essential skin health and beauty
+                metrics
+              </h4>
+            </div>
+          </div>
+          <div className="  ">
+            <h4 className="text-[35px]   ">
+              {" "}
+              Beauty brands that choose Haut.AI see an average increase in
+              shopping cart value of 34%
+            </h4>
+          </div>
         </div>
 
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-12">
           <div className=" h-[200px] flex justify-end ">
             <h4 className="text-[40px]  w-[80%] text-right">
               {" "}
@@ -144,44 +167,69 @@ export default function Home() {
               style={glassStyle}
               className="p-8 flex flex-col gap-4 absolute bg-transparent rounded-b-[40px]  bottom-0"
             >
-              <h1 className="text-[#a8acb1] text-[18px]">Step 1</h1>
+              <h1 className="text-[#a8acb1] text-[18px]">Step 2</h1>
               <h4 className="text-gray-800 text-[20px]">
                 Customers take selfies using our smart camera
               </h4>
             </div>
           </div>
-        </div>
-
-        <div className="flex flex-col gap-4">
-          <div className="bg-red-500 h-12">Item 5</div>
-          {/* <div className="bg-pink-500 h-36">Item 6</div> */}
+          <div className="bg-secondary rounded-[40px] relative ">
+            <img
+              className="rounded-[40px] px-[20%] py-[10%] "
+              src="specialforyou.png"
+              alt=""
+            />
+            <div className="p-8 flex flex-col gap-4 absolute h-[230px] bg-secondary rounded-b-[40px]  bottom-0">
+              <h1 className="text-[#a8acb1] text-[18px]">Step 4</h1>
+              <h4 className="text-gray-800 text-[20px]">
+                AI-powered recommendation engine will suggest the best skincare
+                products to achieve the perfect skin based on your
+                customer&aspos;s skin metrics
+              </h4>
+            </div>
+          </div>
         </div>
       </div>
 
-      {/* <div className="grid grid-rows-3 grid-flow-col   border mt-6 p-[10%]">
-        <div className=" border bg-secondary rounded-[40px] relative h-[670px] col-span-1">
-          <img className="  pt-[10%]" src="checkyourquality.png" alt="" />
-          <div className="p-8 flex flex-col gap-4 absolute bg-secondary rounded-b-[40px]  bottom-0">
-            <h1 className="text-[#a8acb1] text-[18px]">Step 1</h1>
-            <h4 className="text-gray-800 text-[20px]">
-              Install Haut.AI&apos;s Skin Analysis app on your e-commerce
-              website, or offer an in-store expereince
+      {/* Seventh Div */}
+
+      <div className="bg-secondary h-[800px] py-[10%] px-[5%]">
+        <div className=" w-[70%]">
+          <h1 className="text-[56px] text-[#1A2937]">
+            Pricing plan based on usage
+          </h1>
+          <h4 className="text-[20px] text-gray-500 mt-4">
+            Haut.AI offers a customizable and easy-to-use skincare analysis tool
+            that provides accurate, personalized recommendations based on years
+            of scientific research.
+          </h4>
+        </div>
+        <div className="grid grid-cols-2 mt-16 gap-10 ">
+          <div className="bg-white rounded-[40px] p-[10%] ">
+            <h1 className="text-[#1A2937] text-[30px]">
+              For small & medium businesses
+            </h1>
+            <h4 className="mt-4 text-gray-500">
+              Customise the algorithm, and create new recommendations by adding
+              your own products. Haut.AI will help you provide an exceptional
+              digital experience
+            </h4>
+          </div>
+          <div className="bg-white rounded-[40px] p-[10%]">
+            <h1 className="text-[#1A2937] text-[30px]">For Enterprises</h1>
+            <h4 className="mt-4 text-gray-500">
+              Bring digital transformation to your cosmetics brand. A dedicated
+              account manager and support team will work with you to build a
+              fully customised solution powered by Skin SaaS.
             </h4>
           </div>
         </div>
-
-        <div className=" border  ">02</div>
-        <div className="border  col-span-1">03</div>
-        <div className="border col-span-1">
-          <h4 className="text-[40px]">
-            {" "}
-            <span className="text-primary">Personalise</span> every customers`
-            skincare recommendations
-          </h4>
+        <div className="mt-16">
+          <button className="border  py-4 px-10 rounded-full text-primary font-medium border-primary hover:text-white hover:bg-primary">
+            Request Price
+          </button>
         </div>
-        <div className=" border  col-span-1">03</div>
-        <div className="border  col-span-1">03</div>
-      </div> */}
+      </div>
     </div>
   );
 }
