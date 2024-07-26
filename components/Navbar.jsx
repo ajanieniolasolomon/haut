@@ -76,7 +76,7 @@ export default function Navbar() {
       {/* Add a hamburger menu icon for mobile */}
       <button className="md:hidden focus:outline-none" onClick={toggleMenu}>
         <svg
-          className="h-6 w-6 text-white"
+          className="h-6 w-6 text-primary "
           viewBox="0 0 24 24"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
