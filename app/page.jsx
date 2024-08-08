@@ -14,12 +14,12 @@ export default function Home() {
   return (
     <div className="  ">
       {/* First Div */}
-      <div className=" mt-24  border-red-950 md:h-[500px] h-full justify-center space-y-6 flex flex-col  items-center">
-        <div className="text-center">
-          <h1 className="md:text-[56px] text-[40px] text-black  font-medium">
+      <div className=" mt-32  border-red-950 md:h-[500px] h-full justify-center space-y-6 flex flex-col  items-center">
+        <div className="text-center px-4">
+          <h1 className="md:text-[56px] text-[30px] text-black  font-medium">
             The Science-Based Solution
           </h1>
-          <h4 className="md:text-[56px] text-[40px]">
+          <h4 className="md:text-[56px] text-[30px]">
             for{" "}
             <span className="text-primary font-medium">AI Skin Analysis</span>{" "}
           </h4>
@@ -45,7 +45,7 @@ export default function Home() {
 
       {/* Third Div */}
 
-      <div className=" md:h-[500px] h-full mt-[100px] md:gap-0 gap-6 bg-secondary grid md:grid-cols-2 grid-cols-1 py-[5%] md:px-[5%] px-[3%] ">
+      <div className=" md:h-[500px] h-full mt-[100px] md:gap-0 gap-6 bg-secondary grid md:grid-cols-2 grid-cols-1 py-[5%] md:px-[5%] px-[5%] ">
         {/* first internal div */}
         <div className=" ">
           <div className="text-[40px] text-black  font-medium ">
@@ -150,7 +150,7 @@ export default function Home() {
             </div>
           </div>
           <div className="  ">
-            <h4 className="text-[35px]   ">
+            <h4 className="md:text-[35px] text-[25px]   ">
               {" "}
               Beauty brands that choose Tellei see an average increase in
               shopping cart value of 34%
@@ -158,9 +158,9 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="flex flex-col gap-12">
-          <div className=" h-[200px] flex justify-end md:mb-0 mb-16 ">
-            <h4 className="text-[40px]  w-[80%] text-right">
+        <div className="flex flex-col gap-12 ">
+          <div className=" md:h-[200px] flex justify-end md:mb-0 mb-16  h-full">
+            <h4 className="md:text-[40px] text-[30px]  w-[80%] text-right">
               {" "}
               <span className="text-primary">Personalise</span> every customers`
               skincare recommendations
@@ -182,13 +182,13 @@ export default function Home() {
               </h4>
             </div>
           </div>
-          <div className="bg-secondary rounded-[40px] relative ">
+          <div className="bg-secondary rounded-[40px] relative border ">
             <img
               className="rounded-[40px] px-[20%] py-[10%] max-w-full h-auto "
               src="specialforyou.png"
               alt=""
             />
-            <div className="p-8 flex flex-col gap-4 absolute h-[230px] bg-secondary rounded-b-[40px]  bottom-0">
+            <div className="md:p-8 p-4   flex flex-col gap-4 absolute h-[260px] bg-secondary rounded-b-[40px]  bottom-0">
               <h1 className="text-[#a8acb1] text-[18px]">Step 4</h1>
               <h4 className="text-gray-800 text-[20px]">
                 AI-powered recommendation engine will suggest the best skincare
