@@ -50,11 +50,11 @@ export default function Footer() {
         <h1 className="text-[40px]  ">Contact Us </h1>
         <div>
           <h4 className="text-[12px]">Send us an e-mail</h4>
-          <h4 className="text-[20px]">team@haut.ai</h4>
+          <h4 className="text-[20px]">team@Tellei</h4>
         </div>
         <div>
           <h4 className="text-[12px]">Press request</h4>
-          <h4 className="text-[20px]">press@haut.ai</h4>
+          <h4 className="text-[20px]">press@Tellei</h4>
         </div>
         <div>
           <h4 className="text-[20px]">Tallinn, Estonia</h4>
@@ -67,13 +67,16 @@ export default function Footer() {
           <FaInstagram size={30} />
         </div>
         <div>
-          <h4 className="text-[12px]">© Copyright Haut.AI 2024.</h4>
+          <h4 className="text-[12px]">© Copyright Tellei 2024.</h4>
           <h4 className="text-[14px]">
             {" "}
             <span className="underline underline-offset-2">
               Privacy Notice
             </span>{" "}
-            and <span className="underline underline-offset-2">Terms & Conditions</span>
+            and{" "}
+            <span className="underline underline-offset-2">
+              Terms & Conditions
+            </span>
           </h4>
         </div>
       </div>

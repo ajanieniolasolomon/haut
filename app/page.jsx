@@ -29,9 +29,12 @@ export default function Home() {
           product recommendations, available at the tap of a button.
         </h6>
         <div>
-          <button className="bg-primary text-white rounded-full py-4 px-12 font-bold">
+          <a
+            href="https://apps.apple.com/ng/app/tellei/id6478509541"
+            className="bg-primary text-white rounded-full py-4 px-12 font-bold"
+          >
             Request a demo
-          </button>
+          </a>
         </div>
       </div>
 
@@ -54,7 +57,7 @@ export default function Home() {
             <p>solution for beauty industry</p>
           </div>
           <div className="text-[20px] text-gray-500 mt-4">
-            <p>Haut.AI&apos;s Skin Analysis SaaS is an AI-powered platform</p>
+            <p>Tellei&apos;s Skin Analysis SaaS is an AI-powered platform</p>
             <p>that enables beauty brands to provide personalized</p>
             <p>product recommendations and interactive skin</p>
             <p>assessments to their customers.</p>
@@ -85,7 +88,7 @@ export default function Home() {
       <SimpleSlider images={pharmaceuticalImages} />
       {/* Fifth Div */}
 
-      <div className="md:h-[450px] gap-4 h-full bg-gradient-to-t from-blue-200 to-white grid md:grid-cols-3 grid-cols-1 py-[5%] px-[10%]  ">
+      <div className="md:h-[450px] gap-4 h-full bg-gradient-to-t from-primary to-white grid md:grid-cols-3 grid-cols-1 py-[5%] px-[10%]  ">
         <div className="bg-white text-[#222E52] rounded-3xl p-[10%] h-[250px] md:w-[330px] w-full flex flex-col justify-end">
           <p className="text-[40px] font-medium"> 98%</p>
           <div className="  text-[20px] opacity-80 font-medium  right-[11%] left-[11%] ">
@@ -100,7 +103,7 @@ export default function Home() {
             <span className="font-extrabold">
               growth in customer conversion
             </span>{" "}
-            through AI skincare analysis with Haut.AI
+            through AI skincare analysis with Tellei
           </div>
         </div>
         <div className="bg-white text-[#222E52] rounded-3xl p-[10%] h-[250px] md:w-[330px] w-full flex flex-col ">
@@ -108,7 +111,7 @@ export default function Home() {
           <div className="  text-[20px] opacity-80 font-medium  right-[11%] left-[11%]">
             The average{" "}
             <span className=" font-extrabold">increase in order value</span>{" "}
-            Haut.AI customers discover in their clients’ carts
+            Tellei customers discover in their clients’ carts
           </div>
         </div>
       </div>
@@ -126,7 +129,7 @@ export default function Home() {
             <div className="p-8 flex flex-col gap-4 absolute bg-secondary rounded-b-[40px]  bottom-0">
               <h1 className="text-[#a8acb1] text-[18px]">Step 1</h1>
               <h4 className="text-gray-800 text-[20px]">
-                Install Haut.AI&apos;s Skin Analysis app on your e-commerce
+                Install Tellei&apos;s Skin Analysis app on your e-commerce
                 website, or offer an in-store expereince
               </h4>
             </div>
@@ -149,7 +152,7 @@ export default function Home() {
           <div className="  ">
             <h4 className="text-[35px]   ">
               {" "}
-              Beauty brands that choose Haut.AI see an average increase in
+              Beauty brands that choose Tellei see an average increase in
               shopping cart value of 34%
             </h4>
           </div>
@@ -205,7 +208,7 @@ export default function Home() {
             Pricing plan based on usage
           </h1>
           <h4 className="text-[20px] text-gray-500 mt-4">
-            Haut.AI offers a customizable and easy-to-use skincare analysis tool
+            Tellei offers a customizable and easy-to-use skincare analysis tool
             that provides accurate, personalized recommendations based on years
             of scientific research.
           </h4>
@@ -217,7 +220,7 @@ export default function Home() {
             </h1>
             <h4 className="mt-4 text-gray-500">
               Customise the algorithm, and create new recommendations by adding
-              your own products. Haut.AI will help you provide an exceptional
+              your own products. Tellei will help you provide an exceptional
               digital experience
             </h4>
           </div>
@@ -239,7 +242,7 @@ export default function Home() {
 
       {/* Eight Div */}
 
-      <div className=" p-[5%] mt-6 w-[100%]">
+      {/* <div className=" p-[5%] mt-6 w-[100%]">
         <h1 className="text-[#1b1f26] text-[52px] text-center font-medium">
           Press
         </h1>
@@ -286,15 +289,15 @@ export default function Home() {
               alt=""
             />
             <h4 className="text-gray-500 text-[20px]">
-              Haut.AI claims to be the first company to incorporate generative
-              AI for skin simulations
+              Tellei claims to be the first company to incorporate generative AI
+              for skin simulations
             </h4>
           </div>
           <div className="flex gap-4 justify-center items-center">
             <img src="eustartups.png" className="w-[150px] h-[100px] " alt="" />
             <h4 className="text-gray-500 text-[20px]">
               Selfies for skincare | Interview with Anastasia Georgievskaya, CEO
-              and Co-founder, Haut.AI
+              and Co-founder, Tellei
             </h4>
           </div>
           <div className="flex gap-4 justify-center items-center">
@@ -315,7 +318,7 @@ export default function Home() {
               alt=""
             />
             <h4 className="text-gray-500 text-[20px]">
-              Haut.AI Taps BreezoMeter Environmental Data for Personalized Skin
+              Tellei Taps BreezoMeter Environmental Data for Personalized Skin
               Care Recommendations
             </h4>
           </div>
@@ -326,7 +329,7 @@ export default function Home() {
               alt=""
             />
             <h4 className="text-gray-500 text-[20px]">
-              Innovative AI skincare company Haut.AI partners with retail giant
+              Innovative AI skincare company Tellei partners with retail giant
               Ulta Beauty to revolutionise the beauty and skincare industry
             </h4>
           </div>
@@ -337,12 +340,12 @@ export default function Home() {
               alt=""
             />
             <h4 className="text-gray-500 text-[20px]">
-              Ready to adopt&apos;: AI skin analysis firm Haut.AI aiming to tap
+              Ready to adopt&apos;: AI skin analysis firm Tellei aiming to tap
               into &apos;tech savvy&apos; Asian market
             </h4>
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* Ninth Div */}
       <div className="h-[250px] bg-primary opacity-70 text-white justify-center items-center flex mt-6">
