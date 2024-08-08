@@ -10,7 +10,7 @@ export default function Navbar() {
   };
   return (
     <nav
-      className={`fixed top-0 left-0 w-full bg-secondary  flex justify-between items-center px-[5%] py-6 z-10`}
+      className={`fixed top-0  w-full bg-secondary  flex justify-between items-center px-[5%] py-6 z-10 border border-red-950`}
     >
       <Link href="/">
         <img src={"/Logo.png"} alt="" className="w-[50px]" />
