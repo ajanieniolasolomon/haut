@@ -182,7 +182,7 @@ export default function Home() {
               </h4>
             </div>
           </div>
-          <div className="bg-secondary rounded-[40px] relative border ">
+          <div className="bg-secondary rounded-[40px]   relative border ">
             <img
               className="rounded-[40px] px-[20%] py-[10%] max-w-full h-auto "
               src="specialforyou.png"
@@ -190,10 +190,10 @@ export default function Home() {
             />
             <div className="md:p-8 p-4   flex flex-col gap-4 absolute h-[260px] bg-secondary rounded-b-[40px]  bottom-0">
               <h1 className="text-[#a8acb1] text-[18px]">Step 4</h1>
-              <h4 className="text-gray-800 text-[20px]">
+              <h4 className="text-gray-800 md:text-[20px] text-[18px]">
                 AI-powered recommendation engine will suggest the best skincare
                 products to achieve the perfect skin based on your
-                customer&aspos;s skin metrics
+                customer&apos;s skin metrics
               </h4>
             </div>
           </div>
