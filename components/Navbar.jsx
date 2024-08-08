@@ -10,7 +10,7 @@ export default function Navbar() {
   };
   return (
     <nav
-      className={`fixed top-0  w-full bg-secondary  flex justify-between items-center px-[5%] py-6 z-10 border border-red-950`}
+      className={`fixed top-0 left-0 right-0   bg-secondary w-screen  flex justify-between items-center px-[5%] py-6 z-10`}
     >
       <Link href="/">
         <img src={"/Logo.png"} alt="" className="w-[50px]" />
@@ -47,7 +47,7 @@ export default function Navbar() {
           </Link>
         </li>
       </ul>
-      <div>
+      <div className="border">
         <button className="border p-2 px-4 rounded-full border-primary hover:text-white hover:bg-primary">
           Book a Demo
         </button>
@@ -74,7 +74,7 @@ export default function Navbar() {
         </li>
       </ul>
       {/* Add a hamburger menu icon for mobile */}
-      <button className="md:hidden focus:outline-none" onClick={toggleMenu}>
+      <button className="md:hidden focus:outline-none " onClick={toggleMenu}>
         <svg
           className="h-6 w-6 text-primary "
           viewBox="0 0 24 24"
