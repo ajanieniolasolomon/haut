@@ -47,7 +47,7 @@ export default function Navbar() {
           </Link>
         </li>
       </ul>
-      <div className="border">
+      <div className="">
         <button className="border p-2 px-4 rounded-full border-primary hover:text-white hover:bg-primary">
           Book a Demo
         </button>
