@@ -202,7 +202,7 @@ export default function Home() {
 
       {/* Seventh Div */}
 
-      <div className="bg-secondary md:h-[800px] h-full py-[10%] px-[5%]">
+      <div className="bg-secondary md:h-[850px] h-full py-[10%] px-[5%]">
         <div className=" md:w-[70%] w-[100%]">
           <h1 className="text-[56px] text-[#1A2937] text-left ">
             Pricing plan based on usage
