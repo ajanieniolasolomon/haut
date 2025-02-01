@@ -10,46 +10,26 @@ export default function Navbar() {
   };
   return (
     <nav
-      className={`fixed top-0 left-0 right-0   bg-secondary w-screen  flex justify-between items-center px-[5%] py-6 z-10`}
+      className={`fixed top-0 left-0 right-0   bg-white border w-screen  flex justify-between items-center px-[5%] py-6 z-10`}
     >
       <Link href="/">
         <img src={"/Logo.png"} alt="" className="w-[50px]" />
       </Link>
       <ul className="hidden md:flex space-x-8">
         <li>
-          <Link href="/">
-            <p className="hover:text-primary text-gray-500">Product</p>
+          <Link href="/contact">
+            <p className="hover:text-primary text-[#000202]">Our service</p>
           </Link>
         </li>
         <li>
           <Link href="/about">
-            <p className="hover:text-primary text-gray-500">Pricing</p>
-          </Link>
-        </li>
-        <li>
-          <Link href="/contact">
-            <p className="hover:text-primary text-gray-500">Resources</p>
-          </Link>
-        </li>
-        <li>
-          <Link href="/contact">
-            <p className="hover:text-primary text-gray-500">Press</p>
-          </Link>
-        </li>
-        <li>
-          <Link href="/contact">
-            <p className="hover:text-primary text-gray-500">Company</p>
-          </Link>
-        </li>
-        <li>
-          <Link href="/contact">
-            <p className="hover:text-primary text-gray-500">Contacts</p>
+            <p className="hover:text-primary text-[#000202]">About us</p>
           </Link>
         </li>
       </ul>
       <div className="">
-        <button className="border p-2 px-4 rounded-full border-primary hover:text-white hover:bg-primary">
-          Book a Demo
+        <button className="border w-[165px] py-2 rounded-full text-white  bg-primary">
+          Contact Us
         </button>
       </div>
       <ul
