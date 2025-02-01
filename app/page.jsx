@@ -4,12 +4,12 @@ import supportedByImages from "@/data/supportedBy";
 import React from "react";
 
 export default function Home() {
-  const glassStyle = {
-    background: "rgba(255, 255, 255, 0.2)",
-    borderBottomLeftRadius: "40px",
-    borderBottomRightRadius: "40px",
-    backdropFilter: "blur(40px)",
-  };
+  // const glassStyle = {
+  //   background: "rgba(255, 255, 255, 0.2)",
+  //   borderBottomLeftRadius: "40px",
+  //   borderBottomRightRadius: "40px",
+  //   backdropFilter: "blur(40px)",
+  // };
 
   return (
     <div className="  ">
