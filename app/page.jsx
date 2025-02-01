@@ -72,7 +72,7 @@ export default function Home() {
             <div className="border rounded-b-[24px] h-[174px] w-[100%] absolute bg-white bottom-0 p-6">
               <h3 className="text-[24px] font-[600]">Skin Analysis Results</h3>
               <div className="text-[18px] font-[400] text-[#8F918F]">
-                Access detailed insights into users' skincare needs and concerns
+                Access detailed insights into users&apos; skincare needs and concerns
                 in a simple, visual format. Understand their preferences better
                 to offer tailored solutions. Stay informed to make data-driven
                 decisions easily.
