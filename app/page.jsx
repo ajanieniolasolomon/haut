@@ -1,33 +1,30 @@
-import SimpleSlider from "@/components/Slider";
+import FAQ from "@/components/FrequentlyAskedQuestions";
+
+// import SimpleSlider from "@/components/Slider";
 // import pharmaceuticalImages from "@/data/pharmaceutical";
-import supportedByImages from "@/data/supportedBy";
+// import supportedByImages from "@/data/supportedBy";
 import React from "react";
 
 export default function Home() {
-  // const glassStyle = {
-  //   background: "rgba(255, 255, 255, 0.2)",
-  //   borderBottomLeftRadius: "40px",
-  //   borderBottomRightRadius: "40px",
-  //   backdropFilter: "blur(40px)",
-  // };
+
 
   return (
     <div className="  ">
       {/* First Div */}
-      <div className=" mt-20   md:h-[500px]  h-full justify-center  flex flex-col  items-center">
-        <div className="text-center px-4  w-[1074px]">
-          <h1 className="md:text-[56px] text-[30px] text-black  font-[600]">
+      <div className=" mt-20   md:h-[500px]  h-[441px] justify-center  flex flex-col  items-center ">
+        <div className="text-center md:px-4 px-0  md:w-[1074px] w-[327px]">
+          <h1 className="md:text-[56px] text-[24px] text-black  font-[600]">
             Revolutionize Your Skincare Experience with AI
           </h1>
         </div>
-        <h6 className="md:w-[60%] w-[822px] text-center text-gray-500 md:text-[20px] text-[15px] ">
+        <h6 className="w-[327px] md:w-[822px] text-center text-gray-500 md:text-[20px] text-[14px] ">
           Personalized skincare recommendations powered by advanced AI
           technology.
         </h6>
         <div className="mt-12">
           <a
             href="https://apps.apple.com/ng/app/tellei/id6478509541"
-            className="bg-primary text-white font-[400] rounded-full py-4 px-12 "
+            className="bg-primary text-white font-[200] rounded-full py-4 px-12 "
           >
             Request a Demo
           </a>
@@ -35,9 +32,16 @@ export default function Home() {
       </div>
 
       {/* Second Div */}
-      <div className="px-[5%] mt-6  relative">
-        <img className="w-[100%] rounded-[24px]" src="lab.png" alt="" />
-        <p className="text-white text-[128px] w-[784px] font-[800] absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
+      <div className="px-[5%] mt-6    relative">
+        <div className="relative ">
+          <img
+            className="w-[100%] rounded-[24px] md:h-full h-[231px]"
+            src="lab.png"
+            alt=""
+          />
+          <div className="bg-[#09514099] h-[100%] rounded-[24px] absolute w-[100%] top-0"></div>
+        </div>
+        <p className="text-white md:text-[128px] text-[45px] md:w-[784px] w-[276px] text-center font-[800] absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
           Welcome to Innovation!
         </p>
       </div>
@@ -52,7 +56,7 @@ export default function Home() {
         </div>
 
         <div className="w-[100%] flex justify-center my-2">
-          <p className="text-[48px] font-[600] text-[#095140]">
+          <p className="md:text-[48px] text-[24px] text-center md:w-full w-[337px] font-[600] text-[#095140]">
             Smarter Solutions{" "}
             <span className="text-[#000202]">for Skincare Brands</span>{" "}
           </p>
@@ -72,10 +76,10 @@ export default function Home() {
             <div className="border rounded-b-[24px] h-[174px] w-[100%] absolute bg-white bottom-0 p-6">
               <h3 className="text-[24px] font-[600]">Skin Analysis Results</h3>
               <div className="text-[18px] font-[400] text-[#8F918F]">
-                Access detailed insights into users&apos; skincare needs and concerns
-                in a simple, visual format. Understand their preferences better
-                to offer tailored solutions. Stay informed to make data-driven
-                decisions easily.
+                Access detailed insights into users&apos; skincare needs and
+                concerns in a simple, visual format. Understand their
+                preferences better to offer tailored solutions. Stay informed to
+                make data-driven decisions easily.
               </div>
             </div>
           </div>
@@ -191,8 +195,8 @@ export default function Home() {
             increase product sales with no extra effort required.
           </div>
         </div>
-        <div className="mt-8 grid grid-cols-2 gap-8">
-          <div className="rounded-[24px] flex flex-col bg-white w-[592px] h-[270px] p-8">
+        <div className="mt-8 grid grid-cols-2 gap-8 ">
+          <div className="rounded-[24px] flex flex-col bg-white  h-[270px] p-8">
             <img className="w-[42px] h-[42px]" src="wave.svg" alt="" />
             <h3 className="text-[24px] font-[500] text-[#000202] mt-4">
               AI-Powered Skin Analysis
@@ -204,7 +208,7 @@ export default function Home() {
               precise and reliable insights.
             </div>
           </div>
-          <div className="rounded-[24px] flex flex-col bg-white w-[592px] h-[270px] p-8">
+          <div className="rounded-[24px] flex flex-col bg-white  h-[270px] p-8">
             <img className="w-[42px] h-[42px]" src="curvedArrow.svg" alt="" />
             <h3 className="text-[24px] font-[500] text-[#000202] mt-4">
               Personalized Product Suggestions
@@ -217,7 +221,7 @@ export default function Home() {
               customer satisfaction.
             </div>
           </div>
-          <div className="rounded-[24px] flex flex-col bg-white w-[592px] h-[270px] p-8">
+          <div className="rounded-[24px] flex flex-col bg-white  h-[270px] p-8">
             <img className="w-[42px] h-[42px]" src="barcode.svg" alt="" />
             <h3 className="text-[24px] font-[500] text-[#000202] mt-4">
               QR Code Access to Results
@@ -229,7 +233,7 @@ export default function Home() {
               and memorable in store experience.
             </div>
           </div>
-          <div className="rounded-[24px] flex flex-col bg-white w-[592px] h-[270px] p-8">
+          <div className="rounded-[24px] flex flex-col bg-white  h-[270px] p-8">
             <img className="w-[42px] h-[42px]" src="integration.svg" alt="" />
             <h3 className="text-[24px] font-[500] text-[#000202] mt-4">
               Seamless Brand Integration
@@ -268,169 +272,112 @@ export default function Home() {
           <div className="">
             <img className="rounded-[24px]" src="step2human.svg" alt="" />
           </div>
+
+          <div className="">
+            <img className="rounded-[24px]" src="step2products.svg" alt="" />
+          </div>
+          <div></div>
+          <div></div>
+          <div className="">
+            <img className="rounded-[24px]" src="step3barcode.svg" alt="" />
+          </div>
         </div>
       </div>
 
       {/* Seventh Div */}
 
-      <div className="bg-secondary md:h-[850px] h-full py-[10%] px-[5%]">
-        <div className=" md:w-[70%] w-[100%]">
-          <h1 className="text-[56px] text-[#1A2937] text-left ">
-            Pricing plan based on usage
-          </h1>
-          <h4 className="text-[20px] text-gray-500 mt-4">
-            Tellei offers a customizable and easy-to-use skincare analysis tool
-            that provides accurate, personalized recommendations based on years
-            of scientific research.
-          </h4>
+      <div className="bg-white relative w-[100%] p-[5%]">
+        <div className="relative">
+          <img className="w-[100%] rounded-[24px]" src="model.png" alt="" />
+          <div className="bg-[#00000099] h-[100%] rounded-[24px] absolute w-[100%] top-0"></div>
         </div>
-        <div className="grid md:grid-cols-2 grid-cols-1 mt-16 gap-10 ">
-          <div className="bg-white rounded-[40px] p-[10%] ">
-            <h1 className="text-[#1A2937] text-[30px]">
-              For small & medium businesses
-            </h1>
-            <h4 className="mt-4 text-gray-500">
-              Customise the algorithm, and create new recommendations by adding
-              your own products. Tellei will help you provide an exceptional
-              digital experience
-            </h4>
-          </div>
-          <div className="bg-white rounded-[40px] p-[10%]">
-            <h1 className="text-[#1A2937] text-[30px]">For Enterprises</h1>
-            <h4 className="mt-4 text-gray-500">
-              Bring digital transformation to your cosmetics brand. A dedicated
-              account manager and support team will work with you to build a
-              fully customised solution powered by Skin SaaS.
-            </h4>
-          </div>
-        </div>
-        <div className="mt-16">
-          <button className="border  py-4 px-10 rounded-full text-primary font-medium border-primary hover:text-white hover:bg-primary">
-            Request Price
-          </button>
-        </div>
+        <p className="text-white text-[48px] w-[879px]  font-[600] absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
+          Ready to Transform Skincare with AI?
+        </p>
+        <p className="text-white font-[500] text-[24px] w-[575px] text-center absolute top-[57%] mt-4 left-[50%] translate-x-[-50%] translate-y-[-50%]">
+          Schedule a personalized demo today and see the impact firsthand.
+        </p>
+        <button className="top-[68%] font-[200] text-[18px] w-[260px] h-[56px] text-white absolute left-[50%] translate-x-[-50%] translate-y-[-50%] bg-[#0C644F] rounded-[30px]">
+          Request Demo
+        </button>
       </div>
 
       {/* Eight Div */}
 
-      {/* <div className=" p-[5%] mt-6 w-[100%]">
-        <h1 className="text-[#1b1f26] text-[52px] text-center font-medium">
-          Press
+      <div className=" overflow-clip w-[100%] bg-white  mt-6  pl-[5%] pt-[5%] pb-[5%]  gap-6 flex flex-col">
+        <h1 className="text-[#000202] text-[48px] font-[600] text-center">
+          What other brands are saying
         </h1>
-        <div className="grid md:grid-cols-2 grid-cols-1 w-[100%] gap-8 mt-8 ">
-          <div className="flex gap-4 justify-center items-center">
-            <img
-              src="cosmeticsandtoiletries.png"
-              alt=""
-              className="w-[150px] h-[100px] "
-            />
-            <h4 className="text-gray-500 text-[20px]">
-              Industry Insight: How Digital Tech is Iterating Beauty
-            </h4>
+        <div className="flex gap-6 w-[100%]">
+          <div className="rounded-[24px] bg-[#FAFAFA] h-[220px] w-[384px] p-6 flex flex-col justify-between text-center">
+            <div className="text-[#8A938F] text-[16px] font-[500]">
+              This app has completely transformed our in-store experience.
+              Customers love the personalized recommendations, and we’ve seen a
+              significant boost in product sales.
+            </div>
+            <div className="flex gap-2 justify-center">
+              <img src="emoji.png" className="w-6 h-6" alt="" />
+              <span className="text-[#000202] text-[16px]">
+                Skincare brand A
+              </span>
+            </div>
           </div>
-          <div className="flex gap-4 justify-center items-center">
-            <img src="forbes.png" className="w-[150px] h-[100px] " alt="" />
-            <h4 className="text-gray-500 text-[20px]">
-              This Female AI Scientist Quietly Built A Profitable Longevity
-              Startup In Estonia That Is Dominating The Global Skincare AI
-              Market
-            </h4>
+          <div className="rounded-[24px] bg-[#FAFAFA] h-[220px] w-[384px] p-6 flex flex-col justify-between text-center">
+            <div className="text-[#8A938F] text-[16px] font-[500]">
+              This app has completely transformed our in-store experience.
+              Customers love the personalized recommendations, and we’ve seen a
+              significant boost in product sales.
+            </div>
+            <div className="flex gap-2 justify-center">
+              <img src="emoji.png" className="w-6 h-6" alt="" />
+              <span className="text-[#000202] text-[16px]">
+                Skincare brand A
+              </span>
+            </div>
           </div>
-          <div className="flex gap-4 justify-center items-center">
-            <img src="vogue.png" className="w-[150px] h-[100px] " alt="" />
-            <h4 className="text-gray-500 text-[20px]">
-              The Fashion Exec&apos;s Guide to Generative Artificial
-              Intelligence
-            </h4>
+          <div className="rounded-[24px] bg-[#FAFAFA] h-[220px] w-[384px] p-6 flex flex-col justify-between text-center">
+            <div className="text-[#8A938F] text-[16px] font-[500]">
+              This app has completely transformed our in-store experience.
+              Customers love the personalized recommendations, and we’ve seen a
+              significant boost in product sales.
+            </div>
+            <div className="flex gap-2 justify-center">
+              <img src="emoji.png" className="w-6 h-6" alt="" />
+              <span className="text-[#000202] text-[16px]">
+                Skincare brand A
+              </span>
+            </div>
           </div>
-          <div className="flex gap-4 justify-center items-center">
-            <img
-              src="beautymatter.png"
-              className="w-[150px] h-[100px] "
-              alt=""
-            />
-            <h4 className="text-gray-500 text-[20px]">
-              Four New Need-to-Know B2B Beauty Tech Tools
-            </h4>
-          </div>
-          <div className="flex gap-4 justify-center items-center">
-            <img
-              src="cosmeticbusiness.png"
-              className="w-[150px] h-[100px] "
-              alt=""
-            />
-            <h4 className="text-gray-500 text-[20px]">
-              Tellei claims to be the first company to incorporate generative AI
-              for skin simulations
-            </h4>
-          </div>
-          <div className="flex gap-4 justify-center items-center">
-            <img src="eustartups.png" className="w-[150px] h-[100px] " alt="" />
-            <h4 className="text-gray-500 text-[20px]">
-              Selfies for skincare | Interview with Anastasia Georgievskaya, CEO
-              and Co-founder, Tellei
-            </h4>
-          </div>
-          <div className="flex gap-4 justify-center items-center">
-            <img
-              src="crunchbasenews.png"
-              className="w-[150px] h-[100px] "
-              alt=""
-            />
-            <h4 className="text-gray-500 text-[20px]">
-              Special Series Part 4: From Wigs To Fish, Some Very Quirky AI
-              Startups Got Funded In 2022
-            </h4>
-          </div>
-          <div className="flex gap-4 justify-center items-center">
-            <img
-              src="cosmeticsandtoiletries.png"
-              className="w-[150px] h-[100px] "
-              alt=""
-            />
-            <h4 className="text-gray-500 text-[20px]">
-              Tellei Taps BreezoMeter Environmental Data for Personalized Skin
-              Care Recommendations
-            </h4>
-          </div>
-          <div className="flex gap-4 justify-center items-center">
-            <img
-              src="cosmeticbusiness.png"
-              className="w-[150px] h-[100px] "
-              alt=""
-            />
-            <h4 className="text-gray-500 text-[20px]">
-              Innovative AI skincare company Tellei partners with retail giant
-              Ulta Beauty to revolutionise the beauty and skincare industry
-            </h4>
-          </div>
-          <div className="flex gap-4 justify-center items-center">
-            <img
-              src="cosmeticsdesign.png"
-              className="w-[150px] h-[100px] "
-              alt=""
-            />
-            <h4 className="text-gray-500 text-[20px]">
-              Ready to adopt&apos;: AI skin analysis firm Tellei aiming to tap
-              into &apos;tech savvy&apos; Asian market
-            </h4>
+          <div className="rounded-[24px] bg-[#FAFAFA] h-[220px] w-[384px] p-6 flex flex-col justify-between text-center">
+            <div className="text-[#8A938F] text-[16px] font-[500]">
+              This app has completely transformed our in-store experience.
+              Customers love the personalized recommendations, and we’ve seen a
+              significant boost in product sales.
+            </div>
+            <div className="flex gap-2 justify-center">
+              <img src="emoji.png" className="w-6 h-6" alt="" />
+              <span className="text-[#000202] text-[16px]">
+                Skincare brand A
+              </span>
+            </div>
           </div>
         </div>
-      </div> */}
+      </div>
 
       {/* Ninth Div */}
-      <div className="h-[250px] bg-primary opacity-70 text-white justify-center items-center flex mt-6">
-        <h4 className="text-[40px]"> We know your skin</h4>
+      <div className=" bg-white p-[5%] mt-6">
+        {/* <h4 className="text-[40px]"> We know your skin</h4> */}
+        <FAQ />
       </div>
 
       {/* Tenth Div */}
 
-      <div className=" bg-white p-[5%] mt-6 w-[100%]">
+      {/* <div className=" bg-white p-[5%] mt-6 w-[100%]">
         <h1 className="text-[#1b1f26] text-[52px] text-center font-medium">
           Supported by
         </h1>
         <SimpleSlider images={supportedByImages} />
-      </div>
+      </div> */}
     </div>
   );
 }

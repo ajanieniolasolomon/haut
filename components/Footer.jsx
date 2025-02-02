@@ -1,84 +1,77 @@
 import React from "react";
 
 
-import {  FaFacebook, FaInstagram, FaLinkedin, FaYoutube } from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
+import {  FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";
+import {  FaXTwitter } from "react-icons/fa6";
 export default function Footer() {
   return (
-    <div className="  bg-primary  md:h-[750px] h-full p-[10%] md:gap-0 gap-6 grid md:grid-cols-2 grid-cols-1">
-      <div className=" flex flex-col gap-6">
-        <div>
-          <h1 className="text-[20px] text-white"> Name</h1>
-          <input
-            type="text"
-            className="bg-white outline-none p-4 rounded-lg w-full"
-            placeholder="john smith"
-          />
-        </div>
-        <div>
-          <h1 className="text-[20px] text-white"> Email</h1>
-          <input
-            type="email"
-            className="bg-white outline-none p-4 rounded-lg w-full"
-            placeholder="mail@example.com"
-          />
-        </div>
-        <div>
-          <h1 className="text-[20px] text-white"> Message</h1>
-          <textarea
-            className="bg-white outline-none p-4 rounded-lg w-full h-[100px]"
-            placeholder="Type something"
-            name=""
-            id=""
-          ></textarea>
-        </div>
-        <div>
-          <h6 className="text-white text-[20px]">
-            Please read our{" "}
-            <a className="underline underline-offset-4" href="/">
-              Privacy Notice
-            </a>{" "}
-          </h6>
-        </div>
-        <div className="">
-          <button className="border p-4 px-12 md:w-[50%] w-[100%] font-bold rounded-full  text-white bg-primary">
-            SUBMIT
+    <div className="  bg-primary  md:h-[400px] h-full px-[5%] py-[2%]   flex flex-col">
+      <div className="  h-[380px] gap-6 grid grid-cols-5">
+        <div className=" flex flex-col gap-6">
+          <div className="flex gap-2 items-center">
+            <img src={"/Logo.png"} alt="" className="w-[50px]" />
+            <p className="text-[24px] font-[500] text-white ">Tellei</p>
+          </div>
+          <button className="bg-white font-[200] rounded-[30px] h-[56px] text-primary text-[18px]">
+            Request Demo
           </button>
         </div>
+        <div className=" flex flex-col gap-6">
+          <h3 className="text-[14px] text-white font-[200] opacity-[40%] capitalize">
+            Get the app
+          </h3>
+          <p className="text-[14px] text-white font-[500] opacity-[80%] capitalize">
+            Download on iOS
+          </p>
+        </div>
+        <div className=" flex flex-col gap-6">
+          <h3 className="text-[14px] text-white font-[200] opacity-[40%] capitalize">
+            Company
+          </h3>
+          <p className="text-[14px] text-white font-[500] opacity-[80%] capitalize">
+            About Us
+          </p>
+          <p className="text-[14px] text-white font-[500] opacity-[80%] capitalize">
+            Our Service
+          </p>
+          <p className="text-[14px] text-white font-[500] opacity-[80%] capitalize">
+            Request Demo
+          </p>
+        </div>
+        <div className=" flex flex-col gap-6">
+          <h3 className="text-[14px] text-white font-[200] opacity-[40%] capitalize">
+            Legal
+          </h3>
+          <p className="text-[14px] text-white font-[500] opacity-[80%] capitalize">
+            Terms and Conditions
+          </p>
+        </div>
+        <div className=" flex flex-col gap-6">
+          <h3 className="text-[14px] text-white font-[200] opacity-[40%] capitalize">
+            Social Media
+          </h3>
+          <p className="text-[14px] text-white font-[500] flex gap-2 items-center opacity-[80%] capitalize">
+            <FaInstagram size={24} />
+            <span>Instagram</span>
+          </p>
+          <p className="text-[14px] text-white font-[500] flex gap-2 items-center opacity-[80%] capitalize">
+            <FaYoutube size={24} />
+            <span>Youtube</span>
+          </p>
+          <p className="text-[14px] text-white font-[500] flex gap-2 items-center opacity-[80%] capitalize">
+            <FaXTwitter size={24} />
+            <span>Twitter</span>
+          </p>
+          <p className="text-[14px] text-white font-[500] flex gap-2 items-center opacity-[80%] capitalize">
+            <FaFacebook size={24} />
+            <span>Facebook</span>
+          </p>
+        </div>
       </div>
-      <div className=" flex flex-col gap-6 md:text-right text-left text-white">
-        <h1 className="text-[40px]  ">Contact Us </h1>
-        <div>
-          <h4 className="text-[12px]">Send us an e-mail</h4>
-          <h4 className="text-[20px]">team@Tellei</h4>
-        </div>
-        <div>
-          <h4 className="text-[12px]">Press request</h4>
-          <h4 className="text-[20px]">press@Tellei</h4>
-        </div>
-        <div>
-          <h4 className="text-[20px]">Tallinn, Estonia</h4>
-        </div>
-        <div className="flex gap-4  md:justify-end justify-start ">
-          <FaYoutube size={30} />
-          <FaFacebook size={30} />
-          <FaLinkedin size={30} />
-          <FaXTwitter size={30} />
-          <FaInstagram size={30} />
-        </div>
-        <div>
-          <h4 className="text-[12px]">© Copyright Tellei 2024.</h4>
-          <h4 className="text-[14px]">
-            {" "}
-            <span className="underline underline-offset-2">
-              Privacy Notice
-            </span>{" "}
-            and{" "}
-            <span className="underline underline-offset-2">
-              Terms & Conditions
-            </span>
-          </h4>
-        </div>
+      <div className="w-[100%]    h-[20px]">
+        <h3 className="text-center text-white text-[14px] font-[500]">
+          © 2025 — Copyright
+        </h3>
       </div>
     </div>
   );

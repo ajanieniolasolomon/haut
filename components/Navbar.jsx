@@ -10,7 +10,7 @@ export default function Navbar() {
   };
   return (
     <nav
-      className={`fixed top-0 left-0 right-0   bg-white border w-screen  flex justify-between items-center px-[5%] py-6 z-10`}
+      className={`md:fixed relative top-0 left-0 right-0   bg-white border w-[100%]  flex justify-between items-center px-[5%] py-6 z-10`}
     >
       <Link href="/">
         <img src={"/Logo.png"} alt="" className="w-[50px]" />
@@ -28,14 +28,14 @@ export default function Navbar() {
         </li>
       </ul>
       <div className="">
-        <button className="border w-[165px] py-2 rounded-full text-white  bg-primary">
+        <button className="border w-[165px] py-2  rounded-full text-white  bg-primary">
           Contact Us
         </button>
       </div>
       <ul
         className={`md:hidden ${
           isOpen ? "block" : "hidden"
-        } space-x-4 absolute top-full left-0 w-full bg-white p-4`}
+        } space-x-4 absolute top-full left-0  w-full bg-white p-4`}
       >
         <li>
           <Link href="/">

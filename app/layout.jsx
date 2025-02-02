@@ -12,11 +12,11 @@ const inter = Inter({ subsets: ["latin"] });
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={` "w-[100%]" ${inter.className}`}>
         {/* Layout UI */}
         <Header />
         <main>{children}</main>
-        <Footer/>
+        <Footer />
       </body>
     </html>
   );
