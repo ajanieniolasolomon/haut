@@ -292,7 +292,11 @@ export default function Home() {
 
       <div className="bg-white relative w-[100%] p-[5%]">
         <div className="relative">
-          <img className="w-[100%] rounded-[24px]" src="model.png" alt="" />
+          <img
+            className="w-[100%] md:h-full h-[231px] rounded-[24px]"
+            src="model.png"
+            alt=""
+          />
           <div className="bg-[#00000099] h-[100%] rounded-[24px] absolute w-[100%] top-0"></div>
         </div>
         <p className="text-white md:text-[48px] text-center text-[24px] md:w-[879px] w-[249px]  font-[600] absolute md:top-[50%] top-[30%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
