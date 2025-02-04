@@ -1,13 +1,12 @@
 import React from "react";
 
-
-import {  FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";
-import {  FaXTwitter } from "react-icons/fa6";
+import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 export default function Footer() {
   return (
-    <div className="  bg-primary  md:h-[400px] h-full px-[5%] py-[2%]   flex flex-col">
-      <div className="  h-[380px] gap-6 grid grid-cols-5">
-        <div className=" flex flex-col gap-6">
+    <div className="  bg-primary  md:h-[400px] h-full px-[5%] py-[2%]    flex flex-col">
+      <div className="  md:h-[380px] h-full gap-6 grid md:grid-cols-5 grid-cols-2">
+        <div className=" flex flex-col gap-6 md:col-span-1 col-span-2">
           <div className="flex gap-2 items-center">
             <img src={"/Logo.png"} alt="" className="w-[50px]" />
             <p className="text-[24px] font-[500] text-white ">Tellei</p>
@@ -68,8 +67,8 @@ export default function Footer() {
           </p>
         </div>
       </div>
-      <div className="w-[100%]    h-[20px]">
-        <h3 className="text-center text-white text-[14px] font-[500]">
+      <div className="w-[100%]    md:h-[20px] h-full md:my-0 my-6" >
+        <h3 className="text-center text-white opacity-[40%] text-[14px]  font-[500]">
           © 2025 — Copyright
         </h3>
       </div>

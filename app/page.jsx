@@ -9,9 +9,9 @@ export default function Home() {
 
 
   return (
-    <div className="  ">
+    <div className=" ">
       {/* First Div */}
-      <div className=" mt-20   md:h-[500px]  h-[441px] justify-center  flex flex-col  items-center ">
+      <div className=" mt-20 border    md:h-[500px]  h-[441px] justify-center  flex flex-col  items-center ">
         <div className="text-center md:px-4 px-0  md:w-[1074px] w-[327px]">
           <h1 className="md:text-[56px] text-[24px] text-black  font-[600]">
             Revolutionize Your Skincare Experience with AI
@@ -48,7 +48,7 @@ export default function Home() {
 
       {/* Third Div */}
 
-      <div className="  h-full mt-[100px] md:gap-0 gap-6 bg-secondary py-[10%] md:px-[5%] px-[5%] ">
+      <div className="  h-full mt-[100px] md:gap-0 gap-6 bg-secondary py-[10%]  px-[5%] ">
         <div className="flex  justify-center w-[100%] ">
           <button className="border border-[#8A938F] text-[#8A938F] text-[16px] px-2 rounded-[30px]">
             For Skincare Brands
@@ -63,19 +63,21 @@ export default function Home() {
         </div>
 
         <div className="text-[#8A938F] text-[24px] w-[100%]  flex items-center justify-center">
-          <p className="w-[897px]  text-center">
+          <p className="w-[897px]  text-center md:text-[24px] text-[14px]">
             We equip your skincare brand with AI-powered tools to access user
             insights, boost marketing impact, and streamline in store
             operations.
           </p>
         </div>
 
-        <div className="flex mt-8 h-[677px] justify-between w-[100%] gap-[3%]  ">
-          <div className=" border w-[60%] rounded-[24px] flex flex-col relative justify-center items-center bg-white">
+        <div className="md:flex   mt-8 md:h-[677px] h-full  md:justify-between w-[100%] gap-[3%]  ">
+          <div className=" border md:w-[60%] w-[100%] rounded-[24px] flex flex-col relative justify-center items-center bg-white">
             <img src="analysis.svg" />
-            <div className="border rounded-b-[24px] h-[174px] w-[100%] absolute bg-white bottom-0 p-6">
-              <h3 className="text-[24px] font-[600]">Skin Analysis Results</h3>
-              <div className="text-[18px] font-[400] text-[#8F918F]">
+            <div className="border rounded-b-[24px] md:h-[174px] h-[129px] w-[100%] absolute bg-white bottom-0 md:p-6 p-4">
+              <h3 className="md:text-[24px] text-[16px] font-[600]">
+                Skin Analysis Results
+              </h3>
+              <div className="md:text-[18px] text-[12px] font-[400] text-[#8F918F]">
                 Access detailed insights into users&apos; skincare needs and
                 concerns in a simple, visual format. Understand their
                 preferences better to offer tailored solutions. Stay informed to
@@ -83,9 +85,11 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="border rounded-[24px] w-[40%] bg-white p-6 flex flex-col ">
-            <h3 className="text-[24px] font-[600]">Terminal Setup</h3>
-            <div className="text-[18px] font-[400] text-[#8F918F] mt-4">
+          <div className="border rounded-[24px] md:w-[40%] w-[100%] bg-white p-6 md:mt-0 mt-6 flex flex-col ">
+            <h3 className="md:text-[24px] text-[16px] font-[600]">
+              Terminal Setup
+            </h3>
+            <div className="md:text-[18px] text-[12px] font-[400] text-[#8F918F] mt-4">
               Set up in-store terminals to provide seamless user skincare
               analysis. Offer personalized recommendations directly at the point
               of interaction. Manage terminal settings and performance easily
@@ -98,8 +102,8 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="w-[100%] flex  my-2 h-[401px] gap-[3%] mt-8">
-          <div className="w-[50%] rounded-[24px] bg-white border p-6">
+        <div className="w-[100%] md:flex   my-2 md:h-[401px] h-full gap-[3%] mt-8">
+          <div className="md:w-[50%] w-[100%] rounded-[24px] bg-white border p-6">
             <h3 className="text-[24px] font-[600] text-[#000202]">
               Email Marketing
             </h3>
@@ -113,13 +117,13 @@ export default function Home() {
               <img src="marketing.svg" alt="" />
             </div>
           </div>
-          <div className="w-[50%] rounded-[24px] bg-white border flex flex-col items-center p-6 relative">
+          <div className="md:w-[50%] w-[100%] rounded-[24px] bg-white border md:mt-0 mt-6 flex flex-col items-center p-6 relative">
             <img src="analytic.svg" alt="" />
-            <div className="border rounded-b-[24px] p-6 h-[172px] absolute bottom-0 w-[100%] bg-white">
-              <h3 className="text-[24px] font-[600] text-[#000202]">
+            <div className="border rounded-b-[24px] p-6 md:h-[172px] h-[129px] absolute bottom-0 w-[100%] bg-white">
+              <h3 className="md:text-[24px] text-[16px] font-[600] text-[#000202]">
                 Analytic Dashboard
               </h3>
-              <div className="text-[#8F918F] text-[18px] mt-4">
+              <div className="text-[#8F918F] md:text-[18px] text-[12px]">
                 Monitor skincare trends and terminal performance in one
                 easy-to-use dashboard. Gain valuable insights into user
                 behaviors and preferences. Make informed decisions with clear,
@@ -129,14 +133,14 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="w-[100%] mt-8 bg-white flex items-center justify-center h-[600px] border rounded-[24px] relative">
-          <img src="products.svg" alt="" />
+        <div className="w-[100%] mt-8 bg-white flex  md:p-0 p-[5%] md:items-center justify-center md:h-[600px] h-[372px] border rounded-[24px] relative">
+          <img src="products.svg" className="" alt="" />
 
-          <div className="absolute bottom-0 p-6 h-[188px] w-[100%] bg-white rounded-b-[24px] border">
-            <h3 className="text-[24px] font-[600] text-[#000202]">
+          <div className="absolute bottom-0 p-6 md:h-[188px] h-[129px] w-[100%] bg-white rounded-b-[24px] border">
+            <h3 className="md:text-[24px] text-[16px] font-[600] text-[#000202]">
               Product Registration
             </h3>
-            <div className="text-[#8F918F] text-[18px] mt-4">
+            <div className="text-[#8F918F] md:text-[18px] text-[12px] mt-4">
               Add, update, and manage your products effortlessly within the
               portal. Ensure your offerings are always accurate and ready for
               users to explore. Keep everything organized in one central place.
@@ -147,26 +151,26 @@ export default function Home() {
 
       {/* Fourth div */}
 
-      <div className="w-[100%] flex mt-6 bg-white p-[5%] ">
-        <div className="w-[50%]">
+      <div className="w-[100%] md:flex mt-6 bg-white p-[5%] ">
+        <div className="md:w-[50%] ">
           <img
-            className="rounded-tl-[100px] rounded-br-[100px] w-[400px] h-[400px] "
+            className="rounded-tl-[100px] rounded-br-[100px] md:w-[400px] w-[100%] md:h-[400px] h-[372px] "
             src="ai.png"
             alt=""
           />
         </div>
-        <div className="w-[50%] flex flex-col h-[400px] ">
+        <div className="md:w-[50%] w-[100%] md:mt-0 mt-6 flex flex-col  md:h-[400px] h-[371px] ">
           <div className="flex  w-[100%] ">
             <button className="border border-[#8A938F] text-[#8A938F] text-[16px] px-2 rounded-[30px]">
               About Us
             </button>
           </div>
 
-          <h3 className="text-[36px] font-[500] text-[#000202] mt-4">
+          <h3 className="md:text-[36px] text-[24px] font-[500] text-[#000202] mt-4">
             Revolutionizing Skincare with AI Precision
           </h3>
 
-          <div className="text-[#8F918F] text-[16px] mt-4">
+          <div className="text-[#8F918F] md:text-[16px] text-[12px] mt-4">
             At Tellei, we believe that everyone deserves a skincare solution
             tailored to their unique needs. Our mission is to revolutionize in
             store skincare experiences by combining cutting edge AI technology
@@ -187,59 +191,59 @@ export default function Home() {
       {/* Fifth Div */}
       <div className="w-[100%] flex flex-col bg-[#FAFAFA]  p-[5%]">
         <div className="flex flex-col justify-center items-center">
-          <h3 className="text-[48px] font-[600] text-[#000202] mt-4">
+          <h3 className="md:text-[48px] text-[24px] font-[600] text-[#000202] mt-4">
             Boost Sales Effortlessly
           </h3>
-          <div className="text-[#8A938F] font-[400] text-center w-[826px] text-[24px] ">
+          <div className="text-[#8A938F] font-[400] text-center md:w-[826px] w-[337px] md:text-[24px] text-[14px] ">
             Deploy our AI-powered app to provide tailored recommendations and
             increase product sales with no extra effort required.
           </div>
         </div>
-        <div className="mt-8 grid grid-cols-2 gap-8 ">
-          <div className="rounded-[24px] flex flex-col bg-white  h-[270px] p-8">
+        <div className="mt-8 grid md:grid-cols-2 grid-cols-1 gap-8 ">
+          <div className="rounded-[24px] flex flex-col bg-white  md:h-[270px] h-[227px] p-8">
             <img className="w-[42px] h-[42px]" src="wave.svg" alt="" />
-            <h3 className="text-[24px] font-[500] text-[#000202] mt-4">
+            <h3 className="md:text-[24px] text-[16px] font-[500] text-[#000202] mt-4">
               AI-Powered Skin Analysis
             </h3>
 
-            <div className="text-[#8F918F] text-[18px] font-[400] mt-4">
+            <div className="text-[#8F918F] md:text-[18px] text-[12px] font-[400] mt-4">
               AI instantly analyzes your customers face to accurately detect
               skincare concerns like dryness, acne, and dark spots, ensuring
               precise and reliable insights.
             </div>
           </div>
-          <div className="rounded-[24px] flex flex-col bg-white  h-[270px] p-8">
+          <div className="rounded-[24px] flex flex-col bg-white  md:h-[270px] h-[227px] p-8">
             <img className="w-[42px] h-[42px]" src="curvedArrow.svg" alt="" />
-            <h3 className="text-[24px] font-[500] text-[#000202] mt-4">
+            <h3 className="md:text-[24px] text-[16px] font-[500] text-[#000202] mt-4">
               Personalized Product Suggestions
             </h3>
 
-            <div className="text-[#8F918F] text-[18px] font-[400] mt-4">
+            <div className="text-[#8F918F] md:text-[18px] text-[12px] font-[400] mt-4">
               Engage your customers with tailored product recommendations that
               meet their unique skincare needs. Our app instantly matches
               analyzed concerns to your product line, boosting sales and
               customer satisfaction.
             </div>
           </div>
-          <div className="rounded-[24px] flex flex-col bg-white  h-[270px] p-8">
+          <div className="rounded-[24px] flex flex-col bg-white  md:h-[270px] h-[227px] p-8">
             <img className="w-[42px] h-[42px]" src="barcode.svg" alt="" />
-            <h3 className="text-[24px] font-[500] text-[#000202] mt-4">
+            <h3 className="md:text-[24px] text-[16px] font-[500] text-[#000202] mt-4">
               QR Code Access to Results
             </h3>
 
-            <div className="text-[#8F918F] text-[18px] font-[400] mt-4">
+            <div className="text-[#8F918F] md:text-[18px] text-[12px] font-[400] mt-4">
               A simple scan of a QR code lets customers view their analysis and
               recommended products on their mobile devices, ensuring a smooth
               and memorable in store experience.
             </div>
           </div>
-          <div className="rounded-[24px] flex flex-col bg-white  h-[270px] p-8">
+          <div className="rounded-[24px] flex flex-col bg-white  md:h-[270px] h-[227px] p-8">
             <img className="w-[42px] h-[42px]" src="integration.svg" alt="" />
-            <h3 className="text-[24px] font-[500] text-[#000202] mt-4">
+            <h3 className="md:text-[24px]  text-[16px] font-[500] text-[#000202] mt-4">
               Seamless Brand Integration
             </h3>
 
-            <div className="text-[#8F918F] text-[18px] font-[400] mt-4">
+            <div className="text-[#8F918F] md:text-[18px] text-[12px] font-[400] mt-4">
               Our app effortlessly integrates with your skincare brand’s product
               line, matching analyzed skin concerns to your products for
               personalized and effective recommendations.
@@ -258,12 +262,12 @@ export default function Home() {
               How it works
             </button>
           </div>
-          <h3 className="text-[48px] font-[600] text-[#000202] ">
+          <h3 className="md:text-[48px] text-[24px] font-[600] text-[#000202] ">
             Effortless Skincare Analysis in 4 Simple Steps
           </h3>
         </div>
 
-        <div className="grid grid-cols-2 w-[100%] mt-12  gap-12">
+        <div className="grid md:grid-cols-2 grid-cols-1 w-[100%] mt-12  gap-12">
           <div className="">
             <img className="rounded-[24px]" src="step1human.svg" alt="" />
           </div>
@@ -291,26 +295,26 @@ export default function Home() {
           <img className="w-[100%] rounded-[24px]" src="model.png" alt="" />
           <div className="bg-[#00000099] h-[100%] rounded-[24px] absolute w-[100%] top-0"></div>
         </div>
-        <p className="text-white text-[48px] w-[879px]  font-[600] absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
+        <p className="text-white md:text-[48px] text-center text-[24px] md:w-[879px] w-[249px]  font-[600] absolute md:top-[50%] top-[30%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
           Ready to Transform Skincare with AI?
         </p>
-        <p className="text-white font-[500] text-[24px] w-[575px] text-center absolute top-[57%] mt-4 left-[50%] translate-x-[-50%] translate-y-[-50%]">
+        <p className="text-white font-[500] md:text-[24px] text-[14px] md:w-[575px] w-[249px] text-center absolute md:top-[57%] top-[50%] mt-4 left-[50%] translate-x-[-50%] translate-y-[-50%]">
           Schedule a personalized demo today and see the impact firsthand.
         </p>
-        <button className="top-[68%] font-[200] text-[18px] w-[260px] h-[56px] text-white absolute left-[50%] translate-x-[-50%] translate-y-[-50%] bg-[#0C644F] rounded-[30px]">
+        <button className="md:top-[68%] top-[75%] font-[200] text-[18px] md:w-[260px] w-[177px] md:h-[56px] h-[48px] text-white absolute left-[50%] translate-x-[-50%] translate-y-[-50%] bg-[#0C644F] rounded-[30px]">
           Request Demo
         </button>
       </div>
 
       {/* Eight Div */}
 
-      <div className=" overflow-clip w-[100%] bg-white  mt-6  pl-[5%] pt-[5%] pb-[5%]  gap-6 flex flex-col">
-        <h1 className="text-[#000202] text-[48px] font-[600] text-center">
+      <div className=" overflow-clip w-[100%] bg-white  mt-6  p-[5%]  gap-6 flex flex-col">
+        <h1 className="text-[#000202] md:text-[48px] text-[24px] font-[600] text-center">
           What other brands are saying
         </h1>
-        <div className="flex gap-6 w-[100%]">
-          <div className="rounded-[24px] bg-[#FAFAFA] h-[220px] w-[384px] p-6 flex flex-col justify-between text-center">
-            <div className="text-[#8A938F] text-[16px] font-[500]">
+        <div className="flex md:flex-row flex-col  gap-6 w-[100%] ">
+          <div className="rounded-[24px] bg-[#FAFAFA] h-[220px] md:w-[384px] w-[100%] p-6 flex flex-col justify-between text-center">
+            <div className="text-[#8A938F] md:text-[16px] text-[14px] font-[500]">
               This app has completely transformed our in-store experience.
               Customers love the personalized recommendations, and we’ve seen a
               significant boost in product sales.
@@ -322,8 +326,8 @@ export default function Home() {
               </span>
             </div>
           </div>
-          <div className="rounded-[24px] bg-[#FAFAFA] h-[220px] w-[384px] p-6 flex flex-col justify-between text-center">
-            <div className="text-[#8A938F] text-[16px] font-[500]">
+          <div className="rounded-[24px] bg-[#FAFAFA] h-[220px] md:w-[384px] w-[100%] p-6 flex flex-col justify-between text-center">
+            <div className="text-[#8A938F] md:text-[16px] text-[14px] font-[500]">
               This app has completely transformed our in-store experience.
               Customers love the personalized recommendations, and we’ve seen a
               significant boost in product sales.
@@ -335,8 +339,8 @@ export default function Home() {
               </span>
             </div>
           </div>
-          <div className="rounded-[24px] bg-[#FAFAFA] h-[220px] w-[384px] p-6 flex flex-col justify-between text-center">
-            <div className="text-[#8A938F] text-[16px] font-[500]">
+          <div className="rounded-[24px] bg-[#FAFAFA] h-[220px] md:w-[384px] w-[100%] p-6 flex flex-col justify-between text-center">
+            <div className="text-[#8A938F] md:text-[16px] text-[14px] font-[500]">
               This app has completely transformed our in-store experience.
               Customers love the personalized recommendations, and we’ve seen a
               significant boost in product sales.
@@ -348,8 +352,8 @@ export default function Home() {
               </span>
             </div>
           </div>
-          <div className="rounded-[24px] bg-[#FAFAFA] h-[220px] w-[384px] p-6 flex flex-col justify-between text-center">
-            <div className="text-[#8A938F] text-[16px] font-[500]">
+          <div className="rounded-[24px] bg-[#FAFAFA] h-[220px] md:w-[384px] w-[100%] p-6 flex flex-col justify-between text-center">
+            <div className="text-[#8A938F] md:text-[16px] text-[14px] font-[500]">
               This app has completely transformed our in-store experience.
               Customers love the personalized recommendations, and we’ve seen a
               significant boost in product sales.
