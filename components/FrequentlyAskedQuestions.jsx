@@ -42,7 +42,7 @@ export default function FAQ() {
         {faqData.map((faq, index) => (
           <Disclosure key={index}>
             {({ open }) => (
-              <div className="border border-[#095140] rounded-[24px] shadow-sm md:w-[744px] w-[100%] md:mx-auto mx-0 ">
+              <div className="border border-secondary rounded-[24px] shadow-sm md:w-[744px] w-[100%] md:mx-auto mx-0 ">
                 <DisclosureButton className="flex justify-between w-full px-4 py-3 text-left md:text-[24px] text-[16px] font-[500]   ">
                   {faq.question}
                   <ChevronUpIcon

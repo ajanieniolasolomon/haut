@@ -6,25 +6,23 @@ import FAQ from "@/components/FrequentlyAskedQuestions";
 import React from "react";
 
 export default function Home() {
-
-
   return (
     <div className=" ">
       {/* First Div */}
       <div className=" mt-20 border    md:h-[500px]  h-[441px] justify-center  flex flex-col  items-center ">
         <div className="text-center md:px-4 px-0  md:w-[1074px] w-[327px]">
           <h1 className="md:text-[56px] text-[24px] text-black  font-[600]">
-            Revolutionize Your Skincare Experience with AI
+            Discover the secrets of your skin in 90 secs
           </h1>
         </div>
         <h6 className="w-[327px] md:w-[822px] text-center text-gray-500 md:text-[20px] text-[14px] ">
-          Personalized skincare recommendations powered by advanced AI
+          Personalized skincare recommendations powered by human and advanced AI
           technology.
         </h6>
         <div className="mt-12">
           <a
             href="https://apps.apple.com/ng/app/tellei/id6478509541"
-            className="bg-primary text-white font-[200] rounded-full py-4 px-12 "
+            className="bg-secondary text-white font-[200] rounded-full py-4 px-12 "
           >
             Request a Demo
           </a>
@@ -39,7 +37,7 @@ export default function Home() {
             src="lab.png"
             alt=""
           />
-          <div className="bg-[#09514099] h-[100%] rounded-[24px] absolute w-[100%] top-0"></div>
+          <div className="bg-[#100B6E66] h-[100%] rounded-[24px] absolute w-[100%] top-0"></div>
         </div>
         <p className="text-white md:text-[128px] text-[45px] md:w-[784px] w-[276px] text-center font-[800] absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
           Welcome to Innovation!
@@ -48,7 +46,7 @@ export default function Home() {
 
       {/* Third Div */}
 
-      <div className="  h-full mt-[100px] md:gap-0 gap-6 bg-secondary py-[10%]  px-[5%] ">
+      <div className="  h-full mt-[100px] md:gap-0 gap-6 bg-[#FAFAFA] py-[10%]  px-[5%] ">
         <div className="flex  justify-center w-[100%] ">
           <button className="border border-[#8A938F] text-[#8A938F] text-[16px] px-2 rounded-[30px]">
             For Skincare Brands
@@ -56,17 +54,18 @@ export default function Home() {
         </div>
 
         <div className="w-[100%] flex justify-center my-2">
-          <p className="md:text-[48px] text-[24px] text-center md:w-full w-[337px] font-[600] text-[#095140]">
-            Smarter Solutions{" "}
+          <p className="md:text-[48px] text-[24px] text-center md:w-full w-[337px] font-[600] text-primary">
+            Faster & Smarter Solutions{" "}
             <span className="text-[#000202]">for Skincare Brands</span>{" "}
           </p>
         </div>
 
         <div className="text-[#8A938F] text-[24px] w-[100%]  flex items-center justify-center">
-          <p className="w-[897px]  text-center md:text-[24px] text-[14px]">
-            We equip your skincare brand with AI-powered tools to access user
-            insights, boost marketing impact, and streamline in store
-            operations.
+          <p className="w-[1155px]  text-center md:text-[24px] text-[14px]">
+            We equip your skincare brand with Human & Artificial Intelligence
+            (AI) tools to deeply analyze user’s faces, recommend tailored
+            products to their skin concerns, access user insights, connects with
+            users using hyperlocal content and boost marketing impact.
           </p>
         </div>
 
@@ -108,9 +107,9 @@ export default function Home() {
               Email Marketing
             </h3>
             <div className="text-[#8F918F] text-[18px] mt-4">
-              Create and send targeted email campaigns based on real user
-              analysis data. Connect with your audience by offering the right
-              products at the right time.
+              We will create and send targeted email campaigns based on real
+              user analysis data and trends. Connect with your audience with a
+              hyperlocal content strategy and build a community.
             </div>
 
             <div className="w-[100%] flex justify-center items-center ">
@@ -159,7 +158,7 @@ export default function Home() {
             alt=""
           />
         </div>
-        <div className="md:w-[50%] w-[100%] md:mt-0 mt-6 flex flex-col  md:h-[400px] h-[371px] ">
+        <div className="md:w-[50%] w-[100%] md:mt-0 mt-6 flex flex-col  md:h-[410px] h-[371px] ">
           <div className="flex  w-[100%] ">
             <button className="border border-[#8A938F] text-[#8A938F] text-[16px] px-2 rounded-[30px]">
               About Us
@@ -171,18 +170,18 @@ export default function Home() {
           </h3>
 
           <div className="text-[#8F918F] md:text-[16px] text-[12px] mt-4">
-            At Tellei, we believe that everyone deserves a skincare solution
-            tailored to their unique needs. Our mission is to revolutionize in
-            store skincare experiences by combining cutting edge AI technology
-            with industry leading skincare expertise. We’ve designed an
-            innovative solution that helps brands connect with their customers
-            on a deeper level, offering real time skin analysis and personalized
-            recommendations. With our app, we’re not just enhancing customer
-            satisfaction but also driving meaningful sales for skincare brands
-            worldwide.
+            At Demi Care, we believe that everyone deserves a skincare solution
+            tailored to their unique needs. Our mission is to revolutionize
+            in-store skincare experiences by combining cutting-edge AI
+            technology with industry-leading skincare expertise. We’ve designed
+            an innovative solution that helps brands connect with their
+            customers on a deeper level, offering real time skin analysis and
+            personalized recommendations. With our app, we’re not just enhancing
+            customer satisfaction but also driving meaningful sales for skincare
+            brands worldwide.
           </div>
 
-          <button className="bg-primary w-[193px] h-[60px] font-[400] text-white rounded-[30px] mt-4">
+          <button className="bg-secondary w-[193px] h-[60px] font-[400] text-white rounded-[30px] mt-4">
             Contact Us
           </button>
         </div>
@@ -195,21 +194,22 @@ export default function Home() {
             Boost Sales Effortlessly
           </h3>
           <div className="text-[#8A938F] font-[400] text-center md:w-[826px] w-[337px] md:text-[24px] text-[14px] ">
-            Deploy our AI-powered app to provide tailored recommendations and
-            increase product sales with no extra effort required.
+            Boost sales, Build a community around your brand, and Engagement
+            that converts to sales.
           </div>
         </div>
         <div className="mt-8 grid md:grid-cols-2 grid-cols-1 gap-8 ">
           <div className="rounded-[24px] flex flex-col bg-white  md:h-[270px] h-[227px] p-8">
             <img className="w-[42px] h-[42px]" src="wave.svg" alt="" />
             <h3 className="md:text-[24px] text-[16px] font-[500] text-[#000202] mt-4">
-              AI-Powered Skin Analysis
+              Human & AI Powered Skin Analysis
             </h3>
 
             <div className="text-[#8F918F] md:text-[18px] text-[12px] font-[400] mt-4">
-              AI instantly analyzes your customers face to accurately detect
-              skincare concerns like dryness, acne, and dark spots, ensuring
-              precise and reliable insights.
+              Deeply analyze your customer’s face in 90 seconds, inclusive of
+              skin tone and texture, detecting skin concerns like
+              hyperpigmentation, sunburn, dryness, acne, darks spots, and more,
+              ensuring precise and reliable insights
             </div>
           </div>
           <div className="rounded-[24px] flex flex-col bg-white  md:h-[270px] h-[227px] p-8">
@@ -220,9 +220,9 @@ export default function Home() {
 
             <div className="text-[#8F918F] md:text-[18px] text-[12px] font-[400] mt-4">
               Engage your customers with tailored product recommendations that
-              meet their unique skincare needs. Our app instantly matches
-              analyzed concerns to your product line, boosting sales and
-              customer satisfaction.
+              meet their unique skincare needs and lifetime updates on their
+              skincare journey. Build community, and boost sales and customer
+              satisfaction.
             </div>
           </div>
           <div className="rounded-[24px] flex flex-col bg-white  md:h-[270px] h-[227px] p-8">
@@ -234,7 +234,7 @@ export default function Home() {
             <div className="text-[#8F918F] md:text-[18px] text-[12px] font-[400] mt-4">
               A simple scan of a QR code lets customers view their analysis and
               recommended products on their mobile devices, ensuring a smooth
-              and memorable in store experience.
+              and memorable in-store experience.
             </div>
           </div>
           <div className="rounded-[24px] flex flex-col bg-white  md:h-[270px] h-[227px] p-8">
@@ -300,12 +300,12 @@ export default function Home() {
           <div className="bg-[#00000099] h-[100%] rounded-[24px] absolute w-[100%] top-0"></div>
         </div>
         <p className="text-white md:text-[48px] text-center text-[24px] md:w-[879px] w-[249px]  font-[600] absolute md:top-[50%] top-[30%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
-          Ready to Transform Skincare with AI?
+          Ready to know the secrets of your skin in 90 secs
         </p>
-        <p className="text-white font-[500] md:text-[24px] text-[14px] md:w-[575px] w-[249px] text-center absolute md:top-[57%] top-[50%] mt-4 left-[50%] translate-x-[-50%] translate-y-[-50%]">
-          Schedule a personalized demo today and see the impact firsthand.
+        <p className="text-white font-[500] md:text-[24px] text-[14px] md:w-[575px] w-[249px] text-center absolute md:top-[63%] top-[50%] mt-4 left-[50%] translate-x-[-50%] translate-y-[-50%]">
+          Transform your skincare routine with human and artificial intelligence
         </p>
-        <button className="md:top-[68%] top-[75%] font-[200] text-[18px] md:w-[260px] w-[177px] md:h-[56px] h-[48px] text-white absolute left-[50%] translate-x-[-50%] translate-y-[-50%] bg-[#0C644F] rounded-[30px]">
+        <button className="md:top-[75%] top-[75%] font-[200] text-[18px] md:w-[260px] w-[177px] md:h-[56px] h-[48px] text-white absolute left-[50%] translate-x-[-50%] translate-y-[-50%] bg-secondary rounded-[30px]">
           Request Demo
         </button>
       </div>

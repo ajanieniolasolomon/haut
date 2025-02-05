@@ -7,8 +7,8 @@ export const content = [
 export const theme = {
   extend: {
     colors: {
-      primary: "#0e3c31",
-      secondary: "#f6f5f4",
+      primary: "#100B6E",
+      secondary: "#7976AA",
     },
     backgroundImage: {
       "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",

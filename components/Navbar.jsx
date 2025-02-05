@@ -13,7 +13,7 @@ export default function Navbar() {
       className={`md:fixed relative top-0 left-0 right-0   bg-white border w-[100%]  flex justify-between items-center px-[5%] py-6 z-10`}
     >
       <Link href="/">
-        <img src={"/Logo.png"} alt="" className="w-[50px]" />
+        <img src={"/Logo.svg"} alt="" className="w-[50px]" />
       </Link>
       <ul className="hidden md:flex space-x-8">
         <li>
