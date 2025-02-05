@@ -67,7 +67,7 @@ export default function Footer() {
           </p>
         </div>
       </div>
-      <div className="w-[100%]    md:h-[20px] h-full md:my-0 mt-12">
+      <div className="w-[100%]    md:h-[20px] h-full md:my-0 mt-[30px]">
         <h3 className="text-center text-white opacity-[40%] text-[14px]  font-[500]">
           © 2025 — Copyright
         </h3>

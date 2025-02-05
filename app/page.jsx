@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <div className=" ">
       {/* First Div */}
-      <div className=" mt-20 border    md:h-[500px]  h-[441px] justify-center  flex flex-col  items-center ">
+      <div className="   mt-20 md:h-[500px]  h-[441px] justify-center  flex flex-col  items-center ">
         <div className="text-center md:px-4 px-0  md:w-[1074px] w-[327px]">
           <h1 className="md:text-[56px] text-[24px] text-black  font-[600]">
             Discover the secrets of your skin in 90 secs
