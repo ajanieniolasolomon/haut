@@ -2,7 +2,7 @@
 "use client";
 // import { useState } from "react";
 import { DisclosureButton,DisclosurePanel,Disclosure } from "@headlessui/react";
-import { ChevronUpIcon } from "@heroicons/react/20/solid";
+import {  MinusCircleIcon,PlusCircleIcon } from "@heroicons/react/20/solid";
 
 const faqData = [
   {
@@ -45,11 +45,18 @@ export default function FAQ() {
               <div className="border border-secondary rounded-[24px] shadow-sm md:w-[744px] w-[100%] md:mx-auto mx-0 ">
                 <DisclosureButton className="flex justify-between w-full px-4 py-3 text-left md:text-[24px] text-[16px] font-[500]   ">
                   {faq.question}
-                  <ChevronUpIcon
-                    className={`w-6 h-6 transition-transform ${
-                      open ? "rotate-180" : ""
-                    }`}
-                  />
+
+                  {open && (
+                    <MinusCircleIcon
+                      className={`md:w-[48px] w-[16px] md:h-[48px] h-[16px] fill-primary  transition-transform `}
+                    />
+                  )}
+
+                  {!open && (
+                    <PlusCircleIcon
+                      className={`md:w-[48px] w-[16px] md:h-[48px] h-[16px] fill-primary  transition-transform `}
+                    />
+                  )}
                 </DisclosureButton>
                 <DisclosurePanel className="px-4 py-2 text-[#8A938F] font-[400] md:text-[16px] text-[12px] bg-white h-[167px] ">
                   {faq.answer}
