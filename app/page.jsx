@@ -116,7 +116,7 @@ export default function Home() {
               <img src="marketing.svg" alt="" />
             </div>
           </div>
-          <div className="md:w-[50%] w-[100%] rounded-[24px] bg-white border md:mt-0 mt-6 flex flex-col items-center p-6 relative">
+          <div className="md:w-[50%] w-[100%] rounded-[24px] h-full bg-white border md:mt-0 mt-6 flex flex-col items-center p-6 relative">
             <img src="analytic.svg" alt="" />
             <div className="border rounded-b-[24px] p-6 md:h-[172px] h-[129px] absolute bottom-0 w-[100%] bg-white">
               <h3 className="md:text-[24px] text-[16px] font-[600] text-[#000202]">
@@ -132,7 +132,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="w-[100%] mt-8 bg-white flex  md:p-0 p-[5%] md:items-center justify-center md:h-[600px] h-[372px] border rounded-[24px] relative">
+        <div className="w-[100%] mt-8 bg-white flex  md:p-0 p-[5%] md:items-center justify-center md:h-[600px] h-[400px] border rounded-[24px] relative">
           <img src="products.svg" className="" alt="" />
 
           <div className="absolute bottom-0 p-6 md:h-[188px] h-[129px] w-[100%] bg-white rounded-b-[24px] border">
@@ -154,7 +154,7 @@ export default function Home() {
         <div className="md:w-[50%] ">
           <img
             className="rounded-tl-[100px] rounded-br-[100px] md:w-[400px] w-[100%] md:h-[400px] h-[372px] "
-            src="ai.png"
+            src="ai.svg"
             alt=""
           />
         </div>
