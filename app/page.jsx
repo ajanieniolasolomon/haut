@@ -135,7 +135,7 @@ export default function Home() {
         <div className="w-[100%] mt-8 bg-white flex  md:p-0 p-[5%] md:items-center justify-center md:h-[600px] h-[400px] border rounded-[24px] relative">
           <img src="products.svg" className="" alt="" />
 
-          <div className="absolute bottom-0 p-6 md:h-[188px] h-[129px] w-[100%] bg-white rounded-b-[24px] border">
+          <div className="absolute bottom-0 p-6 md:h-[188px] h-[140px] w-[100%] bg-white rounded-b-[24px] border">
             <h3 className="md:text-[24px] text-[16px] font-[600] text-[#000202]">
               Product Registration
             </h3>
@@ -262,28 +262,71 @@ export default function Home() {
               How it works
             </button>
           </div>
-          <h3 className="md:text-[48px] text-[24px] font-[600] text-[#000202] ">
+          <h3 className="md:text-[48px] text-[24px] text-center font-[600] text-[#000202] ">
             Effortless Skincare Analysis in 4 Simple Steps
           </h3>
         </div>
 
-        <div className="grid md:grid-cols-2 grid-cols-1 w-[100%] mt-12  gap-12">
-          <div className="">
-            <img className="rounded-[24px]" src="step1human.svg" alt="" />
-          </div>
-          <div></div>
-          <div></div>
-          <div className="">
-            <img className="rounded-[24px]" src="step2human.svg" alt="" />
+        <div className="flex-col flex w-[100%] mt-12 gap-6  ">
+          <div className="md:flex   gap-6  h-full">
+            <div className="md:w-[50%] w-[100%]">
+              <img className="rounded-[24px]" src="step1human.svg" alt="" />
+            </div>
+            <div className=" md:mt-0 mt-6  relative flex md:justify-center justify-between items-center md:items-start  flex-col md:w-[50%] w-[100%] h-[200px] md:h-auto ">
+              <div className="relative w-[90px] h-[38px] text-[14px] flex justify-center items-center text-[#8A938F] shadow-lg shadow-[#34A8531F] border rounded-[8px] ">
+                <div className="rounded-full bg-[#EB7244] w-[24px] h-[24px] absolute -right-3 -top-3"></div>
+                Step 1
+              </div>
+
+              <img
+                src="step1Arrow.svg"
+                className="    absolute md:w-[300px] md:h-[300px] w-[114px] h-[130px] md:left-[55px]  -bottom-[5px]"
+                alt=""
+              />
+            </div>
           </div>
 
-          <div className="">
-            <img className="rounded-[24px]" src="step2products.svg" alt="" />
+          <div className="flex flex-col md:flex-row  gap-6 h-full">
+            <div className="order-2 md:order-1 h-[200px] md:h-auto  md:mt-0 mt-6 border-red-950  relative flex md:justify-center justify-between items-center md:items-end flex-col w-[100%] md:w-[50%]">
+              <div className="md:ml-auto mt-6 relative w-[90px] h-[38px] text-[14px] flex justify-center items-center text-[#8A938F] shadow-lg shadow-[#34A8531F] border rounded-[8px] ">
+                <div className="rounded-full bg-[#EB7244] w-[24px] h-[24px] absolute -right-3 -top-3"></div>
+                Step 2
+              </div>
+
+              <img
+                src="step2Arrow.svg"
+                className="md:w-[300px] md:h-[300px] w-[114px] h-[130px] absolute bottom-0 md:right-[40px] right-[180px]"
+                alt=""
+              />
+            </div>
+            <div className="order-1 md:order-2 md:w-[50%] w-[100%]">
+              <img className="rounded-[24px]" src="step2human.svg" alt="" />
+            </div>
           </div>
-          <div></div>
-          <div></div>
-          <div className="">
-            <img className="rounded-[24px]" src="step3barcode.svg" alt="" />
+
+          <div className="md:flex  gap-6">
+            <div className="md:w-[50%] w-[100%]">
+              <img className="rounded-[24px]" src="step2products.svg" alt="" />
+            </div>
+            <div className="md:justify-center justify-between items-center md:items-start h-[200px] md:h-auto  relative flex flex-col md:w-[50%] w-[100%]">
+              <div className="md:mt-0 mt-6 relative w-[90px] h-[38px] text-[14px] flex justify-center items-center text-[#8A938F] shadow-lg shadow-[#34A8531F] border rounded-[8px] ">
+                <div className="rounded-full bg-[#EB7244] w-[24px] h-[24px] absolute -right-3 -top-3"></div>
+                Step 3
+              </div>
+
+              <img
+                src="step3Arrow.svg"
+                className=" md:w-[300px] md:h-[300px] w-[114px] h-[130px] absolute bottom-0 md:left-[80px] left-[190px]"
+                alt=""
+              />
+            </div>
+          </div>
+
+          <div className="md:flex  gap-6">
+            <div className="md:w-[50%] w-[100%]"></div>
+            <div className=" md:w-[50%] w-[100%]">
+              <img className="rounded-[24px]" src="step3barcode.svg" alt="" />
+            </div>
           </div>
         </div>
       </div>

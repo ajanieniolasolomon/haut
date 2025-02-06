@@ -38,27 +38,27 @@ export default function FAQ() {
           Do you’ve a question? We’ve answers to them...
         </p>
       </div>
-      <div className="space-y-4 ">
+      <div className="space-y-4 w-full">
         {faqData.map((faq, index) => (
           <Disclosure key={index}>
             {({ open }) => (
-              <div className="border border-secondary rounded-[24px] shadow-sm md:w-[744px] w-[100%] md:mx-auto mx-0 ">
+              <div className="border border-secondary rounded-[24px] shadow-sm md:w-[744px] w-[100%] md:mx-auto mx-0 overflow-hidden">
                 <DisclosureButton className="flex justify-between w-full px-4 py-3 text-left md:text-[24px] text-[16px] font-[500]   ">
                   {faq.question}
 
                   {open && (
                     <MinusCircleIcon
-                      className={`md:w-[48px] w-[16px] md:h-[48px] h-[16px] fill-primary  transition-transform `}
+                      className={`md:w-[48px] w-[24px] md:h-[48px] h-[24px] fill-primary  transition-transform `}
                     />
                   )}
 
                   {!open && (
                     <PlusCircleIcon
-                      className={`md:w-[48px] w-[16px] md:h-[48px] h-[16px] fill-primary  transition-transform `}
+                      className={`md:w-[48px] w-24px] md:h-[48px] h-[24px] fill-primary  transition-transform `}
                     />
                   )}
                 </DisclosureButton>
-                <DisclosurePanel className="px-4 py-2 text-[#8A938F] font-[400] md:text-[16px] text-[12px] bg-white h-[167px] ">
+                <DisclosurePanel className="px-4 py-2 text-[#8A938F] font-[400] md:text-[16px] text-[12px] bg-white transition-all duration-300 ">
                   {faq.answer}
                 </DisclosurePanel>
               </div>
