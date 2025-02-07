@@ -1,23 +1,37 @@
+"use client";
 import FAQ from "@/components/FrequentlyAskedQuestions";
+import Typewriter from "@/components/Typewriter";
 
+import React, { useState } from "react";
 // import SimpleSlider from "@/components/Slider";
 // import pharmaceuticalImages from "@/data/pharmaceutical";
 // import supportedByImages from "@/data/supportedBy";
-import React from "react";
 
 export default function Home() {
+  const textToType = "Discover the secrets of your skin in 90 secs";
+  const subText =
+    "Personalized skincare recommendations powered by human and advanced AI technology.";
+  const [subtextStarted, setSubtextStarted] = useState(false);
+
+  // console.log(hovered)
   return (
     <div className=" ">
       {/* First Div */}
-      <div className="   mt-20 md:h-[500px]  h-[441px] justify-center  flex flex-col  items-center ">
+      <div className=" bg-gradient-to-l from-[#f8f7ff] via-white  to-[#e9e6ff] md:mt-20 mt-0 md:h-[500px]  h-[441px] justify-center  flex flex-col  items-center ">
         <div className="text-center md:px-4 px-0  md:w-[1074px] w-[327px]">
-          <h1 className="md:text-[56px] text-[24px] text-black  font-[600]">
-            Discover the secrets of your skin in 90 secs
+          <h1 className="md:text-[63px] text-[24px] text-[#282828] capitalize  font-[700] font-lexend">
+            <Typewriter
+              text={textToType}
+              speed={30}
+              delay={500}
+              onComplete={() => setSubtextStarted(true)} // Start subtext when main text is done
+            />
           </h1>
         </div>
         <h6 className="w-[327px] md:w-[822px] text-center text-gray-500 md:text-[20px] text-[14px] ">
-          Personalized skincare recommendations powered by human and advanced AI
-          technology.
+          {subtextStarted && ( // Conditionally render subtext Typewriter
+            <Typewriter text={subText} speed={20} delay={0} /> // No initial delay
+          )}
         </h6>
         <div className="mt-12">
           <a
@@ -30,7 +44,7 @@ export default function Home() {
       </div>
 
       {/* Second Div */}
-      <div className="px-[5%] mt-6    relative">
+      <div className="p-[5%]    relative">
         <div className="relative ">
           <img
             className="w-[100%] rounded-[24px] md:h-full h-[231px]"
@@ -56,7 +70,7 @@ export default function Home() {
         <div className="w-[100%] flex justify-center my-2">
           <p className="md:text-[48px] text-[24px] text-center md:w-full w-[337px] font-[600] text-primary">
             Faster & Smarter Solutions{" "}
-            <span className="text-[#000202]">for Skincare Brands</span>{" "}
+            <span className="text-[#000202]">for Skincare Brands</span>
           </p>
         </div>
 
@@ -72,7 +86,7 @@ export default function Home() {
         <div className="md:flex   mt-8 md:h-[677px] h-full  md:justify-between w-[100%] gap-[3%]  ">
           <div className=" border md:w-[60%] w-[100%] rounded-[24px] flex flex-col relative justify-center items-center bg-white">
             <img src="analysis.svg" />
-            <div className="border rounded-b-[24px] md:h-[174px] h-[129px] w-[100%] absolute bg-white bottom-0 md:p-6 p-4">
+            <div className="border rounded-b-[24px] md:h-[174px]  w-[100%] absolute bg-white bottom-0 p-6 ">
               <h3 className="md:text-[24px] text-[16px] font-[600]">
                 Skin Analysis Results
               </h3>
@@ -106,7 +120,7 @@ export default function Home() {
             <h3 className="text-[24px] font-[600] text-[#000202]">
               Email Marketing
             </h3>
-            <div className="text-[#8F918F] text-[18px] mt-4">
+            <div className="text-[#8F918F] md:text-[18px] text-[12px] mt-4">
               We will create and send targeted email campaigns based on real
               user analysis data and trends. Connect with your audience with a
               hyperlocal content strategy and build a community.
@@ -118,7 +132,7 @@ export default function Home() {
           </div>
           <div className="md:w-[50%] w-[100%] rounded-[24px] h-full bg-white border md:mt-0 mt-6 flex flex-col items-center p-6 relative">
             <img src="analytic.svg" alt="" />
-            <div className="border rounded-b-[24px] p-6 md:h-[172px] h-[129px] absolute bottom-0 w-[100%] bg-white">
+            <div className="border rounded-b-[24px] p-6 md:h-[172px]  absolute bottom-0 w-[100%] bg-white">
               <h3 className="md:text-[24px] text-[16px] font-[600] text-[#000202]">
                 Analytic Dashboard
               </h3>
@@ -135,7 +149,7 @@ export default function Home() {
         <div className="w-[100%] mt-8 bg-white flex  md:p-0 p-[5%] md:items-center justify-center md:h-[600px] h-[400px] border rounded-[24px] relative">
           <img src="products.svg" className="" alt="" />
 
-          <div className="absolute bottom-0 p-6 md:h-[188px] h-[140px] w-[100%] bg-white rounded-b-[24px] border">
+          <div className="absolute bottom-0 p-6 md:h-[188px] w-[100%] bg-white rounded-b-[24px] border">
             <h3 className="md:text-[24px] text-[16px] font-[600] text-[#000202]">
               Product Registration
             </h3>
@@ -199,20 +213,29 @@ export default function Home() {
           </div>
         </div>
         <div className="mt-8 grid md:grid-cols-2 grid-cols-1 gap-8 ">
-          <div className="rounded-[24px] flex flex-col bg-white  md:h-[270px] h-[227px] p-8">
+          <div
+            className={` bg-white
+            rounded-[24px] flex flex-col   md:h-[270px]  p-6`}
+          >
             <img className="w-[42px] h-[42px]" src="wave.svg" alt="" />
-            <h3 className="md:text-[24px] text-[16px] font-[500] text-[#000202] mt-4">
+            <h3
+              className={`text-[#000202]
+               md:text-[24px] text-[16px] font-[500]  mt-4`}
+            >
               Human & AI Powered Skin Analysis
             </h3>
 
-            <div className="text-[#8F918F] md:text-[18px] text-[12px] font-[400] mt-4">
+            <div
+              className={` text-[#8F918F]
+                md:text-[18px] text-[12px] font-[400] mt-4`}
+            >
               Deeply analyze your customer’s face in 90 seconds, inclusive of
               skin tone and texture, detecting skin concerns like
               hyperpigmentation, sunburn, dryness, acne, darks spots, and more,
               ensuring precise and reliable insights
             </div>
           </div>
-          <div className="rounded-[24px] flex flex-col bg-white  md:h-[270px] h-[227px] p-8">
+          <div className="rounded-[24px] flex flex-col bg-white  md:h-[270px]  p-6">
             <img className="w-[42px] h-[42px]" src="curvedArrow.svg" alt="" />
             <h3 className="md:text-[24px] text-[16px] font-[500] text-[#000202] mt-4">
               Personalized Product Suggestions
@@ -225,7 +248,7 @@ export default function Home() {
               satisfaction.
             </div>
           </div>
-          <div className="rounded-[24px] flex flex-col bg-white  md:h-[270px] h-[227px] p-8">
+          <div className="rounded-[24px] flex flex-col bg-white  md:h-[270px]  p-6">
             <img className="w-[42px] h-[42px]" src="barcode.svg" alt="" />
             <h3 className="md:text-[24px] text-[16px] font-[500] text-[#000202] mt-4">
               QR Code Access to Results
@@ -237,7 +260,7 @@ export default function Home() {
               and memorable in-store experience.
             </div>
           </div>
-          <div className="rounded-[24px] flex flex-col bg-white  md:h-[270px] h-[227px] p-8">
+          <div className="rounded-[24px] flex flex-col bg-white  md:h-[270px]  p-6">
             <img className="w-[42px] h-[42px]" src="integration.svg" alt="" />
             <h3 className="md:text-[24px]  text-[16px] font-[500] text-[#000202] mt-4">
               Seamless Brand Integration
@@ -360,7 +383,7 @@ export default function Home() {
           What other brands are saying
         </h1>
         <div className="flex md:flex-row flex-col  gap-6 w-[100%] ">
-          <div className="rounded-[24px] bg-[#FAFAFA] h-[220px] md:w-[384px] w-[100%] p-6 flex flex-col justify-between text-center">
+          <div className="rounded-[24px] bg-[#FAFAFA] md:h-[220px] md:w-[384px] md:gap-0  gap-4 w-[100%] p-6 flex flex-col justify-between text-center">
             <div className="text-[#8A938F] md:text-[16px] text-[14px] font-[500]">
               This app has completely transformed our in-store experience.
               Customers love the personalized recommendations, and we’ve seen a
@@ -373,7 +396,7 @@ export default function Home() {
               </span>
             </div>
           </div>
-          <div className="rounded-[24px] bg-[#FAFAFA] h-[220px] md:w-[384px] w-[100%] p-6 flex flex-col justify-between text-center">
+          <div className="rounded-[24px] bg-[#FAFAFA] md:h-[220px] md:w-[384px] w-[100%] md:gap-0  gap-4 p-6 flex flex-col justify-between text-center">
             <div className="text-[#8A938F] md:text-[16px] text-[14px] font-[500]">
               This app has completely transformed our in-store experience.
               Customers love the personalized recommendations, and we’ve seen a
@@ -386,7 +409,7 @@ export default function Home() {
               </span>
             </div>
           </div>
-          <div className="rounded-[24px] bg-[#FAFAFA] h-[220px] md:w-[384px] w-[100%] p-6 flex flex-col justify-between text-center">
+          <div className="rounded-[24px] bg-[#FAFAFA] md:h-[220px] md:w-[384px] w-[100%] md:gap-0  gap-4 p-6 flex flex-col justify-between text-center">
             <div className="text-[#8A938F] md:text-[16px] text-[14px] font-[500]">
               This app has completely transformed our in-store experience.
               Customers love the personalized recommendations, and we’ve seen a
@@ -399,7 +422,7 @@ export default function Home() {
               </span>
             </div>
           </div>
-          <div className="rounded-[24px] bg-[#FAFAFA] h-[220px] md:w-[384px] w-[100%] p-6 flex flex-col justify-between text-center">
+          <div className="rounded-[24px] bg-[#FAFAFA] md:h-[220px] md:w-[384px] w-[100%] md:gap-0  gap-4 p-6 flex flex-col justify-between text-center">
             <div className="text-[#8A938F] md:text-[16px] text-[14px] font-[500]">
               This app has completely transformed our in-store experience.
               Customers love the personalized recommendations, and we’ve seen a

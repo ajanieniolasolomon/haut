@@ -16,6 +16,7 @@ export default function RootLayout({ children }) {
         {/* Add the Head component */}
         <title>Demicare</title> {/* Optional: Set the title here */}
         <link rel="icon" href="/favicon.ico" /> {/* Path to your favicon */}
+        <link href='https://fonts.googleapis.com/css?family=Lexend' rel='stylesheet'></link>
         {/* other meta tags can be added here */}
       </Head>
       <body className={inter.className}>

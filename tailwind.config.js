@@ -6,6 +6,9 @@ export const content = [
 ];
 export const theme = {
   extend: {
+    fontFamily: {
+      lexend: ["Lexend", "sans-serif"], // 'Lexend' is the name you'll use in your HTML
+    },
     colors: {
       primary: "#100B6E",
       secondary: "#7976AA",
