@@ -1,5 +1,6 @@
 "use client";
 import FAQ from "@/components/FrequentlyAskedQuestions";
+import ImageSlider from "@/components/ImageSlider";
 import Typewriter from "@/components/Typewriter";
 
 import React, { useState } from "react";
@@ -12,6 +13,10 @@ export default function Home() {
   const subText =
     "Personalized skincare recommendations powered by human and advanced AI technology.";
   const [subtextStarted, setSubtextStarted] = useState(false);
+  const [div1Hovered, setDiv1Hovered] = useState(false);
+  const [div2Hovered, setDiv2Hovered] = useState(false);
+  const [div3Hovered, setDiv3Hovered] = useState(false);
+  const [div4Hovered, setDiv4Hovered] = useState(false);
 
   // console.log(hovered)
   return (
@@ -45,7 +50,8 @@ export default function Home() {
 
       {/* Second Div */}
       <div className="p-[5%]    relative">
-        <div className="relative ">
+        <ImageSlider />
+        {/* <div className="relative ">
           <img
             className="w-[100%] rounded-[24px] md:h-full h-[231px]"
             src="lab.png"
@@ -55,7 +61,7 @@ export default function Home() {
         </div>
         <p className="text-white md:text-[128px] text-[45px] md:w-[784px] w-[276px] text-center font-[800] absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
           Welcome to Innovation!
-        </p>
+        </p> */}
       </div>
 
       {/* Third Div */}
@@ -86,7 +92,7 @@ export default function Home() {
         <div className="md:flex   mt-8 md:h-[677px] h-full  md:justify-between w-[100%] gap-[3%]  ">
           <div className=" border md:w-[60%] w-[100%] rounded-[24px] flex flex-col relative justify-center items-center bg-white">
             <img src="analysis.svg" />
-            <div className="border rounded-b-[24px] md:h-[174px]  w-[100%] absolute bg-white bottom-0 p-6 ">
+            <div className="border rounded-b-[24px] h-auto  w-[100%] absolute bg-white bottom-0 p-6 ">
               <h3 className="md:text-[24px] text-[16px] font-[600]">
                 Skin Analysis Results
               </h3>
@@ -115,7 +121,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="w-[100%] md:flex   my-2 md:h-[401px] h-full gap-[3%] mt-8">
+        <div className="w-[100%] md:flex   my-2  h-full gap-[3%] mt-8">
           <div className="md:w-[50%] w-[100%] rounded-[24px] bg-white border p-6">
             <h3 className="text-[24px] font-[600] text-[#000202]">
               Email Marketing
@@ -130,9 +136,9 @@ export default function Home() {
               <img src="marketing.svg" alt="" />
             </div>
           </div>
-          <div className="md:w-[50%] w-[100%] rounded-[24px] h-full bg-white border md:mt-0 mt-6 flex flex-col items-center p-6 relative">
+          <div className="md:w-[50%] w-[100%] rounded-[24px] h-auto bg-white border md:mt-0 mt-6 flex flex-col items-center p-6 relative">
             <img src="analytic.svg" alt="" />
-            <div className="border rounded-b-[24px] p-6 md:h-[172px]  absolute bottom-0 w-[100%] bg-white">
+            <div className="border rounded-b-[24px] p-6 h-auto absolute bottom-0 w-[100%] bg-white">
               <h3 className="md:text-[24px] text-[16px] font-[600] text-[#000202]">
                 Analytic Dashboard
               </h3>
@@ -146,10 +152,10 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="w-[100%] mt-8 bg-white flex  md:p-0 p-[5%] md:items-center justify-center md:h-[600px] h-[400px] border rounded-[24px] relative">
-          <img src="products.svg" className="" alt="" />
+        <div className="w-[100%] mt-8 bg-white flex  md:p-0 p-[5%]  justify-center md:items-center items-start  md:h-[600px] h-[332px] border rounded-[24px] relative">
+          <img src="products.svg" className="  " alt="" />
 
-          <div className="absolute bottom-0 p-6 md:h-[188px] w-[100%] bg-white rounded-b-[24px] border">
+          <div className="absolute bottom-0 p-6  h-auto w-[100%] bg-white rounded-b-[24px] border">
             <h3 className="md:text-[24px] text-[16px] font-[600] text-[#000202]">
               Product Registration
             </h3>
@@ -214,19 +220,27 @@ export default function Home() {
         </div>
         <div className="mt-8 grid md:grid-cols-2 grid-cols-1 gap-8 ">
           <div
-            className={` bg-white
+            onMouseEnter={() => setDiv1Hovered(true)}
+            onMouseLeave={() => setDiv1Hovered(false)}
+            className={` transition-colors duration-300 ${
+              div1Hovered ? "bg-secondary" : "bg-white"
+            } 
             rounded-[24px] flex flex-col   md:h-[270px]  p-6`}
           >
             <img className="w-[42px] h-[42px]" src="wave.svg" alt="" />
             <h3
-              className={`text-[#000202]
+              className={`transition-colors duration-300 ${
+                div1Hovered ? "text-white" : "text-[#000202]"
+              } 
                md:text-[24px] text-[16px] font-[500]  mt-4`}
             >
               Human & AI Powered Skin Analysis
             </h3>
 
             <div
-              className={` text-[#8F918F]
+              className={`transition-colors duration-300 ${
+                div1Hovered ? "text-white" : "text-[#8F918F]"
+              }  
                 md:text-[18px] text-[12px] font-[400] mt-4`}
             >
               Deeply analyze your customer’s face in 90 seconds, inclusive of
@@ -235,38 +249,80 @@ export default function Home() {
               ensuring precise and reliable insights
             </div>
           </div>
-          <div className="rounded-[24px] flex flex-col bg-white  md:h-[270px]  p-6">
+          <div
+            onMouseEnter={() => setDiv2Hovered(true)}
+            onMouseLeave={() => setDiv2Hovered(false)}
+            className={` transition-colors duration-300 ${
+              div2Hovered ? "bg-secondary" : "bg-white"
+            }  rounded-[24px] flex flex-col  md:h-[270px]  p-6`}
+          >
             <img className="w-[42px] h-[42px]" src="curvedArrow.svg" alt="" />
-            <h3 className="md:text-[24px] text-[16px] font-[500] text-[#000202] mt-4">
+            <h3
+              className={`transition-colors duration-300 ${
+                div2Hovered ? "text-white" : "text-[#000202]"
+              } md:text-[24px] text-[16px] font-[500]  mt-4`}
+            >
               Personalized Product Suggestions
             </h3>
 
-            <div className="text-[#8F918F] md:text-[18px] text-[12px] font-[400] mt-4">
+            <div
+              className={`transition-colors duration-300 ${
+                div2Hovered ? "text-white" : "text-[#8F918F]"
+              }  md:text-[18px] text-[12px] font-[400] mt-4`}
+            >
               Engage your customers with tailored product recommendations that
               meet their unique skincare needs and lifetime updates on their
               skincare journey. Build community, and boost sales and customer
               satisfaction.
             </div>
           </div>
-          <div className="rounded-[24px] flex flex-col bg-white  md:h-[270px]  p-6">
+          <div
+            onMouseEnter={() => setDiv3Hovered(true)}
+            onMouseLeave={() => setDiv3Hovered(false)}
+            className={`transition-colors duration-300 ${
+              div3Hovered ? "bg-secondary" : "bg-white"
+            } rounded-[24px] flex flex-col   md:h-[270px]  p-6`}
+          >
             <img className="w-[42px] h-[42px]" src="barcode.svg" alt="" />
-            <h3 className="md:text-[24px] text-[16px] font-[500] text-[#000202] mt-4">
+            <h3
+              className={`transition-colors duration-300 ${
+                div3Hovered ? "text-white" : "text-[#000202]"
+              }  md:text-[24px] text-[16px] font-[500]  mt-4`}
+            >
               QR Code Access to Results
             </h3>
 
-            <div className="text-[#8F918F] md:text-[18px] text-[12px] font-[400] mt-4">
+            <div
+              className={`transition-colors duration-300 ${
+                div3Hovered ? "text-white" : "text-[#8F918F]"
+              }  md:text-[18px] text-[12px] font-[400] mt-4`}
+            >
               A simple scan of a QR code lets customers view their analysis and
               recommended products on their mobile devices, ensuring a smooth
               and memorable in-store experience.
             </div>
           </div>
-          <div className="rounded-[24px] flex flex-col bg-white  md:h-[270px]  p-6">
+          <div
+            onMouseEnter={() => setDiv4Hovered(true)}
+            onMouseLeave={() => setDiv4Hovered(false)}
+            className={`transition-colors duration-300 ${
+              div4Hovered ? "bg-secondary" : "bg-white"
+            } rounded-[24px] flex flex-col   md:h-[270px]  p-6`}
+          >
             <img className="w-[42px] h-[42px]" src="integration.svg" alt="" />
-            <h3 className="md:text-[24px]  text-[16px] font-[500] text-[#000202] mt-4">
+            <h3
+              className={`transition-colors duration-300 ${
+                div4Hovered ? "text-white" : "text-[#000202]"
+              }  md:text-[24px]  text-[16px] font-[500]  mt-4`}
+            >
               Seamless Brand Integration
             </h3>
 
-            <div className="text-[#8F918F] md:text-[18px] text-[12px] font-[400] mt-4">
+            <div
+              className={`transition-colors duration-300 ${
+                div4Hovered ? "text-white" : "text-[#8F918F]"
+              }  md:text-[18px] text-[12px] font-[400] mt-4`}
+            >
               Our app effortlessly integrates with your skincare brand’s product
               line, matching analyzed skin concerns to your products for
               personalized and effective recommendations.
@@ -371,7 +427,7 @@ export default function Home() {
         <p className="text-white font-[500] md:text-[24px] text-[14px] md:w-[575px] w-[249px] text-center absolute md:top-[63%] top-[50%] mt-4 left-[50%] translate-x-[-50%] translate-y-[-50%]">
           Transform your skincare routine with human and artificial intelligence
         </p>
-        <button className="md:top-[75%] top-[75%] font-[200] text-[18px] md:w-[260px] w-[177px] md:h-[56px] h-[48px] text-white absolute left-[50%] translate-x-[-50%] translate-y-[-50%] bg-secondary rounded-[30px]">
+        <button className="md:top-[78%] top-[75%] font-[200] text-[18px] md:w-[260px] w-[177px] md:h-[56px] h-[48px] text-white absolute left-[50%] translate-x-[-50%] translate-y-[-50%] bg-secondary rounded-[30px]">
           Request Demo
         </button>
       </div>
@@ -383,7 +439,7 @@ export default function Home() {
           What other brands are saying
         </h1>
         <div className="flex md:flex-row flex-col  gap-6 w-[100%] ">
-          <div className="rounded-[24px] bg-[#FAFAFA] md:h-[220px] md:w-[384px] md:gap-0  gap-4 w-[100%] p-6 flex flex-col justify-between text-center">
+          <div className="rounded-[24px] bg-[#FAFAFA]  md:w-[384px] md:gap-0  gap-4 w-[100%] p-6 flex flex-col justify-between text-center">
             <div className="text-[#8A938F] md:text-[16px] text-[14px] font-[500]">
               This app has completely transformed our in-store experience.
               Customers love the personalized recommendations, and we’ve seen a
@@ -396,7 +452,7 @@ export default function Home() {
               </span>
             </div>
           </div>
-          <div className="rounded-[24px] bg-[#FAFAFA] md:h-[220px] md:w-[384px] w-[100%] md:gap-0  gap-4 p-6 flex flex-col justify-between text-center">
+          <div className="rounded-[24px] bg-[#FAFAFA]  md:w-[384px] w-[100%] md:gap-0  gap-4 p-6 flex flex-col justify-between text-center">
             <div className="text-[#8A938F] md:text-[16px] text-[14px] font-[500]">
               This app has completely transformed our in-store experience.
               Customers love the personalized recommendations, and we’ve seen a
@@ -409,7 +465,7 @@ export default function Home() {
               </span>
             </div>
           </div>
-          <div className="rounded-[24px] bg-[#FAFAFA] md:h-[220px] md:w-[384px] w-[100%] md:gap-0  gap-4 p-6 flex flex-col justify-between text-center">
+          <div className="rounded-[24px] bg-[#FAFAFA] md:w-[384px] w-[100%] md:gap-0  gap-4 p-6 flex flex-col justify-between text-center">
             <div className="text-[#8A938F] md:text-[16px] text-[14px] font-[500]">
               This app has completely transformed our in-store experience.
               Customers love the personalized recommendations, and we’ve seen a
@@ -422,7 +478,7 @@ export default function Home() {
               </span>
             </div>
           </div>
-          <div className="rounded-[24px] bg-[#FAFAFA] md:h-[220px] md:w-[384px] w-[100%] md:gap-0  gap-4 p-6 flex flex-col justify-between text-center">
+          <div className="rounded-[24px] bg-[#FAFAFA]  md:w-[384px] w-[100%] md:gap-0  gap-4 p-6 flex flex-col justify-between text-center">
             <div className="text-[#8A938F] md:text-[16px] text-[14px] font-[500]">
               This app has completely transformed our in-store experience.
               Customers love the personalized recommendations, and we’ve seen a
@@ -440,7 +496,6 @@ export default function Home() {
 
       {/* Ninth Div */}
       <div className=" bg-white p-[5%] mt-6">
-        {/* <h4 className="text-[40px]"> We know your skin</h4> */}
         <FAQ />
       </div>
 

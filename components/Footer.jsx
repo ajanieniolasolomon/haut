@@ -7,7 +7,7 @@ export default function Footer() {
     <div className="  bg-primary  md:h-[400px] h-full px-[5%] py-[2%]    flex flex-col">
       <div className="  md:h-[380px] h-full gap-6 grid md:grid-cols-5 grid-cols-2">
         <div className=" flex flex-col gap-6 md:col-span-1 col-span-2">
-          <div className="">
+          <div className=" md:m-0 m-auto">
             <img src={"/logo2.svg"} alt="" className="w-[100px]" />
             {/* <p className="text-[24px] font-[500] text-white ">Demi Care</p> */}
           </div>

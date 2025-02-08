@@ -42,23 +42,29 @@ export default function FAQ() {
         {faqData.map((faq, index) => (
           <Disclosure key={index}>
             {({ open }) => (
-              <div className="border border-secondary rounded-[24px] shadow-sm md:w-[744px] w-[100%] md:mx-auto mx-0 overflow-hidden">
-                <DisclosureButton className="flex justify-between w-full px-4 py-3 text-left md:text-[24px] text-[16px] font-[500]   ">
+              <div className="border border-[#9FC3CE] rounded-[24px] shadow-sm md:w-[744px] w-[100%] md:mx-auto mx-0 overflow-hidden">
+                <DisclosureButton className="flex justify-between md:items-center items-start w-full p-4  text-left md:text-[24px] text-[16px] font-[500]   ">
                   {faq.question}
 
-                  {open && (
-                    <MinusCircleIcon
-                      className={`md:w-[48px] w-[24px] md:h-[48px] h-[24px] fill-primary  transition-transform `}
-                    />
-                  )}
-
-                  {!open && (
-                    <PlusCircleIcon
-                      className={`md:w-[48px] w-24px] md:h-[48px] h-[24px] fill-primary  transition-transform `}
-                    />
-                  )}
+                  <div
+                    className={`transition-transform duration-300 ${
+                      open ? "rotate-180" : ""
+                    }`}
+                  >
+                    {" "}
+                    {/* Icon Rotation */}
+                    {open ? (
+                      <MinusCircleIcon
+                        className={`md:w-[48px] w-[24px] md:h-[48px] h-[24px] fill-primary`}
+                      />
+                    ) : (
+                      <PlusCircleIcon
+                        className={`md:w-[48px] w-[24px] md:h-[48px] h-[24px] fill-primary`}
+                      />
+                    )}
+                  </div>
                 </DisclosureButton>
-                <DisclosurePanel className="px-4 py-2 text-[#8A938F] font-[400] md:text-[16px] text-[12px] bg-white transition-all duration-300 ">
+                <DisclosurePanel  className="p-6 text-[#8A938F] font-[400] md:text-[16px] text-[12px] bg-white transition-all duration-300 ease-in-out overflow-hidden ">
                   {faq.answer}
                 </DisclosurePanel>
               </div>

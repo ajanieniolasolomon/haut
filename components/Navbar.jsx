@@ -29,7 +29,7 @@ export default function Navbar() {
         </li>
       </ul>
       <div className="md:block hidden">
-        <button className="border w-[165px] py-2 rounded-full text-white bg-primary">
+        <button className="border w-[165px] py-2 font-[200] rounded-full text-white bg-primary">
           Contact Us
         </button>
       </div>

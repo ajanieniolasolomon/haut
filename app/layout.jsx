@@ -4,7 +4,7 @@ import { Inter } from "next/font/google";
 import "../styles/globals.css";
 import React from "react";
 import Footer from "@/components/Footer";
-import  Head  from "next/head";
+import Head from "next/head";
 const inter = Inter({ subsets: ["latin"] });
 
 // eslint-disable-next-line react/prop-types
@@ -16,8 +16,11 @@ export default function RootLayout({ children }) {
         {/* Add the Head component */}
         <title>Demicare</title> {/* Optional: Set the title here */}
         <link rel="icon" href="/favicon.ico" /> {/* Path to your favicon */}
-        <link href='https://fonts.googleapis.com/css?family=Lexend' rel='stylesheet'></link>
-        {/* other meta tags can be added here */}
+        <link
+          href="https://fonts.googleapis.com/css?family=Lexend"
+          rel="stylesheet"
+        ></link>
+        
       </Head>
       <body className={inter.className}>
         {/* Layout UI */}
