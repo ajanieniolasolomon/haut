@@ -35,7 +35,7 @@ export default function Navbar() {
       </div>
       <div // Changed to a div for better animation control
         className={`md:hidden  absolute top-0  left-0 w-full bg-white p-4 transition-transform duration-300 ${
-          isOpen ? "translate-y-0 top-[70px]" : "-translate-y-full " // Added translate for animation
+          isOpen ? "translate-y-0 top-[70px]" : "-translate-y-full " 
         } `}
       >
         <ul className="space-y-4">
