@@ -174,7 +174,7 @@ export default function Home() {
               Terminal Setup
             </h3>
             <div className="md:text-[18px] text-[12px] font-[400] text-[#8F918F] mt-4">
-            Create immersive experiences with our terminals to provide seamless user skin analysis. Personalized recommendations at the point of interaction while being inclusive of the user's skin tone, type, and texture.
+            Create immersive experiences with our terminals to provide seamless user skin analysis. Personalized recommendations at the point of interaction while being inclusive of the {`user's`}  skin tone, type, and texture.
             </div>
 
             <div className="w-[100%] flex items-center  justify-center mt-6">
