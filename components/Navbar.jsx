@@ -9,6 +9,11 @@ export default function Navbar() {
     setIsOpen(!isOpen);
   };
 
+
+    const handleEmailClick = () => {
+      window.location.href = "mailto:info@demicare.kin";
+    }
+
   return (
     <nav
       className={`md:fixed relative top-0 left-0 right-0 bg-white border w-[100%] flex justify-between items-center px-[5%] py-6 z-10 transition-all duration-300`} // Added transition
@@ -29,7 +34,7 @@ export default function Navbar() {
         </li>
       </ul>
       <div className="md:block hidden">
-        <button className="border w-[165px] py-2 font-[200] rounded-full text-white bg-primary">
+        <button onClick={handleEmailClick} className="border w-[165px] py-2 font-[200] rounded-full text-white bg-primary">
           Contact Us
         </button>
       </div>
@@ -52,8 +57,8 @@ export default function Navbar() {
             </Link>
           </li>
           <li>
-            <Link href="/contact">
-              <p className="hover:text-[#3c69d6] text-black">Contact</p>
+            <Link href="/">
+              <p onClick={handleEmailClick} className="hover:text-[#3c69d6] text-black">Contact</p>
             </Link>
           </li>
         </ul>

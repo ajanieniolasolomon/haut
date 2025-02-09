@@ -8,12 +8,12 @@ const faqData = [
   {
     question: "How does the AI skin analysis work?",
     answer:
-      "Our AI uses advanced facial recognition technology to scan your selfie, analyzing key factors like hydration, texture, and fine lines. It delivers instant insights to help you understand your skin better and create a customized routine.",
+     "Our AI uses advanced facial recognition technology to scan your selfie, analyzing key factors like hyperpigmentation, acne, sunburn, fine lines, and other skin issues. It delivers instant insights to help you understand your skin better and create a customized routine."
   },
   {
     question: "Will the AI recommendations suit my skin type?",
     answer:
-      "Absolutely! Our AI is designed to provide tailored product and routine suggestions based on your unique skin profile, ensuring compatibility with your specific skin type and needs.",
+      "Absolutely! Our AI is designed to provide tailored products and routines based on your skin profile, backed by a licensed aesthetician and our medical team, ensuring compatibility with your specific skin type and needs."
   },
   {
     question: "Can I track my skincare progress over time?",
