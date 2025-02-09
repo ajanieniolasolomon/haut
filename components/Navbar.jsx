@@ -11,7 +11,7 @@ export default function Navbar() {
 
 
     const handleEmailClick = () => {
-      window.location.href = "mailto:info@demicare.kin";
+      window.location.href = "mailto:info@demicare.skin";
     }
 
   return (

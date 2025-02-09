@@ -4,7 +4,7 @@ import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 export default function Footer() {
   return (
-    <div className="  bg-primary  md:h-[400px] h-full px-[5%] py-[2%]    flex flex-col">
+    <div className="  bg-primary  md:h-[400px] h-full px-[5%] py-[2%]    flex flex-col ">
       <div className="  md:h-[380px] h-full gap-6 grid md:grid-cols-5 grid-cols-2">
         <div className=" flex flex-col gap-6 md:col-span-1 col-span-2">
           <div className=" md:m-0 m-auto">
