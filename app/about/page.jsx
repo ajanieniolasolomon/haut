@@ -17,15 +17,15 @@ export default function AboutPage() {
           <h1 className="capitalize font-lexend text-[#3A3A3A] text-[42px] font-[700] md:text-start text-center">
             Who we Are
           </h1>
-          <div className="text-[#4B4F58] md:text-[16px] text-[12px] font-[400] md:text-start text-center">
-            Revolutionizing Skincare with AlPrecision at Demi Care, we believe
+          <div className="text-[#4B4F58] md:text-[16px] text-[12px] font-[400] md:text-justify text-justify ">
+            Revolutionizing Skincare with Al Precision.<br /> <br />At Demi Care, we believe
             that everyone deserves effective solutions tailored to their unique
             skin needs and lifestyle. Our mission is to revolutionize skincare
             experiences by combining cutting-edge Al technology with
-            industry-leading skincare experts.This innovative solution designed
+            industry-leading skincare experts.<br /> <br />This innovative solution designed
             helps brands connect with their customers on a deeper level,
             offering real time deep skin analysis and personalized
-            recommendations through their skincare journey.With our app, we're
+            recommendations through their skincare journey.<br /> <br />With our app, we're
             not just enhancing customer satisfaction but also driving meaningful
             sales for skincare brands, helping build a community of real people
             and brand engagement.
