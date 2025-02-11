@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";
@@ -27,9 +28,9 @@ export default function Footer() {
           <h3 className="text-[14px] text-white font-[200] opacity-[40%] capitalize">
             Company
           </h3>
-          <p className="text-[14px] text-white font-[500] opacity-[80%] capitalize">
+          <Link href="/about" className="text-[14px] text-white font-[500] opacity-[80%] capitalize">
             About Us
-          </p>
+          </Link>
           <p className="text-[14px] text-white font-[500] opacity-[80%] capitalize">
             Our Service
           </p>
@@ -41,15 +42,24 @@ export default function Footer() {
           <h3 className="text-[14px] text-white font-[200] opacity-[40%] capitalize">
             Legal
           </h3>
-          <p className="text-[14px] text-white font-[500] opacity-[80%] capitalize">
+          <Link href="/terms" className="text-[14px] text-white font-[500] opacity-[80%] capitalize">
             Terms and Conditions
-          </p>
+          </Link>
         </div>
         <div className=" flex flex-col gap-6">
           <h3 className="text-[14px] text-white font-[200] opacity-[40%] capitalize">
             Social Media
           </h3>
-          <p className="text-[14px] text-white font-[500] flex gap-2 items-center opacity-[80%] capitalize">
+          <p
+            onClick={() =>
+              window.open(
+                "https://www.instagram.com/demicareng",
+                "_blank",
+                "noopener,noreferrer"
+              )
+            }
+            className="text-[14px] text-white font-[500] flex gap-2 items-center opacity-[80%] capitalize"
+          >
             <FaInstagram size={24} />
             <span>Instagram</span>
           </p>

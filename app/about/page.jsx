@@ -36,24 +36,29 @@ export default function AboutPage() {
         </div>
       </div>
 
-      <div className="bg-white p-[5%] w-[100%]  grid md:grid-cols-2">
-        <div className="border-l-1 border-b-0 border-t-0 border-r-0 border p-6 flex flex-col gap-4 items-center">
-          <h4 className="text-[26px] text-black">Mission</h4>
+      <div className="bg-white p-[5%] w-[100%]  grid ">
+        <div className="border-l-1 border-b-0 border-t-0 border-r-0 border p-6 flex flex-col gap-4 ">
+          <h4 className="text-[26px] text-center text-black">Our Goal</h4>
           <div className="md:text-[16px] text-[12px] text-[#4B4F58]">
-            Our mission is to empower businesses in the skincare industry by
-            providing resources and innovative solutions that build trust,
-            enhance services, and deliver exceptional results for people of
-            color
+            We want you to discover the secrets of your skin with AI- powered
+            insights backed by aestheticians and medical experts within seconds.
+          </div>
+          <div className="md:text-[16px] text-[12px] text-[#4B4F58]">
+            Empower you to feel confident in your skin by helping you find the
+            perfect match for your skin type and concerns with brands and
+            products customized to your specific needs while being inclusive of
+            all skin tones, types, and textures.
           </div>
         </div>
-        <div className="border-l-1 border-b-0 border-t-0 border-r-0 border p-6 flex flex-col gap-4  items-center">
+        {/* <div className="border-l-1 border-b-0 border-t-0 border-r-0 border p-6 flex flex-col gap-4  items-center">
           <h4 className="text-[26px] text-black">Vision</h4>
           <div className="md:text-[16px] text-[12px] text-[#4B4F58]">
-            Our vision is to become the trusted authority in uncovering
-            innovative research and solutions that empowers the brands we
-            collaborate with.
+            Empower you to feel confident in your skin by helping you find the
+            perfect match for your skin type and concerns with brands and
+            products customized to your specific needs while being inclusive of
+            all skin tones, types, and textures.
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );

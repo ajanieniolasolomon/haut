@@ -45,7 +45,7 @@ export default function Home() {
         </h6>
         <div className="mt-12">
           <a
-            href="https://apps.apple.com/ng/app/tellei/id6478509541"
+            href="#"
             className="bg-secondary text-white font-[200] rounded-full py-4 px-12 "
           >
             Request a Demo
