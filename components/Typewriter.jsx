@@ -1,9 +1,6 @@
-/* eslint-disable react/prop-types */
-"use client"
 import React, { useState, useEffect, useRef } from "react";
 
 const Typewriter = ({ text, speed = 50, delay = 0, onComplete }) => {
-  // Add onComplete callback
   const [displayedText, setDisplayedText] = useState("");
   const [currentIndex, setCurrentIndex] = useState(0);
   const [cursorVisible, setCursorVisible] = useState(true);
@@ -16,35 +13,37 @@ const Typewriter = ({ text, speed = 50, delay = 0, onComplete }) => {
         setCurrentIndex(currentIndex + 1);
       } else {
         clearTimeout(timeoutRef.current);
-        setCursorVisible(false); // Hide cursor when typing is done
+        setCursorVisible(false);
         if (onComplete) {
-          onComplete(); // Call the callback when typing is finished
+          onComplete();
         }
       }
     }, speed);
 
     return () => clearTimeout(timeoutRef.current);
-  }, [currentIndex, text, speed, onComplete]); // Add onComplete to dependency array
+  }, [currentIndex, text, speed, onComplete]);
 
   useEffect(() => {
     if (delay > 0) {
       const initialTimeout = setTimeout(() => {
-        setCurrentIndex(0); // Start typing after the delay
-        setCursorVisible(true); // Show cursor after the delay
+        setCurrentIndex(0);
+        setCursorVisible(true);
       }, delay);
 
       return () => clearTimeout(initialTimeout);
     } else {
-      setCurrentIndex(0); // Start typing immediately
-      setCursorVisible(true); // Show cursor immediately
+      setCurrentIndex(0);
+      setCursorVisible(true);
     }
   }, [text, delay]);
 
+  const formattedText = displayedText.replace(
+    /90 secs/g,
+    "<span class='text-secondary'>90 secs</span>"
+  );
+
   return (
-    <span className="typewriter">
-      {displayedText}
-      {cursorVisible && <span className="cursor">|</span>}
-    </span>
+    <span className="typewriter" dangerouslySetInnerHTML={{ __html: formattedText }} />
   );
 };
 

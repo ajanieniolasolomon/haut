@@ -9,7 +9,7 @@ import React, { useState } from "react";
 // import supportedByImages from "@/data/supportedBy";
 
 export default function Home() {
-  const textToType = "Discover the secrets of your skin in 90 secs";
+  const textToType = "Discover the secrets of your skin in  90 secs";
   const subText =
     "Personalized skincare recommendations powered by human and advanced AI technology.";
   const [subtextStarted, setSubtextStarted] = useState(false);
@@ -22,14 +22,11 @@ export default function Home() {
   return (
     <div className=" ">
 
-      
-          <div className="p-[5%] md:mt-20 mt-0   relative">
-        <ImageSlider />
-      </div>
+ 
 
-      <div className=" bg-white  to-[#e9e6ff]  md:h-[55vh]  h-[40vh] justify-center  flex flex-col  items-center ">
+      <div className=" bg-white  to-[#e9e6ff]  md:h-[55vh]  h-[30vh] justify-center  mt-12 md:mb-2 mb-12   flex flex-col  items-center ">
         <div className="text-center md:px-4 px-0  md:w-[1074px] w-[327px]">
-          <h1 className="md:text-[63px] text-[24px] text-[#282828] capitalize  font-[700] font-lexend">
+          <h1 className="md:text-[63px] text-[33px] text-[#282828] capitalize  font-[700] font-lexend">
             <Typewriter
               text={textToType}
               speed={30}
@@ -51,6 +48,11 @@ export default function Home() {
             Request a Demo
           </a>
         </div>
+      </div>
+
+           
+      <div className="p-[5%] md:mt-20 mt-0   relative">
+        <ImageSlider />
       </div>
 
       <div className="bg-white w-[100%] p-[5%] flex flex-col">
