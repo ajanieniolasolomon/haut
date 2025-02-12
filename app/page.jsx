@@ -26,7 +26,7 @@ export default function Home() {
 
       <div className=" bg-white  to-[#e9e6ff]  md:h-[55vh]  h-[30vh] justify-center  mt-12 md:mb-2 mb-12   flex flex-col  items-center ">
         <div className="text-center md:px-4 px-0  md:w-[1074px] w-[327px]">
-          <h1 className="md:text-[63px] text-[33px] text-[#282828] capitalize  font-[700] font-lexend">
+          <h1 className="md:text-[63px] text-[34px] tracking-tight text-[#282828] capitalize  font-[700] font-lexend">
             <Typewriter
               text={textToType}
               speed={30}
@@ -35,7 +35,7 @@ export default function Home() {
             />
           </h1>
         </div>
-        <h6 className="w-[327px] md:w-[822px] text-center text-gray-500 md:text-[20px] text-[14px] ">
+        <h6 className="w-[327px] md:w-[822px] text-center mt-6 text-gray-500 md:text-[20px] text-[14px] ">
           {subtextStarted && ( // Conditionally render subtext Typewriter
             <Typewriter text={subText} speed={20} delay={0} /> // No initial delay
           )}
