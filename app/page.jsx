@@ -24,7 +24,7 @@ export default function Home() {
 
  
 
-      <div className=" bg-white  to-[#e9e6ff]   justify-center  h-full  md:mt-[100px] mb-6  flex flex-col  items-center ">
+      <div className=" bg-white  to-[#e9e6ff]   justify-center  md:h-[540px] h-[393px]  md:mt-[100px] mb-6  flex flex-col  items-center ">
         <div className="mb-[16px] text-center md:px-4 px-0  md:w-[1074px] w-[327px]">
           <h1 className="md:text-[63px] text-[34px] tracking-[-0.75px] text-[#282828] capitalize  font-[700] font-lexend">
             <Typewriter
@@ -51,7 +51,7 @@ export default function Home() {
       </div>
 
            
-      <div className="p-[5%] md:mt-20 mt-0   relative">
+      <div className="p-[5%]    relative">
         <ImageSlider />
       </div>
 
