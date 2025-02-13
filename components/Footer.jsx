@@ -58,7 +58,7 @@ export default function Footer() {
                 "noopener,noreferrer"
               )
             }
-            className="text-[14px] text-white font-[500] flex gap-2 items-center opacity-[80%] capitalize"
+            className="text-[14px] cursor-pointer text-white font-[500] flex gap-2 items-center opacity-[80%] capitalize"
           >
             <FaInstagram size={24} />
             <span>Instagram</span>
