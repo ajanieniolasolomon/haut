@@ -22,9 +22,6 @@ export default function Home() {
   // console.log(hovered)
   return (
     <div className=" ">
-
- 
-
       <div className="  relative     justify-center  md:h-[540px] h-[393px]  md:mt-[100px] mb-6  flex flex-col  items-center ">
         <div className="mb-[16px] z-10 text-center md:px-4 px-0  md:w-[1074px] w-[327px]">
           <h1 className="md:text-[63px] text-[34px] tracking-[-0.75px] text-[#282828] capitalize  font-[700] font-lexend">
@@ -44,17 +41,14 @@ export default function Home() {
         <div className="z-10">
           <a
             href="#"
-            className="bg-secondary text-white font-[200] rounded-full py-4 px-12 "
+            className="bg-secondary transition-colors duration-300 hover:bg-primary text-white font-[200] rounded-full py-4 px-12 "
           >
             Request a Demo
           </a>
         </div>
-      <AnimatedGridPattern/>
+        <AnimatedGridPattern />
       </div>
 
-
-
-           
       <div className="p-[5%]    relative">
         <ImageSlider />
       </div>
@@ -135,12 +129,10 @@ export default function Home() {
         </div>
       </div>
 
-  
-
       <div className="  h-full mt-[100px] md:gap-0 gap-6 bg-[#FAFAFA] py-[5%]  px-[5%] ">
         <div className="flex  justify-center w-[100%] ">
           <button className="border border-[#8A938F] text-[#8A938F] text-[16px] px-2 rounded-[30px]">
-            For  Brands
+            For Brands
           </button>
         </div>
 
@@ -180,7 +172,10 @@ export default function Home() {
               Terminal Setup
             </h3>
             <div className="md:text-[18px] text-[12px] font-[400] text-[#8F918F] mt-4">
-            Create immersive experiences with our terminals to provide seamless user skin analysis. Personalized recommendations at the point of interaction while being inclusive of the {`user's`}  skin tone, type, and texture.
+              Create immersive experiences with our terminals to provide
+              seamless user skin analysis. Personalized recommendations at the
+              point of interaction while being inclusive of the {`user's`} skin
+              tone, type, and texture.
             </div>
 
             <div className="w-[100%] flex items-center  justify-center mt-6">
@@ -225,18 +220,20 @@ export default function Home() {
 
           <div className="absolute bottom-0 p-6  h-auto w-[100%] bg-white rounded-b-[24px] border">
             <h3 className="md:text-[24px] text-[16px] font-[600] text-[#000202]">
-            Product Integration
+              Product Integration
             </h3>
             <div className="text-[#8F918F] md:text-[18px] text-[12px] mt-4">
-            Add, update, and manage your products effortlessly with the portal, ensuring your offerings match tailored skin concerns and are ready for users to explore. 
-            Keep everything organized in one central place.
+              Add, update, and manage your products effortlessly with the
+              portal, ensuring your offerings match tailored skin concerns and
+              are ready for users to explore. Keep everything organized in one
+              central place.
             </div>
           </div>
         </div>
       </div>
 
       {/* Fourth div */}
-{/* 
+      {/* 
       <div className="w-[100%] md:flex mt-6 bg-white p-[5%] ">
         <div className="md:w-[50%] ">
           <img
@@ -281,8 +278,8 @@ export default function Home() {
             Boost Sales Effortlessly
           </h3>
           <div className="text-[#8A938F] font-[400] text-center md:w-[826px] w-[337px] md:text-[24px] text-[14px] ">
-            Build a community around your brand, and Engagement
-            that converts to sales.
+            Build a community around your brand, and Engagement that converts to
+            sales.
           </div>
         </div>
         <div className="mt-8 grid md:grid-cols-2 grid-cols-1 gap-8 ">
@@ -400,8 +397,6 @@ export default function Home() {
       {/* <SimpleSlider images={pharmaceuticalImages} /> */}
 
       {/* sixth div */}
-
-     
 
       {/* Seventh Div */}
 
