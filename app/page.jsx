@@ -1,6 +1,7 @@
 "use client";
 import FAQ from "@/components/FrequentlyAskedQuestions";
 import ImageSlider from "@/components/ImageSlider";
+import { AnimatedGridPattern } from "@/components/magicui/animated-grid-pattern";
 import Typewriter from "@/components/Typewriter";
 
 import React, { useState } from "react";
@@ -24,7 +25,7 @@ export default function Home() {
 
  
 
-      <div className=" bg-white  to-[#e9e6ff]   justify-center  md:h-[540px] h-[393px]  md:mt-[100px] mb-6  flex flex-col  items-center ">
+      <div className=" bg-white relative  to-[#e9e6ff]   justify-center  md:h-[540px] h-[393px]  md:mt-[100px] mb-6  flex flex-col  items-center ">
         <div className="mb-[16px] text-center md:px-4 px-0  md:w-[1074px] w-[327px]">
           <h1 className="md:text-[63px] text-[34px] tracking-[-0.75px] text-[#282828] capitalize  font-[700] font-lexend">
             <Typewriter
@@ -48,7 +49,10 @@ export default function Home() {
             Request a Demo
           </a>
         </div>
+      <AnimatedGridPattern/>
       </div>
+
+
 
            
       <div className="p-[5%]    relative">
