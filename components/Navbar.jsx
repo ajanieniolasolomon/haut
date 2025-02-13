@@ -16,7 +16,7 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`md:fixed relative top-0 left-0 right-0 bg-white border w-[100%] flex justify-between items-center px-[5%] py-6 z-10 transition-all duration-300`} // Added transition
+      className={`md:fixed relative top-0 left-0 right-0 bg-white/20 backdrop-blur-md rounded-lg p-6  border-white/10 shadow-inner border w-[100%] flex justify-between items-center px-[5%] py-6 z-20 transition-all duration-300`} // Added transition
     >
       <Link href="/">
         <img src={"/Logo.svg"} alt="" className="w-[50px]" />
@@ -34,13 +34,16 @@ export default function Navbar() {
         </li>
       </ul>
       <div className="md:block hidden">
-        <button onClick={handleEmailClick} className="border w-[165px] py-2 font-[200] rounded-full text-white bg-primary">
+        <button
+          onClick={handleEmailClick}
+          className="border w-[165px] py-2 font-[200] rounded-full text-white bg-primary"
+        >
           Contact Us
         </button>
       </div>
       <div // Changed to a div for better animation control
         className={`md:hidden  absolute top-0  left-0 w-full bg-white p-4 transition-transform duration-300 ${
-          isOpen ? "translate-y-0 top-[70px]" : "-translate-y-full " 
+          isOpen ? "translate-y-0 top-[70px]" : "-translate-y-full "
         } `}
       >
         <ul className="space-y-4">
@@ -58,7 +61,12 @@ export default function Navbar() {
           </li>
           <li>
             <Link href="/">
-              <p onClick={handleEmailClick} className="hover:text-[#3c69d6] text-black">Contact</p>
+              <p
+                onClick={handleEmailClick}
+                className="hover:text-[#3c69d6] text-black"
+              >
+                Contact
+              </p>
             </Link>
           </li>
         </ul>

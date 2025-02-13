@@ -1,3 +1,4 @@
+/* eslint-disable react/react-in-jsx-scope */
 "use client";;
 import { motion } from "motion/react";
 import { useEffect, useId, useRef, useState } from "react";
@@ -83,7 +84,7 @@ export function AnimatedGridPattern({
       ref={containerRef}
       aria-hidden="true"
       className={cn(
-        "pointer-events-none absolute inset-0 h-full w-full fill-gray-400/30 stroke-gray-400/30",
+        "pointer-events-none  absolute inset-0 h-full w-full fill-gray-400/30 stroke-gray-400/30",
         className
       )}
       {...props}>
