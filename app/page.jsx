@@ -1,7 +1,7 @@
 "use client";
 import FAQ from "@/components/FrequentlyAskedQuestions";
 import ImageSlider from "@/components/ImageSlider";
-import { AnimatedGridPattern } from "@/components/magicui/animated-grid-pattern";
+// import { AnimatedGridPattern } from "@/components/magicui/animated-grid-pattern";
 import Typewriter from "@/components/Typewriter";
 
 import React, { useState } from "react";
@@ -46,7 +46,7 @@ export default function Home() {
             Request a Demo
           </a>
         </div>
-        <AnimatedGridPattern />
+        {/* <AnimatedGridPattern /> */}
       </div>
 
       <div className="p-[5%]    relative">
