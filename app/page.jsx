@@ -24,7 +24,7 @@ export default function Home() {
     <div className=" ">
       <div className="  relative     justify-center  md:h-[540px] h-[393px]  md:mt-[100px] mb-6  flex flex-col  items-center ">
         <div className="mb-[16px] z-10 text-center md:px-4 px-0  md:w-[1074px] w-[327px]">
-          <h1 className="md:text-[63px] text-[34px] tracking-[-0.75px] text-[#282828] capitalize  font-[700] font-lexend">
+          <h1 className="md:text-[63px] text-[34px] tracking-[-0.75px] text-[#282828] capitalize  font-[700] font-cgp">
             <Typewriter
               text={textToType}
               speed={30}

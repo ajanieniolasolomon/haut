@@ -1,11 +1,11 @@
 "use client";
 import Header from "@/components/Header";
-import { Inter } from "next/font/google";
+// import { Inter } from "next/font/google";
 import "../styles/globals.css";
 import React from "react";
 import Footer from "@/components/Footer";
 import Head from "next/head";
-const inter = Inter({ subsets: ["latin"] });
+// const inter = Inter({ subsets: ["latin"] });
 
 // eslint-disable-next-line react/prop-types
 export default function RootLayout({ children }) {
@@ -22,7 +22,7 @@ export default function RootLayout({ children }) {
         ></link>
         
       </Head>
-      <body className={inter.className}>
+      <body className={'font-cgp'}>
         {/* Layout UI */}
         <Header />
         <main>{children}</main>

@@ -36,7 +36,7 @@ export default function Navbar() {
       <div className="md:block hidden">
         <button
           onClick={handleEmailClick}
-          className="border w-[165px] py-2 font-[200] rounded-full text-white bg-primary"
+          className=" w-[165px] py-2 font-[200] rounded-full text-white bg-primary"
         >
           Contact Us
         </button>

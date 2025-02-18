@@ -1,6 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+@font-face {
+  font-family: 'CenturyGothicPaneuropean';
+  src: url('/fonts/CenturyGothicPaneuropeanRegular.ttf') format('truetype'); /* Only TTF */
+ 
+  font-display: swap; /* Still important! */
+}
 /* @layer base {
   :root {
     --background: 0 0% 100%;

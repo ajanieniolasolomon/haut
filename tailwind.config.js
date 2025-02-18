@@ -8,6 +8,7 @@ export const theme = {
   extend: {
     fontFamily: {
       lexend: ["Lexend", "sans-serif"], // 'Lexend' is the name you'll use in your HTML
+      cgp: ["CenturyGothicPaneuropean"],
     },
     colors: {
       primary: "#100B6E",
