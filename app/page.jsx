@@ -12,7 +12,7 @@ import React, { useState } from "react";
 export default function Home() {
   const textToType = "Discover the secrets of your skin in  90 secs";
   const subText =
-    "Personalized skincare recommendations powered by human and advanced AI technology.";
+    "Personalized skin analysis and product recommendation for your unique skin concern powered by advanced AI technology backed by top Aestheticians and Medical Experts.";
   const [subtextStarted, setSubtextStarted] = useState(false);
   const [div1Hovered, setDiv1Hovered] = useState(false);
   const [div2Hovered, setDiv2Hovered] = useState(false);
@@ -40,7 +40,7 @@ export default function Home() {
         </h6>
         <div className="z-10">
           <a
-            href="#"
+            href="https://apps.apple.com/ng/app/demicare/id6478509541"
             className="bg-secondary transition-colors duration-300 hover:bg-primary text-white font-[200] rounded-full py-4 px-12 "
           >
             Request a Demo
@@ -278,8 +278,7 @@ export default function Home() {
             Boost Sales Effortlessly
           </h3>
           <div className="text-[#8A938F] font-[400] text-center md:w-[826px] w-[337px] md:text-[24px] text-[14px] ">
-            Build a community around your brand, and Engagement that converts to
-            sales.
+            Build a community around your brand with shorter transaction time, easier purchase decisions, increased sales, loyalty, and customized analysis
           </div>
         </div>
         <div className="mt-8 grid md:grid-cols-2 grid-cols-1 gap-8 ">
