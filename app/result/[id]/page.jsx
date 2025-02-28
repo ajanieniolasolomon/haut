@@ -1,23 +1,27 @@
-"use client";
+"use client"
 
 import React from "react";
 import { useForm } from "react-hook-form";
 
-const Result = () => {
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm();
 
-  const onSubmit = (data) => {
-    console.log(data); // Handle form submission here
-  };
+const Result = () => {
+
+    const {
+      register,
+      handleSubmit,
+      formState: { errors },
+    } = useForm();
+
+    const onSubmit = (data) => {
+      console.log(data); // Handle form submission here
+    };
+    // console.log(params)
+  
   return (
-    <div className="container mx-auto p-4 md:p-6 lg:p-8 md:mt-[95px]  flex items-center justify-center ">
+    <div className="container mx-auto p-4 md:p-6 lg:p-8 md:mt-[95px] flex items-center justify-center">
       {" "}
       {/* Responsive container */}
-      <div className="bg-white rounded-lg shadow-md border p-6 md:p-8 lg:p-10 w-full md:w-3/4 lg:w-[600px]">
+      <div className="bg-white rounded-lg shadow-md p-6 md:p-8 lg:p-10 w-full md:w-3/4 lg:w-[600px] border">
         {" "}
         {/* Card-like container */}
         {/* <h2 className="text-2xl font-semibold mb-4">Contact Us</h2>{" "} */}
@@ -33,7 +37,7 @@ const Result = () => {
             <input
               type="email"
               id="email"
-              className={`w-full border rounded-md px-3 py-2 focus:outline-none bg-transparent ${
+              className={`w-full border rounded-md px-3 py-2 focus:outline-none  ${
                 errors.email ? "border-red-500" : ""
               }`}
               {...register("email", {
@@ -55,9 +59,9 @@ const Result = () => {
           <div>
             <button
               type="submit"
-              className="bg-secondary transition-colors duration-300 w-full h-[47px] hover:bg-primary text-white font-[200] rounded-full focus:outline-none"
+              className="w-full bg-secondary transition-colors duration-300 hover:bg-primary text-white font-[200] rounded-full  h-[47px] focus:outline-none"
             >
-              Submit
+              Enter your Email to view result
             </button>
           </div>
         </form>

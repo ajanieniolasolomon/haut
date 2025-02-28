@@ -67,8 +67,16 @@ export default function Home() {
 
         <div className="flex-col flex w-[100%] mt-12 gap-6  ">
           <div className="md:flex   gap-6  h-full">
-            <div className="md:w-[50%] w-[100%]">
-              <img className="rounded-[24px]" src="step1human.svg" alt="" />
+            <div className="md:w-[592px] w-[100%]   border flex flex-col justify-end relative  bg-[#9FC3CE] rounded-[24px]">
+              <img className="rounded-[24px]   " src="model.svg" alt="" />
+
+              {/* <img className="rounded-[24px] absolute mx-auto border  " src="mask.svg" alt="" /> */}
+              <div className="bg-[#100B6E] rounded-b-[24px] p-6 flex flex-col gap-2  text-white">
+                <h3 className="font-[400] text-[18px]">Instore Experience</h3>
+                <p className="font-[500] text-[24px]">
+                  Customers scan their faces, ready for a quick skin check-up.
+                </p>
+              </div>
             </div>
             <div className=" md:mt-0 mt-6  relative flex md:justify-center justify-between items-center md:items-start  flex-col md:w-[50%] w-[100%] h-[200px] md:h-auto ">
               <div className="relative w-[90px] h-[38px] text-[14px] flex justify-center items-center text-[#8A938F] shadow-lg shadow-[#34A8531F] border rounded-[8px] ">
@@ -278,7 +286,9 @@ export default function Home() {
             Boost Sales Effortlessly
           </h3>
           <div className="text-[#8A938F] font-[400] text-center md:w-[826px] w-[337px] md:text-[24px] text-[14px] ">
-            Build a community around your brand with shorter transaction time, easier purchase decisions, increased sales, loyalty, and customized analysis
+            Build a community around your brand with shorter transaction time,
+            easier purchase decisions, increased sales, loyalty, and customized
+            analysis
           </div>
         </div>
         <div className="mt-8 grid md:grid-cols-2 grid-cols-1 gap-8 ">
