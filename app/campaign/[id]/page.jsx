@@ -17,6 +17,7 @@ export default function SelfiePage() {
   const [terminal, setTerminal] = useState("");
   const [userId, setuserId] = useState("");
   const proxy = "https://cors-anywhere.herokuapp.com/";
+
   const validateEmail = (email) => /\S+@\S+\.\S+/.test(email);
 
 
@@ -30,8 +31,9 @@ export default function SelfiePage() {
       formData.append('email', email);
       formData.append('userId', userId);
       formData.append('terminalId', terminal);
-      // Replace '/api/upload' with your actual API endpoint
+
       const response = await axios.post(`${proxy}${process.env.NEXT_PUBLIC_BASE_URL}/campaign/campaign-vision`, formData, {
+
         headers: { 'Content-Type': 'multipart/form-data' },
       });
       setDataList([response.data.data.id]);
@@ -54,7 +56,9 @@ export default function SelfiePage() {
 
     try {
       const response = await axios.get(
+
         `${proxy}${process.env.NEXT_PUBLIC_BASE_URL}/campaign/find-by-email-id?userId=${id}&email=${encodeURIComponent(email)}`
+
       );
 
       if (response.data.success && response.data.statusCode === 200) {
