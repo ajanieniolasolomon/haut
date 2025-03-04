@@ -42,7 +42,7 @@ export default function SelfiePage() {
       setLoading(false);
     } catch (error) {
       setLoading(false);
-      setError("Sorry Something went wrong");
+      setError(error.response.data.message.toString());
 
     }
   };
@@ -75,8 +75,8 @@ export default function SelfiePage() {
         }
       }
     } catch (error) {
-      console.error("Error fetching data:", error);
-      setError("Failed to fetch data. Please try again.");
+      console.error("Error fetching data:", error.response.data.message);
+      setError(error.response.data.message.toString());
     }
     setLoading(false);
   };
@@ -88,7 +88,7 @@ export default function SelfiePage() {
   }, [webcamRef]);
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100 p-4 relative">
+    <div className="min-h-screen flex items-center justify-center bg-gray-100 p-4 relative ">
       {loading && (
         <div className="absolute inset-0 flex items-center justify-center bg-gray-900 bg-opacity-50">
           <div className="loader border-t-4 border-blue-500 rounded-full w-12 h-12 animate-spin"></div>
@@ -112,7 +112,7 @@ export default function SelfiePage() {
                   onChange={(e) => setEmail(e.target.value)}
                   required
                 />
-                {error && <p className="text-red-500 text-sm mt-1">{error}</p>}
+                {error && <p className="text-red-500 text-sm mt-3 mb-3">{error}</p>}
               </div>
               <button
                 type="submit"
@@ -178,12 +178,15 @@ export default function SelfiePage() {
         )}
 
         {step === 'result' && (
+          //        <h1 className="text-center mb-10 fs-5 fw-bolder">Please ensure you enter a valid email address</h1>
+          <>
+             <h1 className="text-center mb-10 text-lg font-bold ">Below Is Your Skin Concern and Product Recommendation</h1>
           <div className="max-w-lg mx-auto p-6 bg-white shadow-lg rounded-lg">
             {/* Skin Concerns */}
             <h2 className=" font-semibold fs-5 mb-4">Skin Concerns</h2>
             <ul className="space-y-2">
               {dataList[0].skinConcerns.map((concern, index) => (
-                <li key={index} className="p-3 bg-gray-100 rounded-md shadow-sm">
+                <li key={index} className="p-3 bg-gray-100 rounded-md shadow-sm text-sm">
                   {concern.name}
                 </li>
               ))}
@@ -198,11 +201,12 @@ export default function SelfiePage() {
                   alt={product.name}
                   className="w-full h-48 object-cover rounded-md mb-4"
                 />
-                <h3 className="fs-5 font-semibold">{product.name}</h3>
-                <p className="text-sm text-gray-700 mt-2">{product.explanation}</p>
+                <h3 className="text-sm font-semibold">{product.name}</h3>
+                {/* <p className="text-sm text-gray-700 mt-2">{product.explanation}</p> */}
               </div>
             ))}
           </div>
+          </>
 
         )}
       </div>
