@@ -23,6 +23,7 @@ export default function SelfiePage() {
 
 
   const uploadImage = async () => {
+    setError("");
     setLoading(true);
     try {
       const blob = await fetch(imageSrc).then((res) => res.blob());
@@ -32,7 +33,7 @@ export default function SelfiePage() {
       formData.append('userId', userId);
       formData.append('terminalId', terminal);
 
-      const response = await axios.post(`${proxy}${process.env.NEXT_PUBLIC_BASE_URL}/campaign/campaign-vision`, formData, {
+      const response = await axios.post(`${process.env.NEXT_PUBLIC_BASE_URL}/campaign/campaign-vision`, formData, {
 
         headers: { 'Content-Type': 'multipart/form-data' },
       });
@@ -41,10 +42,11 @@ export default function SelfiePage() {
       setLoading(false);
     } catch (error) {
       setLoading(false);
-      alert('Sorry Something went wrong')
+      setError("Sorry Something went wrong");
+
     }
   };
-
+//:O33(86djEHHav
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!validateEmail(email)) {
@@ -57,7 +59,7 @@ export default function SelfiePage() {
     try {
       const response = await axios.get(
 
-        `${proxy}${process.env.NEXT_PUBLIC_BASE_URL}/campaign/find-by-email-id?userId=${id}&email=${encodeURIComponent(email)}`
+        `${process.env.NEXT_PUBLIC_BASE_URL}/campaign/find-by-email-id?userId=${id}&email=${encodeURIComponent(email)}`
 
       );
 
