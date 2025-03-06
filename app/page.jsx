@@ -110,9 +110,24 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="md:flex  gap-6">
-            <div className="md:w-[50%] w-[100%]">
-              <img className="rounded-[24px]" src="step2products.svg" alt="" />
+          <div className="md:flex   gap-6 md:h-[655px]  h-full">
+            <div className="md:w-[592px] w-[100%]   border flex flex-col justify-end relative  bg-[#9FC3CE] rounded-[24px]">
+              <img
+                className="rounded-[24px]   "
+                src="step2Products.svg"
+                alt=""
+              />
+
+              {/* <img className="rounded-[24px] absolute mx-auto border  " src="mask.svg" alt="" /> */}
+              <div className="bg-[#100B6E] rounded-b-[24px] p-6 flex flex-col gap-2  text-white">
+                <h3 className="font-[400] text-[18px]">
+                  Personalized Recomendations
+                </h3>
+                <p className="font-[500] text-[24px]">
+                  The App instantly recommends products tailored to customers
+                  specific skin concerns after deep analysis.
+                </p>
+              </div>
             </div>
             <div className="md:justify-center justify-between items-center md:items-start h-[200px] md:h-auto  relative flex flex-col md:w-[50%] w-[100%]">
               <div className="md:mt-0 mt-6 relative w-[90px] h-[38px] text-[14px] flex justify-center items-center text-[#8A938F] shadow-lg shadow-[#34A8531F] border rounded-[8px] ">
