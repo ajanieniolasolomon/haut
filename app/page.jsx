@@ -170,6 +170,7 @@ export default function Home() {
               </div>
             </div>
             <ScrollAnimation animateIn='fadeIn'
+             animateOnce={true}
              >
               <div className="md:flex  gap-6">
                 <div className="md:w-[50%] w-[100%]"></div>
@@ -181,7 +182,7 @@ export default function Home() {
           </div>
         </div>
 
-      <ScrollAnimation animateIn="fadeIn">
+      <ScrollAnimation animateIn="fadeIn"  animateOnce={true}>
         <div className="  h-full mt-[100px] md:gap-0 gap-6 bg-[#FAFAFA] py-[5%]  px-[5%] ">
           <div className="flex  justify-center w-[100%] ">
             <button className="border border-[#8A938F] text-[#8A938F] text-[16px] px-2 rounded-[30px]">
