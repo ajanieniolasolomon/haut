@@ -8,7 +8,7 @@ import React, { useState } from "react";
 // import SimpleSlider from "@/components/Slider";
 // import pharmaceuticalImages from "@/data/pharmaceutical";
 // import supportedByImages from "@/data/supportedBy";
-import {Animated} from "react-animated-css";
+import { Animated } from "react-animated-css";
 export default function Home() {
   const textToType = "Discover the secrets of your skin in  90 secs";
   const subText =
@@ -60,7 +60,7 @@ export default function Home() {
 
 
 
-      <ScrollAnimation animateIn="fadeIn">
+
         <div className="bg-white w-[100%] p-[5%] flex flex-col">
           <div className="w-[100%] flex flex-col gap-2 items-center">
             <div className="flex justify-center items-center  w-[100%] ">
@@ -75,7 +75,9 @@ export default function Home() {
 
           <div className="flex-col flex w-[100%] mt-12 gap-6  ">
             <div className="md:flex   gap-6  h-full">
-     
+              <ScrollAnimation animateIn='fadeIn'
+               animateOnce={true}
+              >
                 <div className="md:w-[592px] w-[100%]   border flex flex-col justify-end relative  bg-[#9FC3CE] rounded-[24px]">
                   <img className="rounded-[24px]   " src="model.svg" alt="" />
 
@@ -88,7 +90,7 @@ export default function Home() {
                   </div>
                 </div>
 
-         
+              </ScrollAnimation>
 
               <div className=" md:mt-0 mt-6  relative flex md:justify-center justify-between items-center md:items-start  flex-col md:w-[50%] w-[100%] h-[200px] md:h-auto ">
                 <div className="relative w-[90px] h-[38px] text-[14px] flex justify-center items-center text-[#8A938F] shadow-lg shadow-[#34A8531F] border rounded-[8px] ">
@@ -119,15 +121,19 @@ export default function Home() {
               </div>
 
               <div className="order-1 md:order-2 md:w-[50%] w-[100%]">
-        
+                <ScrollAnimation animateIn='fadeIn'
+                 animateOnce={true}
+                >
                   <img className="rounded-[24px]" src="step2human.svg" alt="" />
-      
+                </ScrollAnimation>
               </div>
 
             </div>
 
             <div className="md:flex   gap-6 md:h-[655px]  h-full">
-          
+              <ScrollAnimation animateIn='fadeIn'
+               animateOnce={true}
+              >
                 <div className="md:w-[592px] w-[100%]   border flex flex-col justify-end relative  bg-[#9FC3CE] rounded-[24px]">
                   <img
                     className="rounded-[24px]   "
@@ -149,7 +155,7 @@ export default function Home() {
                   </div>
 
                 </div>
-        
+              </ScrollAnimation>
               <div className="md:justify-center justify-between items-center md:items-start h-[200px] md:h-auto  relative flex flex-col md:w-[50%] w-[100%]">
                 <div className="md:mt-0 mt-6 relative w-[90px] h-[38px] text-[14px] flex justify-center items-center text-[#8A938F] shadow-lg shadow-[#34A8531F] border rounded-[8px] ">
                   <div className="rounded-full bg-[#EB7244] w-[24px] h-[24px] absolute -right-3 -top-3"></div>
@@ -163,17 +169,18 @@ export default function Home() {
                 />
               </div>
             </div>
-         
+            <ScrollAnimation animateIn='fadeIn'
+             >
               <div className="md:flex  gap-6">
                 <div className="md:w-[50%] w-[100%]"></div>
                 <div className=" md:w-[50%] w-[100%]">
                   <img className="rounded-[24px]" src="step3barcode.svg" alt="" />
                 </div>
               </div>
-
+            </ScrollAnimation>
           </div>
         </div>
-      </ScrollAnimation>
+
       <ScrollAnimation animateIn="fadeIn">
         <div className="  h-full mt-[100px] md:gap-0 gap-6 bg-[#FAFAFA] py-[5%]  px-[5%] ">
           <div className="flex  justify-center w-[100%] ">
@@ -200,11 +207,11 @@ export default function Home() {
 
           <div className="md:flex   mt-8 md:h-[677px] h-full  md:justify-between w-[100%] gap-[3%]  ">
 
-       
+
             <div className=" border md:w-[60%] w-[100%] rounded-[24px] flex flex-col relative justify-center items-center bg-white">
-            <ScrollAnimation animateIn='fadeIn'
-              animateOut='fadeOut'>
-              <img src="analysis.svg" />
+              <ScrollAnimation animateIn='fadeIn'
+                animateOut='fadeOut'>
+                <img src="analysis.svg" />
               </ScrollAnimation>
               <div className="border rounded-b-[24px] h-auto  w-[100%] absolute bg-white bottom-0 p-6 ">
                 <h3 className="md:text-[24px] text-[16px] font-[600]">
@@ -232,9 +239,9 @@ export default function Home() {
               </div>
 
               <div className="w-[100%] flex items-center  justify-center mt-6">
-                         <ScrollAnimation animateIn='fadeIn'
-              animateOut='fadeOut'>  <img className="mt-4" src="world.svg" /></ScrollAnimation>
-              
+                <ScrollAnimation animateIn='fadeIn'
+                  animateOut='fadeOut'>  <img className="mt-4" src="world.svg" /></ScrollAnimation>
+
               </div>
             </div>
           </div>
@@ -251,16 +258,16 @@ export default function Home() {
               </div>
 
               <div className="w-[100%] flex justify-center items-center ">
-              <ScrollAnimation animateIn='fadeIn'
-              animateOut='fadeOut'> 
-                <img src="marketing.svg" alt="" />
+                <ScrollAnimation animateIn='fadeIn'
+                  animateOut='fadeOut'>
+                  <img src="marketing.svg" alt="" />
                 </ScrollAnimation>
               </div>
             </div>
             <div className="md:w-[50%] w-[100%] rounded-[24px] h-auto bg-white border md:mt-0 mt-6 flex flex-col items-center p-6 relative">
-            <ScrollAnimation animateIn='fadeIn'
-              animateOut='fadeOut'> 
-              <img src="analytic.svg" alt="" />
+              <ScrollAnimation animateIn='fadeIn'
+                animateOut='fadeOut'>
+                <img src="analytic.svg" alt="" />
               </ScrollAnimation>
               <div className="border rounded-b-[24px] p-6 h-auto absolute bottom-0 w-[100%] bg-white">
                 <h3 className="md:text-[24px] text-[16px] font-[600] text-[#000202]">
@@ -277,9 +284,9 @@ export default function Home() {
           </div>
 
           <div className="w-[100%] mt-8 bg-white flex  md:p-0 p-[5%]  justify-center md:items-center items-start  md:h-[600px] h-[332px] border rounded-[24px] relative">
-          <ScrollAnimation animateIn='fadeIn'
-              animateOut='fadeOut'> 
-            <img src="products.svg" className="  " alt="" />
+            <ScrollAnimation animateIn='fadeIn'
+              animateOut='fadeOut'>
+              <img src="products.svg" className="  " alt="" />
             </ScrollAnimation>
 
             <div className="absolute bottom-0 p-6  h-auto w-[100%] bg-white rounded-b-[24px] border">
@@ -319,9 +326,9 @@ export default function Home() {
             rounded-[24px] flex flex-col   md:h-[270px]  p-6`}
             >
               <Animated animationIn="bounceInLeft" animationOut="fadeOut" isVisible={true}>
-              <img className="w-[42px] h-[42px]" src="wave.svg" alt="" />
+                <img className="w-[42px] h-[42px]" src="wave.svg" alt="" />
               </Animated>
-             
+
               <h3
                 className={`transition-colors duration-300 ${div1Hovered ? "text-white" : "text-[#000202]"
                   } 
@@ -435,11 +442,11 @@ export default function Home() {
           <p className="text-white font-[500] md:text-[24px] text-[14px] md:w-[575px] w-[249px] text-center absolute md:top-[63%] top-[50%] mt-4 left-[50%] translate-x-[-50%] translate-y-[-50%]">
             Transform your skincare routine with human and artificial intelligence
           </p>
-          
+
           <button className="md:top-[78%] top-[75%] font-[200] text-[18px] md:w-[260px] w-[177px] md:h-[56px] h-[48px] text-white absolute left-[50%] translate-x-[-50%] translate-y-[-50%] bg-secondary rounded-[30px]">
             Request Demo
           </button>
-        
+
         </div>
       </ScrollAnimation>
 
