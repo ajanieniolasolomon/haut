@@ -5,10 +5,14 @@ import "../styles/globals.css";
 import React from "react";
 import Footer from "@/components/Footer";
 import Head from "next/head";
+import { usePathname } from 'next/navigation';
 // const inter = Inter({ subsets: ["latin"] });
 
 // eslint-disable-next-line react/prop-types
 export default function RootLayout({ children }) {
+  const pathname = usePathname();
+ 
+
   return (
     <html lang="en">
       <Head>
@@ -16,17 +20,30 @@ export default function RootLayout({ children }) {
         {/* Add the Head component */}
         <title>Demicare</title> {/* Optional: Set the title here */}
         <link rel="icon" href="/favicon.ico" /> {/* Path to your favicon */}
-        <link
+        {/* <link
           href="https://fonts.googleapis.com/css?family=Lexend"
           rel="stylesheet"
-        ></link>
-        
+        ></link> */}
+
       </Head>
       <body className={'font-cgp'}>
         {/* Layout UI */}
-        <Header />
-        <main>{children}</main>
-        <Footer />
+        <>
+          {
+            pathname.includes('campaign') && <main>{children}</main>
+          }
+
+          {
+            !pathname.includes('campaign') && <>
+
+              <Header />
+              <main>{children}</main>
+              <Footer />
+            </>
+          }
+
+        </>
+
       </body>
     </html>
   );

@@ -9,98 +9,126 @@ export default function SelfiePage() {
   const { id } = router;
   const [email, setEmail] = useState("");
   const [error, setError] = useState("");
-  const [loading, setLoading] = useState(false); // Global loading state
-  const [step, setStep] = useState("form"); // steps: form, prepare, capture, captured, result
+  const [loading, setLoading] = useState(false);
+  const [step, setStep] = useState("form");
   const [imageSrc, setImageSrc] = useState(null);
   const [dataList, setDataList] = useState([]);
   const webcamRef = useRef(null);
   const [terminal, setTerminal] = useState("");
-  const [userId, setuserId] = useState("");
-  const proxy = "https://cors-anywhere.herokuapp.com/";
+  const [userId, setUserId] = useState("");
 
   const validateEmail = (email) => /\S+@\S+\.\S+/.test(email);
-
-
 
   const uploadImage = async () => {
     setError("");
     setLoading(true);
     try {
-      const blob = await fetch(imageSrc).then((res) => res.blob());
+      if (!imageSrc) {
+        throw new Error("No image captured");
+      }
+
+      const response = await fetch(imageSrc);
+      if (!response.ok) throw new Error("Failed to process image");
+      const blob = await response.blob();
+
       const formData = new FormData();
-      formData.append('file', blob);
-      formData.append('email', email);
-      formData.append('userId', userId);
-      formData.append('terminalId', terminal);
+      formData.append("file", blob);
+      formData.append("email", email);
+      formData.append("userId", userId);
+      formData.append("terminalId", terminal);
 
-      const response = await axios.post(`${process.env.NEXT_PUBLIC_BASE_URL}/campaign/campaign-vision`, formData, {
+      const { data } = await axios.post(
+        `${process.env.NEXT_PUBLIC_BASE_URL}/campaign/campaign-vision`,
+        formData,
+        { headers: { "Content-Type": "multipart/form-data" } }
+      );
 
-        headers: { 'Content-Type': 'multipart/form-data' },
-      });
-      setDataList([response.data.data.id]);
+      if (!data?.data) throw new Error("Invalid response from server");
+      setDataList([data.data]);
       setStep("result");
-      setLoading(false);
     } catch (error) {
+      setError(
+        error.response?.data?.message ||
+          error.message ||
+          "Failed to upload image"
+      );
+    } finally {
       setLoading(false);
-      setError(error.response.data.message.toString());
-
     }
   };
-//:O33(86djEHHav
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!validateEmail(email)) {
       setError("Please enter a valid email address");
       return;
     }
+
     setError("");
     setLoading(true);
 
     try {
-      const response = await axios.get(
-
-        `${process.env.NEXT_PUBLIC_BASE_URL}/campaign/find-by-email-id?userId=${id}&email=${encodeURIComponent(email)}`
-
+      const { data } = await axios.get(
+        `${process.env.NEXT_PUBLIC_BASE_URL}/campaign/find-by-email-id`,
+        {
+          params: { userId: id, email: email },
+        }
       );
 
-      if (response.data.success && response.data.statusCode === 200) {
-        if (response.data.data.status === false) {
-          setStep("prepare");
-          setTerminal(response.data.data.terminal)
-          setuserId(response.data.data.userId)
-        } else {
-          console.log(response.data.data)
-          setDataList([response.data.data]);
-          setStep("result");
-        }
+      if (!data?.success || data?.statusCode !== 200) {
+        throw new Error(data?.message || "Invalid server response");
+      }
+
+      if (data.data?.status === false) {
+        setStep("prepare");
+        setTerminal(data.data.terminal || "");
+        setUserId(data.data.userId || "");
+      } else {
+        if (!data.data) throw new Error("No data received");
+        setDataList([data.data]);
+        setStep("result");
       }
     } catch (error) {
-      console.error("Error fetching data:", error.response.data.message);
-      setError(error.response.data.message.toString());
+      setError(
+        error.response?.data?.message ||
+          error.message ||
+          "Network error. Please try again."
+      );
+    } finally {
+      setLoading(false);
     }
-    setLoading(false);
   };
 
   const capture = useCallback(() => {
-    const capturedImage = webcamRef.current.getScreenshot();
-    setImageSrc(capturedImage);
-    setStep('captured');
+    const capturedImage = webcamRef.current?.getScreenshot();
+    if (capturedImage) {
+      setImageSrc(capturedImage);
+      setStep("captured");
+    }
   }, [webcamRef]);
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100 p-4 relative ">
+    <div className="min-h-screen flex items-center justify-center p-4 relative">
       {loading && (
         <div className="absolute inset-0 flex items-center justify-center bg-gray-900 bg-opacity-50">
           <div className="loader border-t-4 border-blue-500 rounded-full w-12 h-12 animate-spin"></div>
         </div>
       )}
-      <div className=" w-full max-w-md">
+
+      <div className="w-full max-w-md">
         {step === "form" && (
           <>
-            <h1 className="text-center mb-10 fs-5 fw-bolder">Please ensure you enter a valid email address</h1>
-            <form onSubmit={handleSubmit} className="bg-white p-8 rounded shadow-sm">
+            <h1 className="text-center text-lg mb-2 font-extrabold">
+              Congratulations on you have been selected!
+            </h1>
+            <p className="text-sm text-justify mb-5">
+              Your hard work and dedication have paid off! We're thrilled to
+              share that you have been selected to take part in the Demicare Skin
+              Analysis😊!
+            </p>
+            <form onSubmit={handleSubmit} className="p-1 rounded shadow-sm">
               <div className="mb-4">
-                <label htmlFor="email" className="block text-gray-700 mb-2">
+                <label htmlFor="email" className="block text-gray-700 font-extrabold mb-2">
                   Email Address
                 </label>
                 <input
@@ -112,26 +140,25 @@ export default function SelfiePage() {
                   onChange={(e) => setEmail(e.target.value)}
                   required
                 />
-                {error && <p className="text-red-500 text-sm mt-3 mb-3">{error}</p>}
+                {error && (
+                  <p className="text-red-500 text-sm mt-3 mb-3">{error}</p>
+                )}
               </div>
               <button
                 type="submit"
-                className="w-full bg-secondary text-white py-2 px-4 transition-colors duration-300 hover:bg-primary text-white font-[200] rounded-full"
-
+                className="w-full bg-secondary text-white py-2 px-4 transition-colors duration-300 hover:bg-primary font-[200] rounded-full"
               >
-                {loading ? "Loading..." : "Submit"}
+                Submit
               </button>
             </form>
           </>
         )}
 
-
-
         {step === "prepare" && (
-          <div className="text-center bg-white p-8 rounded shadow-sm ">
+          <div className="text-center bg-white p-8 rounded shadow-sm">
             <p className="text-lg mb-4">Prepare for your selfie!</p>
             <button
-              onClick={() => setStep('capture')}
+              onClick={() => setStep("capture")}
               className="bg-green-500 text-white py-2 px-4 rounded hover:bg-green-600 transition-colors"
             >
               Take Picture
@@ -139,14 +166,15 @@ export default function SelfiePage() {
           </div>
         )}
 
-
-        {step === 'capture' && (
+        {step === "capture" && (
           <div className="text-center bg-white p-8 rounded shadow-sm">
             <Webcam
               audio={false}
               ref={webcamRef}
               screenshotFormat="image/jpeg"
-              className="mx-auto rounded"
+              className="mx-auto rounded w-full h-auto"
+              screenshotQuality={0.8}
+              forceScreenshotSourceSize
             />
             <button
               onClick={capture}
@@ -157,9 +185,15 @@ export default function SelfiePage() {
           </div>
         )}
 
-        {step === 'captured' && (
+        {step === "captured" && (
           <div className="text-center bg-white p-8 rounded shadow-sm">
-            <img src={imageSrc} alt="Captured Selfie" className="mx-auto rounded mb-4" />
+            {imageSrc && (
+              <img
+                src={imageSrc}
+                alt="Captured Selfie"
+                className="mx-auto rounded mb-4 w-full h-auto"
+              />
+            )}
             <div className="flex justify-center space-x-4">
               <button
                 onClick={uploadImage}
@@ -168,7 +202,7 @@ export default function SelfiePage() {
                 Upload Photo
               </button>
               <button
-                onClick={() => setStep('capture')}
+                onClick={() => setStep("capture")}
                 className="bg-gray-500 text-white py-2 px-4 rounded hover:bg-gray-600 transition-colors"
               >
                 Retake Photo
@@ -177,37 +211,48 @@ export default function SelfiePage() {
           </div>
         )}
 
-        {step === 'result' && (
-          //        <h1 className="text-center mb-10 fs-5 fw-bolder">Please ensure you enter a valid email address</h1>
+        {step === "result" && dataList[0] && (
           <>
-             <h1 className="text-center mb-10 text-lg font-bold ">Below Is Your Skin Concern and Product Recommendation</h1>
-          <div className="max-w-lg mx-auto p-6 bg-white shadow-lg rounded-lg">
-            {/* Skin Concerns */}
-            <h2 className=" font-semibold fs-5 mb-4">Skin Concerns</h2>
-            <ul className="space-y-2">
-              {dataList[0].skinConcerns.map((concern, index) => (
-                <li key={index} className="p-3 bg-gray-100 rounded-md shadow-sm text-sm">
-                  {concern.name}
-                </li>
+            <h1 className="text-center mb-10 text-lg font-bold">
+              Below Is Your Skin Concern and Product Recommendation
+            </h1>
+            <div className="max-w-lg mx-auto p-6 bg-white shadow-lg rounded-lg">
+              <h2 className="font-semibold text-lg mb-4">Skin Concerns</h2>
+              <ul className="space-y-2">
+                {dataList[0].skinConcerns?.map((concern, index) => (
+                  <li
+                    key={index}
+                    className="p-3 bg-gray-100 rounded-md shadow-sm text-sm"
+                  >
+                    {concern.name}
+                  </li>
+                ))}
+              </ul>
+
+              <h2 className="text-lg font-semibold mt-6 mb-4">
+                Recommended Product
+              </h2>
+              {dataList[0].productAnalysis?.map((product, index) => (
+                <div
+                  key={index}
+                  className="bg-gray-100 p-4 rounded-lg shadow-md mb-4"
+                >
+                  {product.imageUrl && (
+                    <img
+                      src={product.imageUrl}
+                      alt={product.name}
+                      className="w-full h-48 object-cover rounded-md mb-4"
+                      onError={(e) => {
+                        e.target.onerror = null;
+                        e.target.src = "/placeholder-image.jpg";
+                      }}
+                    />
+                  )}
+                  <h3 className="text-sm font-semibold">{product.name}</h3>
+                </div>
               ))}
-            </ul>
-
-            {/* Product Analysis */}
-            <h2 className=" fs-5 font-semibold mt-6 mb-4">Recommended Product</h2>
-            {dataList[0].productAnalysis.map((product, index) => (
-              <div key={index} className="bg-gray-100 p-4 rounded-lg shadow-md">
-                <img
-                  src={product.imageUrl}
-                  alt={product.name}
-                  className="w-full h-48 object-cover rounded-md mb-4"
-                />
-                <h3 className="text-sm font-semibold">{product.name}</h3>
-                {/* <p className="text-sm text-gray-700 mt-2">{product.explanation}</p> */}
-              </div>
-            ))}
-          </div>
+            </div>
           </>
-
         )}
       </div>
     </div>
