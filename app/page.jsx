@@ -137,7 +137,7 @@ export default function Home() {
                 <div className="md:w-[592px] w-[100%]   border flex flex-col justify-end relative  bg-[#9FC3CE] rounded-[24px]">
                   <img
                     className="rounded-[24px]   "
-                    src="step2Products.svg"
+                    src="step2products.svg"
                     alt=""
                   />
 
