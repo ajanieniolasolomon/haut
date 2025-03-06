@@ -12,6 +12,7 @@ export default function Footer() {
             <img src={"/logo2.svg"} alt="" className="w-[100px]" />
             {/* <p className="text-[24px] font-[500] text-white ">Demi Care</p> */}
           </div>
+          
           <button className="bg-white font-[200] rounded-[30px] h-[56px] text-primary text-[18px]">
             Request Demo
           </button>
