@@ -97,7 +97,7 @@ const Result = () => {
             <img src="/recommend3.svg" className="md:w-[50%] h-full " alt="" />
             <div className="flex flex-col gap-2 md:w-[50%] h-full">
               <h3 className="text-primary md:text-[24px] text-[14px] font-[400]">
-                Men's Ingrown Hair Duo
+                Men{"'"}s Ingrown Hair Duo
               </h3>
 
               <div className="flex flex-col gap-2">

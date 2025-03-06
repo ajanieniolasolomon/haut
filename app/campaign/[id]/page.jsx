@@ -122,7 +122,7 @@ export default function SelfiePage() {
               Congratulations on you have been selected!
             </h1>
             <p className="text-sm text-justify mb-5">
-              Your hard work and dedication have paid off! We're thrilled to
+              Your hard work and dedication have paid off! We{"'"}re thrilled to
               share that you have been selected to take part in the Demicare Skin
               Analysis😊!
             </p>
