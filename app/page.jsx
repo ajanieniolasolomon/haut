@@ -75,8 +75,7 @@ export default function Home() {
 
           <div className="flex-col flex w-[100%] mt-12 gap-6  ">
             <div className="md:flex   gap-6  h-full">
-              <ScrollAnimation animateIn='bounceInRight'
-                animateOut='bounceOutLeft'>
+     
                 <div className="md:w-[592px] w-[100%]   border flex flex-col justify-end relative  bg-[#9FC3CE] rounded-[24px]">
                   <img className="rounded-[24px]   " src="model.svg" alt="" />
 
@@ -89,7 +88,7 @@ export default function Home() {
                   </div>
                 </div>
 
-              </ScrollAnimation>
+         
 
               <div className=" md:mt-0 mt-6  relative flex md:justify-center justify-between items-center md:items-start  flex-col md:w-[50%] w-[100%] h-[200px] md:h-auto ">
                 <div className="relative w-[90px] h-[38px] text-[14px] flex justify-center items-center text-[#8A938F] shadow-lg shadow-[#34A8531F] border rounded-[8px] ">
@@ -120,17 +119,15 @@ export default function Home() {
               </div>
 
               <div className="order-1 md:order-2 md:w-[50%] w-[100%]">
-                <ScrollAnimation animateIn='bounceInLeft'
-                  animateOut='bounceOutRight'>
+        
                   <img className="rounded-[24px]" src="step2human.svg" alt="" />
-                </ScrollAnimation>
+      
               </div>
 
             </div>
 
             <div className="md:flex   gap-6 md:h-[655px]  h-full">
-              <ScrollAnimation animateIn='bounceInRight'
-                animateOut='bounceOutLeft'>
+          
                 <div className="md:w-[592px] w-[100%]   border flex flex-col justify-end relative  bg-[#9FC3CE] rounded-[24px]">
                   <img
                     className="rounded-[24px]   "
@@ -152,7 +149,7 @@ export default function Home() {
                   </div>
 
                 </div>
-              </ScrollAnimation>
+        
               <div className="md:justify-center justify-between items-center md:items-start h-[200px] md:h-auto  relative flex flex-col md:w-[50%] w-[100%]">
                 <div className="md:mt-0 mt-6 relative w-[90px] h-[38px] text-[14px] flex justify-center items-center text-[#8A938F] shadow-lg shadow-[#34A8531F] border rounded-[8px] ">
                   <div className="rounded-full bg-[#EB7244] w-[24px] h-[24px] absolute -right-3 -top-3"></div>
@@ -166,15 +163,14 @@ export default function Home() {
                 />
               </div>
             </div>
-            <ScrollAnimation animateIn='bounceInLeft'
-              animateOut='bounceOutRight'>
+         
               <div className="md:flex  gap-6">
                 <div className="md:w-[50%] w-[100%]"></div>
                 <div className=" md:w-[50%] w-[100%]">
                   <img className="rounded-[24px]" src="step3barcode.svg" alt="" />
                 </div>
               </div>
-            </ScrollAnimation>
+
           </div>
         </div>
       </ScrollAnimation>
