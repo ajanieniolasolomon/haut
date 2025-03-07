@@ -1,5 +1,5 @@
-/* eslint-disable react/no-unescaped-entities */
-/* eslint-disable react/react-in-jsx-scope */
+"use client";
+
 
 export default function AboutPage() {
   return (

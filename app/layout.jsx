@@ -7,6 +7,8 @@ import Footer from "@/components/Footer";
 import Head from "next/head";
 import "animate.css/animate.compat.css"
 import { usePathname } from 'next/navigation';
+import {ViewTransitions} from 'next-view-transitions'
+import ReactLenis from "@studio-freight/react-lenis";
 // const inter = Inter({ subsets: ["latin"] });
 
 // eslint-disable-next-line react/prop-types
@@ -15,6 +17,7 @@ export default function RootLayout({ children }) {
  
 
   return (
+    <ViewTransitions>
     <html lang="en">
       <Head>
         {" "}
@@ -28,6 +31,7 @@ export default function RootLayout({ children }) {
 
       </Head>
       <body className={'font-cgp'}>
+      <ReactLenis root>
         {/* Layout UI */}
         <>
           {
@@ -44,8 +48,9 @@ export default function RootLayout({ children }) {
           }
 
         </>
-
+</ReactLenis>
       </body>
     </html>
+    </ViewTransitions>
   );
 }
