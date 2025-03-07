@@ -25,7 +25,7 @@ export default function AboutPage() {
             industry-leading skincare experts.<br /> <br />This innovative solution designed
             helps brands connect with their customers on a deeper level,
             offering real time deep skin analysis and personalized
-            recommendations through their skincare journey.<br /> <br />With our app, we're
+            recommendations through their skincare journey.<br /> <br />With our app, we{"'"}re
             not just enhancing customer satisfaction but also driving meaningful
             sales for skincare brands, helping build a community of real people
             and brand engagement.
