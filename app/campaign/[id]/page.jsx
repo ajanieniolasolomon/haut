@@ -71,7 +71,7 @@ export default function SelfiePage() {
       const { data } = await axios.get(
         `${process.env.NEXT_PUBLIC_BASE_URL}/campaign/find-by-email-id`,
         {
-          params: { userId: id, email: email },
+          params: { userId: id=='1111'?'0e5a1774-df5a-42fc-aa19-de575a20ef60':id, email: email },
         }
       );
 
