@@ -49,8 +49,8 @@ export default function SelfiePage() {
     } catch (error) {
       setError(
         error.response?.data?.message ||
-          error.message ||
-          "Failed to upload image"
+        error.message ||
+        "Failed to upload image"
       );
     } finally {
       setLoading(false);
@@ -91,8 +91,8 @@ export default function SelfiePage() {
     } catch (error) {
       setError(
         error.response?.data?.message ||
-          error.message ||
-          "Network error. Please try again."
+        error.message ||
+        "Network error. Please try again."
       );
     } finally {
       setLoading(false);
@@ -118,6 +118,12 @@ export default function SelfiePage() {
       <div className="w-full max-w-md">
         {step === "form" && (
           <>
+            {error && (
+              <div className="bg-red-100 text-red-700 text-sm p-3 rounded-md mb-4">
+                {error}
+              </div>
+            )}
+
             <h1 className="text-center text-lg mb-2 font-extrabold">
               Congratulations on you have been selected!
             </h1>
@@ -140,9 +146,7 @@ export default function SelfiePage() {
                   onChange={(e) => setEmail(e.target.value)}
                   required
                 />
-                {error && (
-                  <p className="text-red-500 text-sm mt-3 mb-3">{error}</p>
-                )}
+
               </div>
               <button
                 type="submit"
