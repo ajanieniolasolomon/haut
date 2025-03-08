@@ -128,9 +128,9 @@ export default function SelfiePage() {
               Congratulations on you have been selected!
             </h1>
             <p className="text-sm text-justify mb-5">
-              Your hard work and dedication have paid off! We{"'"}re thrilled to
-              share that you have been selected to take part in the Demicare Skin
-              Analysis😊!
+              Congrats! You made it here!
+              Sign up with your email to get access and RSVP to Urban Skin Rx Launch Event and
+               your Skin Analysis for curated regimen and care package to be picked up at the event 😊!
             </p>
             <form onSubmit={handleSubmit} className="p-1 rounded shadow-sm">
               <div className="mb-4">
