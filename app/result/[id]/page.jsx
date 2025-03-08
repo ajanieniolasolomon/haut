@@ -52,7 +52,7 @@ const Result = () => {
     <>
 
 
-      {analysis ? (
+      {analysis.data ? (
         <div className="p-4 md:p-[5%]  md:mt-[95px] flex flex-col gap-6">
           <div className="md:flex md:flex-row flex flex-col">
             <div className="md:w-[50%] md:flex md:gap-6 md:flex-row flex flex-col">
@@ -60,7 +60,7 @@ const Result = () => {
                 Skin Analysis:
               </h3>
               <div className="flex flex-wrap gap-2 mb-5 mt-5">
-  {analysis.data.skinConcerns?.map((condition, key) => (
+  {analysis.data?.skinConcerns?.map((condition, key) => (
     <span
       key={key}
       className="px-3 py-1 rounded-full text-sm font-medium text-white"
@@ -72,7 +72,7 @@ const Result = () => {
 </div>
 
             </div>
-            <img src={analysis.data.imageUrl} className="md:w-[50%] h-[100%]" alt="User" />
+            <img src={analysis.data?.imageUrl} className="md:w-[50%] h-[100%]" alt="User" />
           </div>
 
 
@@ -83,7 +83,7 @@ const Result = () => {
             </h3>
             <div className="">
              
-            {analysis.data.productAnalysis?.map((condition, key) => (
+            {analysis.data?.productAnalysis?.map((condition, key) => (
                
                   <div  key={key} className="border border-[#CAC4D0] rounded-[8px] md:flex p-4 gap-4 md:flex-row flex flex-col">
                   <img src={condition.imageUrl} className="md:w-[50%] h-full " alt="" />
