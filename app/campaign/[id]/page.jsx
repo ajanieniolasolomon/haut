@@ -134,7 +134,7 @@ export default function SelfiePage() {
             </p>
             <form onSubmit={handleSubmit} className="p-1 rounded shadow-sm">
               <div className="mb-4">
-                <label htmlFor="email" className="block text-gray-700 font-extrabold mb-2">
+                <label htmlFor="email" className="block text-gray-700 font-light mb-2">
                   Email Address
                 </label>
                 <input
