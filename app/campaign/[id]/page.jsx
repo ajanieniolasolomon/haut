@@ -246,7 +246,7 @@ export default function SelfiePage() {
         {step === "result" && dataList[0] && (
           <>
             <div className="bg-green-100 text-green-700 text-sm p-3 rounded-md mb-4">
-              We can't wait to host you and enjoy a very warm Nigerian welcome at our official launch event! 💃
+              We can{"'"}t wait to host you and enjoy a very warm Nigerian welcome at our official launch event! 💃
             </div>
             {/* <h1 className="text-center mb-10 text-lg font-bold">
               Below Is Your Skin Concern and Product Recommendation
