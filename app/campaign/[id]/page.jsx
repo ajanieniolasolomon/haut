@@ -18,6 +18,25 @@ export default function SelfiePage() {
   const [userId, setUserId] = useState("");
 
   const validateEmail = (email) => /\S+@\S+\.\S+/.test(email);
+  const colors = [
+    "bg-red-100 text-red-800",
+    "bg-blue-100 text-blue-800",
+    "bg-green-100 text-green-800",
+    "bg-yellow-100 text-yellow-800",
+    "bg-purple-100 text-purple-800",
+    "bg-pink-100 text-pink-800",
+    "bg-indigo-100 text-indigo-800",
+    "bg-teal-100 text-teal-800",
+  ];
+  
+  // Function to shuffle array
+  const shuffleArray = (array) => {
+    return array.sort(() => Math.random() - 0.5);
+  };
+  
+  // Shuffle colors array
+  const shuffledColors = shuffleArray([...colors]);
+  
 
   const uploadImage = async () => {
     setError("");
@@ -117,6 +136,8 @@ export default function SelfiePage() {
       )}
 
       <div className="w-full max-w-md">
+
+  
         {step === "form" && (
           <>
             {error && (
@@ -164,7 +185,7 @@ export default function SelfiePage() {
         {step === "prepare" && (
           <div className="text-center bg-white p-8 rounded shadow-sm">
              <div className="bg-blue-100 text-blue-700 text-sm p-3 rounded-md mb-4">
-             Please ensure you have good lighting when taking the picture
+             Please ensure you have good lighting when taking the picture.
               </div>
           
             <p className="text-lg mb-4">Prepare for your selfie!</p>
@@ -224,21 +245,26 @@ export default function SelfiePage() {
 
         {step === "result" && dataList[0] && (
           <>
-            <h1 className="text-center mb-10 text-lg font-bold">
+              <div className="bg-green-100 text-green-700 text-sm p-3 rounded-md mb-4">
+              We can't wait to host you and enjoy a very warm Nigerian welcome at our official launch event! 💃
+              </div>
+            {/* <h1 className="text-center mb-10 text-lg font-bold">
               Below Is Your Skin Concern and Product Recommendation
-            </h1>
+            </h1> */}
             <div className="max-w-lg mx-auto p-6 bg-white shadow-lg rounded-lg">
               <h2 className="font-semibold text-lg mb-4">Skin Concerns</h2>
               <ul className="space-y-2">
-                {dataList[0].skinConcerns?.map((concern, index) => (
-                  <li
-                    key={index}
-                    className="p-3 bg-gray-100 rounded-md shadow-sm text-sm"
-                  >
-                    {concern.name}
-                  </li>
-                ))}
-              </ul>
+  {dataList[0].skinConcerns?.map((concern, index) => (
+    <li
+      key={index}
+      className={`p-3 rounded-md shadow-sm text-sm ${
+        shuffledColors[index % shuffledColors.length]
+      }`}
+    >
+      {concern.name}
+    </li>
+  ))}
+</ul>
 
               <h2 className="text-lg font-semibold mt-6 mb-4">
                 Recommended Product
@@ -246,7 +272,7 @@ export default function SelfiePage() {
               {dataList[0].productAnalysis?.map((product, index) => (
                 <div
                   key={index}
-                  className="bg-gray-100 p-4 rounded-lg shadow-md mb-4"
+                  className=" p-4 rounded-lg shadow-sm mb-4"
                 >
                   {product.imageUrl && (
                     <img
@@ -259,7 +285,8 @@ export default function SelfiePage() {
                       }}
                     />
                   )}
-                  <h3 className="text-sm font-semibold">{product.name}</h3>
+                  <h3 className="text-md font-semibold">{product.name}</h3>
+                  {/* <h3 className="text-sm font-light">{product.explanation}</h3> */}
                 </div>
               ))}
             </div>
