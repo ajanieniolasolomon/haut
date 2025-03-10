@@ -44,7 +44,8 @@ export default function SelfiePage() {
       );
 
       if (!data?.data) throw new Error("Invalid response from server");
-      setDataList([data.data]);
+      console.log(data.data.data)
+      setDataList([data.data.data]);
       setStep("result");
     } catch (error) {
       setError(
@@ -71,7 +72,7 @@ export default function SelfiePage() {
       const { data } = await axios.get(
         `${process.env.NEXT_PUBLIC_BASE_URL}/campaign/find-by-email-id`,
         {
-          params: { userId: id=='1111'?'cd7c0130-9b18-414b-b597-d607806eb5a5':id, email: email },
+          params: { userId: id == '1111' ? 'cd7c0130-9b18-414b-b597-d607806eb5a5' : id, email: email },
         }
       );
 
@@ -127,10 +128,12 @@ export default function SelfiePage() {
             <h1 className="text-center text-lg mb-2 font-extrabold">
               Congratulations on you have been selected!
             </h1>
+           
+          
             <p className="text-sm text-justify mb-5">
               Congrats! You made it here!
               Sign up with your email to get access and RSVP to Urban Skin Rx Launch Event and
-               your Skin Analysis for curated regimen and care package to be picked up at the event 😊!
+              your Skin Analysis for curated regimen and care package to be picked up at the event 😊!
             </p>
             <form onSubmit={handleSubmit} className="p-1 rounded shadow-sm">
               <div className="mb-4">
@@ -160,6 +163,10 @@ export default function SelfiePage() {
 
         {step === "prepare" && (
           <div className="text-center bg-white p-8 rounded shadow-sm">
+             <div className="bg-blue-100 text-blue-700 text-sm p-3 rounded-md mb-4">
+             Please ensure you have good lighting when taking the picture
+              </div>
+          
             <p className="text-lg mb-4">Prepare for your selfie!</p>
             <button
               onClick={() => setStep("capture")}
