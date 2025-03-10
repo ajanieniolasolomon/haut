@@ -286,7 +286,7 @@ export default function SelfiePage() {
                     />
                   )}
                   <h3 className="text-md font-semibold">{product.name}</h3>
-                  {/* <h3 className="text-sm font-light">{product.explanation}</h3> */}
+                  <h3 className="text-sm font-light">{product.explanation}</h3>
                 </div>
               ))}
             </div>
