@@ -3,6 +3,7 @@ import { useState, useRef, useCallback } from "react";
 import { useParams } from "next/navigation";
 import Webcam from "react-webcam";
 import axios from "axios";
+import { Camera, Sun, User, Wallpaper } from "lucide-react";
 
 export default function SelfiePage() {
   const router = useParams();
@@ -183,19 +184,34 @@ export default function SelfiePage() {
         )}
 
         {step === "prepare" && (
-          <div className="text-center bg-white p-8 rounded shadow-sm">
-            <div className="bg-blue-100 text-blue-700 text-sm p-3 rounded-md mb-4">
-              Please ensure you have good lighting when taking the picture.
-            </div>
-
-            <p className="text-lg mb-4">Prepare for your selfie!</p>
-            <button
-              onClick={() => setStep("capture")}
-              className="bg-green-500 text-white py-2 px-4 rounded hover:bg-green-600 transition-colors"
-            >
-              Take Picture
-            </button>
+      
+  <div className="flex flex-col items-center justify-center min-h-screen  p-4">
+      <div className="max-w-md w-full bg-white shadow-lg rounded-2xl p-6">
+        <h2 className="text-xl font-semibold text-center mb-4">📸 Capture Your Best Skin Scan!</h2>
+        <div className="space-y-4">
+          <div className="flex items-center gap-3">
+            <Wallpaper className="w-6 h-6 text-blue-500" />
+            <p className="text-gray-700">Use a <strong>plain background</strong>—no distractions behind you.</p>
           </div>
+          <div className="flex items-center gap-3">
+            <User className="w-6 h-6 text-green-500" />
+            <p className="text-gray-700">Face the camera directly for a <strong>front view</strong>.</p>
+          </div>
+          <div className="flex items-center gap-3">
+            <Camera className="w-6 h-6 text-purple-500" />
+            <p className="text-gray-700">Keep the camera <strong>close-up</strong> to your face.</p>
+          </div>
+          <div className="flex items-center gap-3">
+            <Sun className="w-6 h-6 text-yellow-500" />
+            <p className="text-gray-700">Ensure <strong>good lighting</strong>—natural or bright indoor light.</p>
+          </div>
+          <button    onClick={() => setStep("capture")} className="w-full mt-4 bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 transition">
+            Start Skin Analysis
+          </button>
+        </div>
+      </div>
+    </div>
+       
         )}
 
         {step === "capture" && (
