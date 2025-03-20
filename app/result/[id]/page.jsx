@@ -112,6 +112,9 @@ const Result = () => {
                   <h3 className="text-primary md:text-[24px] text-[14px] font-[400]">
                     {condition.name}
                   </h3>
+                  <h5 className="text-primary md:text-[20px] text-[10px] font-[200]">
+                    {condition.explanation}
+                  </h5>
                 </div>
               </div>
             ))}
