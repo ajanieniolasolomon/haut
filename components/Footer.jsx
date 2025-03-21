@@ -1,9 +1,54 @@
-import Link from "next/link";
+
 import React from "react";
+import { useTransitionRouter } from 'next-view-transitions'
 
 import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 export default function Footer() {
+
+
+  const slideInOut = () => {
+    document.documentElement.animate(
+      [
+        {
+
+          opacity: 1,
+          transform: "translateY(0)"
+        },
+        {
+
+          opacity: 0.2,
+          transform: "translateY(-35%)"
+        }
+      ], {
+      duration: 1500,
+      easing: "cubic-bezier(0.87,0,0.13,1)",
+      fill: "forwards",
+      pseudoElement: "::view-transition-old(root)"
+    }
+    );
+    document.documentElement.animate(
+      [
+        {
+
+          clipPath: "polygon(0% 100% ,100% 100%,100% 100%,0% 100%)",
+
+        },
+        {
+
+          clipPath: "polygon(0% 100% ,100% 100%,100% 0%,0% 0%)",
+        }
+      ], {
+      duration: 1500,
+      easing: "cubic-bezier(0.87,0,0.13,1)",
+      fill: "forwards",
+      pseudoElement: "::view-transition-new(root)"
+    }
+    );
+
+  }
+
+  const router = useTransitionRouter()
   return (
     <div className="  bg-primary  md:h-[400px] h-full px-[5%] py-[2%]    flex flex-col ">
       <div className="  md:h-[380px] h-full gap-6 grid md:grid-cols-5 grid-cols-2">
@@ -12,6 +57,7 @@ export default function Footer() {
             <img src={"/logo2.svg"} alt="" className="w-[100px]" />
             {/* <p className="text-[24px] font-[500] text-white ">Demi Care</p> */}
           </div>
+
           <button className="bg-white font-[200] rounded-[30px] h-[56px] text-primary text-[18px]">
             Request Demo
           </button>
@@ -28,12 +74,22 @@ export default function Footer() {
           <h3 className="text-[14px] text-white font-[200] opacity-[40%] capitalize">
             Company
           </h3>
-          <Link href="/about" className="text-[14px] text-white font-[500] opacity-[80%] capitalize">
+          <a href="/about" onClick={(e) => {
+            e.preventDefault()
+            router.push("/about", {
+              onTransitionReady: slideInOut
+            })
+          }} className="text-[14px] text-white font-[500] opacity-[80%] capitalize">
             About Us
-          </Link>
-          <p className="text-[14px] text-white font-[500] opacity-[80%] capitalize">
-            Our Service
-          </p>
+          </a>
+          <a href="/privacy" onClick={(e) => {
+            e.preventDefault()
+            router.push("/privacy", {
+              onTransitionReady: slideInOut
+            })
+          }} className="text-[14px] text-white font-[500] opacity-[80%] capitalize">
+            Privacy & Policy
+          </a>
           <p className="text-[14px] text-white font-[500] opacity-[80%] capitalize">
             Request Demo
           </p>
@@ -42,9 +98,18 @@ export default function Footer() {
           <h3 className="text-[14px] text-white font-[200] opacity-[40%] capitalize">
             Legal
           </h3>
-          <Link href="/terms" className="text-[14px] text-white font-[500] opacity-[80%] capitalize">
+          <a href="/terms"
+
+            onClick={(e) => {
+              e.preventDefault()
+              router.push("/terms", {
+                onTransitionReady: slideInOut
+              })
+            }}
+
+            className="text-[14px] text-white font-[500] opacity-[80%] capitalize">
             Terms and Conditions
-          </Link>
+          </a>
         </div>
         <div className=" flex flex-col gap-6">
           <h3 className="text-[14px] text-white font-[200] opacity-[40%] capitalize">

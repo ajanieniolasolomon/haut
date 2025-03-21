@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import React, { useState } from "react";
+import { useTransitionRouter } from 'next-view-transitions'
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -9,7 +10,48 @@ export default function Navbar() {
     setIsOpen(!isOpen);
   };
 
+const slideInOut =() =>{
+  document.documentElement.animate(
+    [
+      {
 
+        opacity:1,
+        transform: "translateY(0)"
+      },
+      {
+
+        opacity:0.2,
+        transform: "translateY(-35%)"
+      }
+    ],{
+      duration:1500,
+      easing:"cubic-bezier(0.87,0,0.13,1)",
+      fill:"forwards",
+      pseudoElement:"::view-transition-old(root)"
+    }
+  );
+  document.documentElement.animate(
+    [
+      {
+
+        clipPath:"polygon(0% 100% ,100% 100%,100% 100%,0% 100%)",
+  
+      },
+      {
+
+        clipPath:"polygon(0% 100% ,100% 100%,100% 0%,0% 0%)",
+      }
+    ],{
+      duration:1500,
+      easing:"cubic-bezier(0.87,0,0.13,1)",
+      fill:"forwards",
+      pseudoElement:"::view-transition-new(root)"
+    }
+  );
+
+}
+
+  const router = useTransitionRouter()
     const handleEmailClick = () => {
       window.location.href = "mailto:info@demicare.skin";
     }
@@ -18,19 +60,44 @@ export default function Navbar() {
     <nav
       className={`md:fixed relative top-0 left-0 right-0 bg-white/20 backdrop-blur-md rounded-lg p-6  border-white/10 shadow-inner border w-[100%] flex justify-between items-center px-[5%] py-6 z-20 transition-all duration-300`} // Added transition
     >
-      <Link href="/">
+      <a 
+       onClick={(e)=>{
+        e.preventDefault()
+        router.push("/",{
+          onTransitionReady:slideInOut
+        })
+       }}
+      
+      href="/">
         <img src={"/Logo.svg"} alt="" className="w-[50px]" />
-      </Link>
+      </a>
       <ul className="hidden md:flex space-x-8">
         <li>
-          <Link href="/contact">
+          <a
+               onClick={(e)=>{
+                e.preventDefault()
+                router.push("/contact",{
+                  onTransitionReady:slideInOut
+                })
+               }}
+          
+          href="/contact">
             <p className="hover:text-primary text-[#000202]">Our service</p>
-          </Link>
+          </a>
         </li>
         <li>
-          <Link href="/about">
+          <a 
+          
+          onClick={(e)=>{
+            e.preventDefault()
+            router.push("/about",{
+              onTransitionReady:slideInOut
+            })
+           }}
+          
+          href="/about">
             <p className="hover:text-primary text-[#000202]">About us</p>
-          </Link>
+          </a>
         </li>
       </ul>
       <div className="md:block hidden">
@@ -50,24 +117,45 @@ export default function Navbar() {
           {" "}
           {/* Changed to space-y for vertical spacing */}
           <li>
-            <Link href="/">
+            <a href="/" 
+            
+            onClick={(e)=>{
+      
+              e.preventDefault()
+           
+              router.push("/",{
+                onTransitionReady:slideInOut
+              })
+             }}
+            >
               <p className="hover:text-[#3c69d6] text-black">Home</p>
-            </Link>
+            </a>
           </li>
           <li>
-            <Link href="/about">
+            <a href="/about" 
+            
+            
+            onClick={(e)=>{
+      
+              e.preventDefault()
+ 
+              router.push("/about",{
+                onTransitionReady:slideInOut
+              })
+             }}
+            >
               <p className="hover:text-[#3c69d6] text-black">About</p>
-            </Link>
+            </a>
           </li>
           <li>
-            <Link href="/">
+            <a >
               <p
                 onClick={handleEmailClick}
                 className="hover:text-[#3c69d6] text-black"
               >
                 Contact
               </p>
-            </Link>
+            </a>
           </li>
         </ul>
       </div>
