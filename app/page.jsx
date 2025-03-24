@@ -424,9 +424,11 @@ export default function Home() {
       <h2 className="md:text-[48px]  text-[24px] font-[600] text-center  mb-5">
         Our Partners
         </h2>
-        <Marquee>
-      <img className="h-[10%] w-[30%] ml-2 pt-5" src="urbanskin.svg" alt="" />
-      <img className="h-[10%] w-[60%] mr-2 pt-5" src="perfect.png" alt="" />
+        <Marquee autoFill="false" pauseOnHover="true">
+      <img className="h-[10%] mr-5 w-[200px]  pt-5" src="urbanskin.svg" alt="" />
+      <img className="h-[10%] w-[200px] mr-10   pt-5" src="perfect.png" alt="" />
+      <img className="h-[10%] w-[200px] mr-10 pt-5" src="shefa.jpg" alt="" />
+      
 </Marquee>
       </div>
 
