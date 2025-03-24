@@ -148,14 +148,12 @@ export default function SelfiePage() {
             )}
 
             <h1 className="text-center text-lg mb-2 font-extrabold">
-              Congratulations on you have been selected!
+            Urban Skin Rx 
             </h1>
 
 
             <p className="text-sm text-justify mb-5">
-              Congrats! You made it here!
-              Sign up with your email to get access and RSVP to Urban Skin Rx Launch Event and
-              your Skin Analysis for curated regimen and care package to be picked up at the event 😊!
+            Sign up with your email for deep skin analysis and consultation with 15% OFF Urban Skin Rx prescribed products
             </p>
             <form onSubmit={handleSubmit} className="p-1 rounded shadow-sm">
               <div className="mb-4">

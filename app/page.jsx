@@ -5,6 +5,7 @@ import ImageSlider from "@/components/ImageSlider";
 import Typewriter from "@/components/Typewriter";
 import ScrollAnimation from 'react-animate-on-scroll';
 import React, { useState } from "react";
+import Marquee from "react-fast-marquee";
 // import SimpleSlider from "@/components/Slider";
 // import pharmaceuticalImages from "@/data/pharmaceutical";
 // import supportedByImages from "@/data/supportedBy";
@@ -424,9 +425,17 @@ export default function Home() {
       </ScrollAnimation>
       {/* <SimpleSlider images={pharmaceuticalImages} /> */}
 
-      {/* sixth div */}
+      <div  className="flex flex-col md:w-auto w-[337px] ">
+      <h2 className="md:text-[48px]  text-[24px] font-[600] text-center  mb-5">
+        Our Partners
+        </h2>
+        <Marquee>
+      <img className="h-[10%] w-[30%] ml-2 pt-5" src="urbanskin.svg" alt="" />
+      <img className="h-[10%] w-[60%] mr-2 pt-5" src="perfect.png" alt="" />
+</Marquee>
+      </div>
 
-      {/* Seventh Div */}
+      
       <ScrollAnimation animateIn="fadeIn">
         <div className="bg-white relative w-[100%] p-[5%]">
           <div className="relative">
