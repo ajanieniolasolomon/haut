@@ -40,17 +40,12 @@ export default function Home() {
           )}
         </h6>
         <div className="z-10">
-
-          <ScrollAnimation animateIn='wobble'
-            initiallyVisible={true}>
-            <a
-              href="https://apps.apple.com/ng/app/demicare/id6478509541"
-              className="bg-secondary transition-colors duration-300 hover:bg-primary text-white font-[200] rounded-full py-4 px-12 "
-            >
-              Request a Demo
-            </a>
-          </ScrollAnimation>
-
+          <a
+            href="https://apps.apple.com/ng/app/demi-care-brand/id6741867226"
+            className="bg-secondary transition-colors duration-300 hover:bg-primary text-white font-[200] rounded-full py-4 px-12 "
+          >
+            Request a Demo
+          </a>
         </div>
         {/* <AnimatedGridPattern /> */}
       </div>
