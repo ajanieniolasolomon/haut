@@ -422,7 +422,7 @@ export default function Home() {
 
       <div  className="flex flex-col md:w-auto w-[337px] ">
       <h2 className="md:text-[48px]  text-[24px] font-[600] text-center  mb-5">
-        Our Partners
+     Trusted By
         </h2>
         <Marquee autoFill="false" pauseOnHover="true">
       <img className="h-[10%] mr-5 w-[200px]  pt-5" src="urbanskin.svg" alt="" />
