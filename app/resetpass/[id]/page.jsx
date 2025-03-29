@@ -59,7 +59,7 @@ if(data.success==true){
 
 
   return (
-    <div className="min-h-screen flex items-center justify-center p-4 relative">
+    <div className="h-[80vh] flex items-center justify-center p-4">
       {loading && (
         <div className="absolute inset-0 flex items-center justify-center bg-gray-900 bg-opacity-50">
           <div className="loader border-t-4 border-blue-500 rounded-full w-12 h-12 animate-spin"></div>
