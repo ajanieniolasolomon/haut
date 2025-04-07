@@ -53,7 +53,7 @@ const slideInOut =() =>{
 
   const router = useTransitionRouter()
     const handleEmailClick = () => {
-      window.location.href = "mailto:info@demicare.skin";
+      window.location.href = "mailto:demicareng@gmail.com";
     }
 
   return (

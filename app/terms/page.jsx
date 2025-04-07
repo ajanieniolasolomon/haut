@@ -117,10 +117,10 @@ export default function TermsPage() {
                   If you have any questions regarding shipping policies or
                   tracking your shipment, please email{" "}
                   <a
-                    href="mailto:info@demicare.skin"
+                    href="mailto:demicareng@gmail.com"
                     className="text-secondary"
                   >
-                    info@demicare.skin
+                    demicareng@gmail.com
                   </a>
                 </b>
               </div>
@@ -185,8 +185,8 @@ export default function TermsPage() {
                 If your package arrives and products are damaged, please take
                 photos of the outer shipping carton and the damaged products.
                 Please send the photos and a note describing the damage to
-                <a href="mailto:info@demicare.skin" className="text-secondary">
-                  info@demicare.skin
+                <a href="mailto:demicareng@gmail.com" className="text-secondary">
+                  demicareng@gmail.com
                 </a>{" "}
                 within 2 weeks of delivery and we will be happy to send
                 replacements.
@@ -411,8 +411,8 @@ export default function TermsPage() {
                 If you believe your copyright or other intellectual property or
                 privacy right has been violated by content accessible via the
                 Services, please contact us by email at{" "}
-                <a href="mailto:info@demicare.skin" className="text-secondary">
-                  info@demicare.skin
+                <a href="mailto:demicareng@gmail.com" className="text-secondary">
+                  demicareng@gmail.com
                 </a>{" "}
               </div>
             </div>
@@ -444,8 +444,8 @@ export default function TermsPage() {
                 physician immediately. If you believe you have experienced an
                 adverse reaction to one of our products, please contact us with
                 your before and after picture at{" "}
-                <a href="mailto:info@demicare.skin" className="text-secondary">
-                  info@demicare.skin
+                <a href="mailto:demicareng@gmail.com" className="text-secondary">
+                  demicareng@gmail.com
                 </a>{" "}
               </div>
             </div>
@@ -600,8 +600,8 @@ export default function TermsPage() {
               </p>
               <p>
                 email:{" "}
-                <a href="mailto:info@demicare.skin" className="text-secondary">
-                  info@demicare.skin
+                <a href="mailto:demicareng@gmail.com" className="text-secondary">
+                  demicareng@gmail.com
                 </a>{" "}
               </p>
               <p>phone: (+234) 9132496146</p>
@@ -618,10 +618,10 @@ export default function TermsPage() {
                 <p>
                   email:{" "}
                   <a
-                    href="mailto:info@demicare.skin"
+                    href="mailto:demicareng@gmail.com"
                     className="text-secondary"
                   >
-                    info@demicare.skin
+                    demicareng@gmail.com
                   </a>{" "}
                 </p>
                 <p>phone: (+234) 9132496146</p>

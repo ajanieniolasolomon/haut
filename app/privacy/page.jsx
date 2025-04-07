@@ -48,7 +48,7 @@ export default function PrivacyPage() {
               We use facial data to:
               <ul class="list-disc pl-5">
                 <li>Facial data is stored securely and retained only as long as necessary for analysis and research purpose.</li>
-                <li>You can request deletion of your face data at any time by contacting info@demicare.skin</li>
+                <li>You can request deletion of your face data at any time by contacting demicareng@gmail.com</li>
                 <li>After deletion, we ensure that no residual data remains in our systems.</li>
               </ul>
               </div>
@@ -64,7 +64,7 @@ export default function PrivacyPage() {
               7. Contact Us
               </h3>
               <div>
-              If you have any questions about this policy, you can reach us at info@demicare.skin.
+              If you have any questions about this policy, you can reach us at demicareng@gmail.com.
               </div>
          
             </div>
@@ -86,12 +86,12 @@ export default function PrivacyPage() {
               <div>
               <ul class="list-disc pl-5">
                 <li>
-                You can opt out of face data collections by contacting info@demicare.skin.
+                You can opt out of face data collections by contacting demicareng@gmail.com.
 
                 </li>
 
                 <li>
-                You have the right to access, update, or delete your data by contacting info@demicare.skin.
+                You have the right to access, update, or delete your data by contacting demicareng@gmail.com.
                 </li>
                </ul>
               </div>
@@ -110,10 +110,10 @@ export default function PrivacyPage() {
                 <p>
                   email:{" "}
                   <a
-                    href="mailto:info@demicare.skin"
+                    href="mailto:demicareng@gmail.com"
                     className="text-secondary"
                   >
-                    info@demicare.skin
+                    demicareng@gmail.com
                   </a>{" "}
                 </p>
                 <p>phone: (+234) 9132496146</p>
