@@ -22,6 +22,7 @@ export default function SelfiePage() {
 
 
 
+
   useEffect(() => {
     async function fetchBrands() {
       setError("");
@@ -30,7 +31,9 @@ export default function SelfiePage() {
         const res = await fetch('https://srv.demicare.skin/brand/by-user?userId='+id);
         const data = await res.json();
         if(data.data){
+        
           setBrands(data.data);
+         
           setStep('form')
         }else{
           setStep('error')
@@ -119,12 +122,12 @@ export default function SelfiePage() {
 
     setError("");
     setLoading(true);
-
+// params: { userId: id == '1111' ? 'cd7c0130-9b18-414b-b597-d607806eb5a5' : id, email: email },
     try {
       const { data } = await axios.get(
         `${process.env.NEXT_PUBLIC_BASE_URL}/campaign/find-by-email-id`,
         {
-          params: { userId: id == '1111' ? 'cd7c0130-9b18-414b-b597-d607806eb5a5' : id, email: email },
+          params: { userId: id, email: email },
         }
       );
 
@@ -233,11 +236,16 @@ export default function SelfiePage() {
              />
 
            </div>
+           
            <button
              type="submit"
-             className={`w-full bg-[${brands['primaryColor']}] text-[${brands['secondaryColor']}] py-2 px-4  font-[200] rounded-full`}
-           >
-             Submit
+             className={`w-full py-2 px-4  font-[200] rounded-full`}
+             style={{
+              backgroundColor: brands['primaryColor'],
+              color: brands['secondaryColor'],
+            }}
+          >
+             Submit 
            </button>
          </form>
        </div>
@@ -265,7 +273,13 @@ export default function SelfiePage() {
          <Sun className="w-6 h-6 text-yellow-500" />
          <p className="text-gray-700">Ensure <strong>good lighting</strong>—natural or bright indoor light.</p>
        </div>
-       <button    onClick={() => setStep("capture")} className={`w-full mt-4 bg-[${brands['primaryColor']}] text-[${brands['secondaryColor']}] py-2 rounded-lg hover:bg-blue-600 transition`}>
+       <button    onClick={() => setStep("capture")}
+          style={{
+            backgroundColor: brands['primaryColor'],
+            color: brands['secondaryColor'],
+          }}
+       
+       className={`w-full mt-4  py-2 rounded-lg hover:bg-blue-600 transition`}>
          Start Skin Analysis
        </button>
      </div>
@@ -286,7 +300,12 @@ export default function SelfiePage() {
          />
          <button
            onClick={capture}
-           className={`mt-4 bg-[${brands['primaryColor']}] text-[${brands['secondaryColor']}] py-2 px-4 rounded `}
+
+           style={{
+            backgroundColor: brands['primaryColor'],
+            color: brands['secondaryColor'],
+          }}
+           className={`mt-4 py-2 px-4 rounded `}
          >
            Capture Photo
          </button>
