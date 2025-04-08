@@ -324,7 +324,7 @@ export default function SelfiePage() {
          <div className="bg-green-100 text-green-700 text-sm p-3 rounded-md mb-4">
          ✨ Your free skin consultation with {brands['brandName']} is complete! Below are your personalized results. To get your hands on the recommended products, feel free to contact <a href={`tel:${brands['contactMobile']}`} className="text-blue-500 underline">
   Call Us: {brands['contactMobile']}
-</a> — they’ll be happy to assist you! 
+</a> — they{'’'}ll be happy to assist you! 
          </div>
          {/* <h1 className="text-center mb-10 text-lg font-bold">
            Below Is Your Skin Concern and Product Recommendation
