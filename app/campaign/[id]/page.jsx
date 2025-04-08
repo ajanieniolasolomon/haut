@@ -189,7 +189,7 @@ export default function SelfiePage() {
          
           <h1 className="text-center text-lg mb-2 font-extrabold">
           <div className="bg-red-100 text-red-700 text-sm p-3 rounded-md mb-4">
-          Hmm... it looks like the brand you're searching for doesn't exist at the moment. It might have been removed or the link could be incorrect
+          Hmm... it looks like the brand you{"'"}re searching for doesn{"'"}t exist at the moment. It might have been removed or the link could be incorrect
            </div>
          </h1>
         </div>
