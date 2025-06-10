@@ -41,30 +41,9 @@ const SpinWheel = ({
 
       const selectedItem = wheelData[segmentIndex];
 
-      // if (selectedItem?.name.toString().toLowerCase() != 'retry again' && selectedItem?.quantity == 0 && selectedItem?.available == false) {
-      //   const data = {
-      //     'available'
-      //       : false,
-      //     'createdAt'
-      //       : "2025-06-09T14:23:56.982Z",
-      //     'id': "00000000-0000-0000-0000-000000000000",
-      //     'imageUrl': "",
-      //     'name': "No item won",
-      //     'quantity': 0,
-      //     'status': false,
-      //     'updatedAt':
-      //       "2025-06-09T14:23:56.982Z",
-      //     'userId': "b1be8983-a09a-4248-9c85-e21dddbcb7f2"
-      //   };
-      //   setResult(data);
-      // } else {
-      //   setResult(selectedItem);
-      // }
-      // console.log(selectedItem)
+      
      setResult(selectedItem);
       setIsSpinning(false);
-
-      // Call the callback function with the selected item
       if (onItemSelected) {
         onItemSelected(selectedItem);
       }
@@ -135,21 +114,26 @@ const SpinWheel = ({
 
         {/* Controls */}
         <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center mb-4 sm:mb-6 px-4">
+          
           <button
-            onClick={spinWheel}
-            disabled={isSpinning}
-            className="bg-blue-600 hover:bg-blue-700 disabled:bg-gray-600 text-white font-bold py-3 px-6 sm:px-8 rounded-full transition-colors duration-200 transform hover:scale-105 disabled:scale-100 w-full sm:w-auto"
-          >
-            {isSpinning ? 'Spinning...' : 'Spin Wheel'}
-          </button>
+  onClick={spinWheel}
+  disabled={isSpinning}
+  type="button"
+  className="group relative block w-full sm:w-auto focus:outline-none font-bold uppercase cursor-pointer tracking-wider disabled:cursor-not-allowed"
+>
+  <span
+    className="absolute left-0 top-0 block w-full h-[38px] bg-blue-600 text-white rounded-[8px] transition-transform duration-100 ease-in-out translate-y-[6px] group-active:translate-y-[3px] disabled:group-active:translate-y-[6px]"
+    aria-hidden="true"
+  ></span>
 
-          <button
-            onClick={resetWheel}
-            disabled={isSpinning}
-            className="bg-gray-600 hover:bg-gray-700 disabled:bg-gray-500 text-white font-bold py-3 px-6 sm:px-8 rounded-full transition-colors duration-200 transform hover:scale-105 disabled:scale-100 w-full sm:w-auto"
-          >
-            Reset
-          </button>
+  <span
+    className="relative text-base block leading-none px-10 py-[10px] h-[38px] box-border bg-blue-700 text-white rounded-[8px] transition-all duration-100 ease-in-out group-active:translate-y-[3px] opacity-100 disabled:opacity-70"
+  >
+    {isSpinning ? 'Spinning...' : 'Spin Wheel'}
+  </span>
+</button>
+
+         
         </div>
 
         {/* Result Display */}

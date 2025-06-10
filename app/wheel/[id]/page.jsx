@@ -7,7 +7,8 @@ import { useParams } from "next/navigation";
 import useSound from 'use-sound';
 import axios from "axios";
 import Rive from '@rive-app/react-canvas';
-import ErrorAnimation from '../../../components/Error'
+import ErrorAnimation from '../../../components/Error';
+import Confetti from 'react-confetti'
 import {
   useRive,
   useStateMachineInput,
@@ -15,7 +16,7 @@ import {
   Fit,
   Alignment,
 } from "@rive-app/react-canvas";
-
+import {useWindowSize, useTimeout} from 'react-use';
 import SpinWheel from '../../../components/PrizeWheel';
 export default function WheelPage() {
   const router = useParams();
@@ -29,14 +30,32 @@ export default function WheelPage() {
 
   const [userId, setUserId] = useState("");
   const [brands, setBrands] = useState(null);
-  const [playActive] = useSound('pop-down.mp3', {
-    volume: 0.25,
-  })
-
+  // const [playActive] = useSound('pop-down.mp3', {
+  //   volume: 0.25,
+  // })
+const [resultspin, setresultspin] = useState(null);
+  const { width, height } = useWindowSize()
+  const [isComplete] = useTimeout(4000);
 
  const handleSpinFinish = (result) => {
-    console.log(result);
-    // Handle the result as needed
+
+    if(result?.name.toLowerCase()!='Retry again'.toLowerCase()){
+      if(result?.available==false && result?.quantity==0){
+
+loss(result);
+      }else{
+        if(result?.name.toLowerCase()=='no item won'.toLowerCase()){
+loss(result);
+        }else{
+          win(result);
+          
+        }
+
+
+      }
+
+    }
+ 
   };
 
  
@@ -63,114 +82,14 @@ export default function WheelPage() {
 
 
 
-// The data you provided
-const prizeData = 
- [
-        {
-            "id": "20431586-d6af-400f-9c5b-205848454347",
-            "name": "A",
-            "userId": "b1be8983-a09a-4248-9c85-e21dddbcb7f2",
-            "quantity":6,
-            "status": false,
-            "imageUrl": "https://firebasestorage.googleapis.com/v0/b/telleibuz-dev.appspot.com/o/4a30741e-52df-4004-84b3-5fb2de0285e3-photo.jpg?alt=media",
-            "createdAt": "2025-06-06T23:27:21.319Z",
-            "updatedAt": "2025-06-06T23:27:21.319Z",
-            "available": true
-        },
-        {
-            "id": "00000000-0000-0000-0000-000000000000",
-            "name": "No item won",
-            "quantity": 0,
-            "imageUrl": "",
-            "status": false,
-            "createdAt": "2025-06-09T14:23:56.982Z",
-            "updatedAt": "2025-06-09T14:23:56.982Z",
-            "userId": "b1be8983-a09a-4248-9c85-e21dddbcb7f2",
-            "available": false
-        },
-        {
-            "id": "587a96e2-e086-4117-87c4-b38e28f0ad15",
-            "name": "B",
-            "userId": "b1be8983-a09a-4248-9c85-e21dddbcb7f2",
-            "quantity":9,
-            "status": false,
-            "imageUrl": "https://firebasestorage.googleapis.com/v0/b/telleibuz-dev.appspot.com/o/4a30741e-52df-4004-84b3-5fb2de0285e3-photo.jpg?alt=media",
-            "createdAt": "2025-06-06T23:27:21.319Z",
-            "updatedAt": "2025-06-06T23:27:21.319Z",
-            "available": true
-        },
-        {
-            "id": "00000000-0000-0000-0000-000000000000",
-            "name": "No item won",
-            "quantity": 0,
-            "imageUrl": "",
-            "status": false,
-            "createdAt": "2025-06-09T14:23:56.982Z",
-            "updatedAt": "2025-06-09T14:23:56.982Z",
-            "userId": "b1be8983-a09a-4248-9c85-e21dddbcb7f2",
-            "available": false
-        },
-        {
-            "id": "cfedf727-77fb-4dc9-8e5b-4b420e649342",
-            "name": "D",
-            "userId": "b1be8983-a09a-4248-9c85-e21dddbcb7f2",
-            "quantity":90,
-            "status": false,
-            "imageUrl": "https://firebasestorage.googleapis.com/v0/b/telleibuz-dev.appspot.com/o/4a30741e-52df-4004-84b3-5fb2de0285e3-photo.jpg?alt=media",
-            "createdAt": "2025-06-06T23:27:21.319Z",
-            "updatedAt": "2025-06-06T23:27:21.319Z",
-            "available": true
-        },
-        {
-            "id": "00000000-0000-0000-0000-000000000000",
-            "name": "Retry again",
-            "quantity": 0,
-            "imageUrl": "",
-            "status": false,
-            "createdAt": "2025-06-09T14:23:56.982Z",
-            "updatedAt": "2025-06-09T14:23:56.982Z",
-            "userId": "b1be8983-a09a-4248-9c85-e21dddbcb7f2",
-            "available": false
-        },
-        {
-            "id": "60bf6b6d-f92c-482a-b555-6fe1ebea714b",
-            "name": "C",
-            "userId": "b1be8983-a09a-4248-9c85-e21dddbcb7f2",
-             "quantity":0,
-            "status": false,
-            "imageUrl": "https://firebasestorage.googleapis.com/v0/b/telleibuz-dev.appspot.com/o/4a30741e-52df-4004-84b3-5fb2de0285e3-photo.jpg?alt=media",
-            "createdAt": "2025-06-06T23:27:21.319Z",
-            "updatedAt": "2025-06-06T23:27:21.319Z",
-            "available": false
-        },
-        {
-            "id": "00000000-0000-0000-0000-000000000000",
-            "name": "No item won",
-            "quantity": 0,
-            "imageUrl": "",
-            "status": false,
-            "createdAt": "2025-06-09T14:23:56.982Z",
-            "updatedAt": "2025-06-09T14:23:56.982Z",
-            "userId": "b1be8983-a09a-4248-9c85-e21dddbcb7f2",
-            "available": false
-        }
-    ]
-
     
 
-    const onFinished = (winner) => {
-    console.log(winner)
-  }
 
-//  const skinInput = useStateMachineInput(
-//     rive,
-//     STATE_MACHINE_NAME,
-//     TRIGGER_NAME
-//   );
+
 
   useEffect(() => {
     if (rive) {
-      console.log("Rive ready");
+  
       rive.play('Gem'); 
       rive.play('Shine'); 
     
@@ -183,7 +102,7 @@ const prizeData =
     async function fetchBrands() {
       setError("");
       setLoading(true);
-      console.log(rive);
+  
       try{
         const ID =  id == '1111' ? 'cd7c0130-9b18-414b-b597-d607806eb5a5' : id
         const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/brand/by-user?userId=${ID}`);
@@ -200,14 +119,11 @@ const prizeData =
        
 
       }catch(err){
-        console.log(err)
+        
         setStep('error')
       }finally {
         setLoading(false);
-    //               if (rive) {
-    //   rive.play('Gem'); // optional if not autoplay
-    //    rive.play('Shine');
-    // }
+    
       }
 
     }
@@ -235,12 +151,90 @@ const prizeData =
   // Shuffle colors array
   const shuffledColors = shuffleArray([...colors]);
 
+const loss = (result)=>{
+  const api = process.env.NEXT_PUBLIC_BASE_URL;
+      setError("");
+    setLoading(true);
+ return  fetch(`${api}/spinner/loss`, {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json'
+  },
+  body: JSON.stringify({
+    email: email,
+    userId: id
+  })
+})
+.then(response => {
+  if (!response.ok) {
+    throw new Error('Network response was not ok');
+  }
+  return response.json(); // assuming the server returns JSON
+})
+.then(data => {
 
+
+   setLoading(false);
+            setresultspin({...result,'mode':'noWin'});
+             setStep('spinner-result');
+})
+.catch(error => {
+  console.error('Error:', error);
+   setError(
+        error.response?.data?.message ||
+        error.message ||
+        "Network error. Please try again."
+      );
+   setLoading(false);
+});
+
+}
+
+  
+
+const win = (result)=>{
+  const api = process.env.NEXT_PUBLIC_BASE_URL;
+      setError("");
+    setLoading(true);
+ return  fetch(`${api}/spinner/win`, {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json'
+  },
+  body: JSON.stringify({
+    email: email,
+    itemId: result?.id,
+    userId: id
+  })
+})
+.then(response => {
+  if (!response.ok) {
+    throw new Error('Network response was not ok');
+  }
+  return response.json(); // assuming the server returns JSON
+})
+.then(data => {
+
+
+   setLoading(false);
+            setresultspin({...result,'mode':'Win'});
+             setStep('spinner-result');
+})
+.catch(error => {
+
+   setError(
+        error.response?.data?.message ||
+        error.message ||
+        "Network error. Please try again."
+      );
+   setLoading(false);
+});
+
+}
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    playActive();
-    navigator.vibrate(200);
+ 
     if (!validateEmail(email)) {
       setError("Please enter a valid email address");
       return;
@@ -251,12 +245,12 @@ const prizeData =
 // params: { userId: id == '1111' ? 'cd7c0130-9b18-414b-b597-d607806eb5a5' : id, email: email },
     try {
         //process.env.NEXT_PUBLIC_BASE_URL
-    const api = 'https://million-app-iota.vercel.app';
+    const api = process.env.NEXT_PUBLIC_BASE_URL;
       const { data } = await axios.get(
         `${api}/spinner/items`,
         {
-          params: { userId: 'b1be8983-a09a-4248-9c85-e21dddbcb7f2', email: email },
-        // params: { userId: id == '1111' ? 'cd7c0130-9b18-414b-b597-d607806eb5a5' : id, email: email },
+          params: { userId: id, email: email },
+     
         }
       );
 
@@ -264,7 +258,7 @@ const prizeData =
         throw new Error(data?.message || "Invalid server response");
       }
 
-      console.log(data.data.length == 1);
+   
        if (data.data.length == 1) {
   
          setDataList(data.data);
@@ -273,26 +267,14 @@ const prizeData =
 
        }
        else if(data.data.length > 1){
-        
+          setDataList(data.data);
          setStep("wheel");
        }else{
         //no wheel yet
        }
      
 
-    //   if (data.data?.status === false) {
-    //     setStep("prepare");
-    //     setTerminal(data.data.terminal || "");
-    //     setUserId(data.data.userId || "");
-    //   } else {
-    //     if (!data.data) throw new Error("No data received");
-    //     setDataList([data.data]);
-    
-    //     timerRef.current = setTimeout(() => {
-    //       openModal();
-    //     }, 7000);
-    //     setStep("result");
-    //   }
+ 
     } catch (error) {
       setError(
         error.response?.data?.message ||
@@ -311,11 +293,10 @@ const prizeData =
   <div className="dark min-h-screen flex items-center justify-center p-4 relative bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100">
 
   {loading && (
-    <div className="absolute inset-0 flex items-center justify-center bg-gray-500 dark:bg-gray-950 bg-opacity-50 dark:bg-opacity-60">
-      {/* ^ Adjusted overlay for dark mode */}
-      <div className="loader border-t-4 border-blue-500 dark:border-blue-400 rounded-full w-12 h-12 animate-spin"></div>
-      {/* ^ Adjusted loader border for dark mode */}
-    </div>
+<div className="fixed inset-0 flex items-center justify-center z-50">
+  <div className="absolute inset-0 backdrop-blur-md bg-white/20 dark:bg-black/20" />
+  <div className="loader border-t-4 border-blue-500 dark:border-blue-400 rounded-full w-12 h-12 animate-spin z-10" />
+</div>
   )}
 
   <div className="w-full max-w-xl">
@@ -335,7 +316,7 @@ const prizeData =
       </>
     )}
 
- 
+
     {step === "form" && (
       <div className="flex flex-col items-center w-full max-w-xl justify-center p-5 ">
         {/* ^ Added background, padding, and shadow to form container for better visual in both modes */}
@@ -398,14 +379,29 @@ const prizeData =
 
     {step === "result" && dataList[0] && (
       <div className="p-1  w-full"> 
-
-      {/* <img src="" /> {dataList[0]} */}
+<Confetti
+ 
+    
+      recycle={!isComplete()}
+       numberOfPieces={300}
+      gravity={0.2}
+    />
 
       {
          dataList[0]['mode'] =='spinnerResult' && (
       <div className=" flex flex-col items-center justify-start w-full">
-         <p className="mt-2 mb-3 text-xl font-semibold">Congratulation you won  <strong className="text-[#F3BE40]">{dataList[0]['item']['name']}</strong></p>
-<div className="relative group w-[100px] h-[200px]">
+  <div style={{ textAlign: 'center', marginTop: '2rem' }}>
+      <h2 style={{ fontSize: '2rem', color: '#F3BE40' }}>
+        🎉 Congratulations! 🎊
+      </h2>
+      <p style={{ fontSize: '1.2rem', color: '#555' }}>
+        You’ve just won big on the wheel! 🥳
+      </p>
+    
+    </div>
+    
+
+<div className="relative group w-[100px] h-[200px] mt-8">
   <img
 
     src={dataList[0]['item']['imageUrl']}
@@ -424,6 +420,9 @@ const prizeData =
                dark:group-hover:bg-white/20
                group-hover:blur-lg group-hover:w-[80%] group-hover:h-[12px] group-hover:bottom-1"
   ></div>
+  
+         <p className="mt-2 mb-3 text-center text-xl font-semibold"> <strong className="text-[#F3BE40]">{dataList[0]['item']['name']}</strong></p>
+
 </div>
         </div>
          )
@@ -459,9 +458,55 @@ const prizeData =
       <h1 className="text-4xl md:text-5xl font-bold text-gray-100 mb-4">Spin the Wheel!</h1>
       <p className="text-gray-300 mb-1">Click the Spin button to win a prize.</p>
       
-      <SpinWheel wheelData={prizeData}  onItemSelected={handleSpinFinish} />
+      <SpinWheel wheelData={dataList}  onItemSelected={handleSpinFinish} />
     </div>
      )}
+
+{step === "spinner-result" && resultspin['mode'] === 'Win' && (
+  <div>
+    
+
+      <Confetti
+ 
+    
+      recycle={!isComplete()}
+       numberOfPieces={300}
+      gravity={0.2}
+    />
+       <div className=" flex flex-col items-center justify-start w-full">
+         <div style={{ textAlign: 'center', marginTop: '2rem' }}>
+      <h2 style={{ fontSize: '2rem', color: '#F3BE40' }}>
+        🎉 Congratulations! 🎊
+      </h2>
+      <p style={{ fontSize: '1.2rem', color: '#555' }}>
+        You’ve just won big on the wheel! 🥳💰
+      </p>
+    
+    </div>
+         {/* <p className="mt-2 mb-3 text-xl font-semibold">Congratulation you won  <strong className="text-[#F3BE40]">{resultspin['name']}</strong></p> */}
+    
+<div className="relative group w-[100px] h-[200px] mt-5">
+           <img src={resultspin['imageUrl']} className="relative z-10 block w-full h-[70%] object-cover rounded-md transition-transform duration-300 ease-out group-hover:-translate-y-2" />
+   
+</div>
+  <h3 style={{ fontWeight: 'bold', marginTop: '1px' }}>
+        {resultspin['name']}
+      </h3>
+      
+      </div>
+
+  </div>
+)}
+
+           {step === "spinner-result" && resultspin['mode'] === 'noWin' && (
+
+     <div className=" flex flex-col items-center justify-start w-full">
+    <ErrorAnimation />
+  <p className="mt-2 mb-3 text-xl font-semibold">Better luck next time — no item won! </p>
+  
+  </div>
+)}
+
   </div>
 </div>
   );
