@@ -35,11 +35,14 @@ export default function RootLayout({ children }) {
         {/* Layout UI */}
         <>
           {
-            pathname.includes('campaign') && <main>{children}</main>
+            pathname.includes('campaign')  && <main >{children}</main>
+          }
+             {
+            pathname.includes('wheel') && <main className="dark">{children}</main>
           }
 
           {
-            !pathname.includes('campaign') && <>
+            !  (pathname.includes('campaign') ||  pathname.includes('wheel')) && <>
 
               <Header />
               <main>{children}</main>
