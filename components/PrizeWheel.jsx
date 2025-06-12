@@ -80,9 +80,9 @@ const SpinWheel = ({
     <div className="flex flex-col items-center justify-center min-h-screen p-2 sm:p-4">
       <div className="p-4 sm:p-8 max-w-2xl w-full mx-2">
          <h1 className="text-4xl md:text-5xl font-bold text-gray-100 mb-4">Spin the Wheel!</h1>
-      <p className="text-gray-300 mb-5">Click the Spin button to win a prize</p>
+      <p className="text-gray-300 text-center mb-5">Click the Spin button to win a prize</p>
 
-        <div className="relative flex justify-center mb-4 sm:mb-8">
+        <div className="relative flex justify-center mt-2 mb-4 sm:mb-8">
           {/* Wheel Container */}
           <div className="relative">
             {/* Pointer/Stopper */}
@@ -137,7 +137,7 @@ const SpinWheel = ({
                         stroke="black"
                         strokeWidth="0.3"
                         paintOrder="stroke fill"
-                      >{item.name}
+                      >{item.name === "No item won" ?'' :'Oops 😅'}
                           </text>
                           : <text
                         x={textX}

@@ -8,7 +8,9 @@ import useSound from 'use-sound';
 import axios from "axios";
 import Rive from '@rive-app/react-canvas';
 import ErrorAnimation from '../../../components/Error';
-import Confetti from 'react-confetti'
+import Confetti from 'react-confetti';
+import { motion } from "framer-motion";
+
 import {
   useRive,
   useStateMachineInput,
@@ -374,7 +376,7 @@ const win = (result)=>{
           </button>
         </form>
 
-        <p className="mt-10">Powered by <strong>{brands['brandName']}</strong></p>
+        <p className="mt-10">Powered by <strong>Demicare</strong></p>
       </div>
     )}
 
@@ -398,6 +400,7 @@ const win = (result)=>{
       <p style={{ fontSize: '1.2rem', color: '#555' }}>
         You’ve just won big on the wheel! 🥳
       </p>
+
     
     </div>
     
@@ -422,8 +425,17 @@ const win = (result)=>{
                group-hover:blur-lg group-hover:w-[80%] group-hover:h-[12px] group-hover:bottom-1"
   ></div>
   
-         <p className="mt-2 mb-3 text-center text-xl font-semibold"> <strong className="text-[#F3BE40]">{dataList[0]['item']['name']}</strong></p>
+         <p className="mt-2 mb-1 text-center text-xl font-semibold"> <strong className="text-[#F3BE40]">{dataList[0]['item']['name']}</strong></p>
 
+</div>
+<div class="bg-gray-900 text-white p-5 rounded-2xl shadow-xl max-w-md mx-auto mt-1 space-y-3">
+  <h2 class="text-xl font-bold">🎁 Claim Your Prize in 3 Easy Steps</h2>
+  <ul class="list-decimal list-inside text-sm space-y-1">
+    <li>📸 Take a screenshot of this page.</li>
+    <li>📱 Open Instagram and search <a href="https://instagram.com/demicareng" target="_blank" class="text-blue-400 underline">@demicareng</a>.</li>
+    <li>📤 Send us a DM with your screenshot.Also include your email address.</li>
+  </ul>
+  <p class="text-green-400 font-medium pt-2">🏆 That’s it! We’ll handle the rest. 💬✨</p>
 </div>
         </div>
          )
@@ -455,11 +467,19 @@ const win = (result)=>{
 
 
      {step === "wheel" && (
-     <div className="min-h-screen  flex flex-col items-center justify-center p-4">
-     
-      
-      <SpinWheel wheelData={dataList}  onItemSelected={handleSpinFinish} />
-    </div>
+     <motion.div
+   initial={{ scale: 0.8 }}
+    animate={{
+      scale: [0.8, 1.1, 0.95, 1],
+      transition: {
+        duration: 0.6,
+        ease: "easeOut",
+      },
+    }}
+    className="flex justify-center items-center"
+  >
+    <SpinWheel wheelData={dataList} onItemSelected={handleSpinFinish} />
+  </motion.div>
      )}
 
 {step === "spinner-result" && resultspin['mode'] === 'Win' && (
@@ -492,6 +512,15 @@ const win = (result)=>{
   <h3 style={{ fontWeight: 'bold', marginTop: '1px' }}>
         {resultspin['name']}
       </h3>
+      <div class="bg-gray-900 text-white p-5 rounded-2xl shadow-xl max-w-md mx-auto mt-3 space-y-3">
+  <h2 class="text-xl font-bold">🎁 Claim Your Prize in 3 Easy Steps</h2>
+  <ul class="list-decimal list-inside text-sm space-y-1">
+    <li>📸 Take a screenshot of this page.</li>
+    <li>📱 Open Instagram and search <a href="https://instagram.com/demicareng" target="_blank" class="text-blue-400 underline">@demicareng</a>.</li>
+    <li>📤 Send us a DM with your screenshot.Also include your email address.</li>
+  </ul>
+  <p class="text-green-400 font-medium pt-2">🏆 That’s it! We’ll handle the rest. 💬✨</p>
+</div>
       
       </div>
 
