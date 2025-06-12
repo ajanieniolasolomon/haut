@@ -11,11 +11,12 @@ const SpinWheel = ({
   const wheelRef = useRef(null);
 
   const segmentAngle = 360 / wheelData.length;
-
+//  'bg-[#161636d]', 'bg-[#9ec2cd]', 'bg-[#5b426c]',
+   // 'bg-[#ea7146]'
   // Generate colors for segments
   const colors = [
-    'bg-black', 'bg-blue-500', 'bg-green-500', 'bg-yellow-500',
-    'bg-purple-500', 'bg-pink-500', 'bg-indigo-500', 'bg-orange-500'
+   'bg-[#161636d]', 'bg-[#9ec2cd]', 'bg-[#5b426c]','bg-[#ea7146]',
+   'bg-[#161636d]', 'bg-[#9ec2cd]', 'bg-[#5b426c]','bg-[#ea7146]'
   ];
 
   const spinWheel = () => {
@@ -64,9 +65,9 @@ const SpinWheel = ({
           {/* Wheel Container */}
           <div className="relative">
             {/* Pointer/Stopper */}
-            <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-3 sm:-translate-y-4 z-20">
-              <div className="w-0 h-0 border-l-[15px] sm:border-l-[20px] border-r-[15px] sm:border-r-[20px] border-b-[30px] sm:border-b-[40px] border-l-transparent border-r-transparent border-b-red-500 drop-shadow-2xl shadow-black"></div>
-              <div className="absolute top-[25px] sm:top-[35px] left-1/2 transform -translate-x-1/2 w-3 h-3 sm:w-4 sm:h-4 bg-red-500 rounded-full shadow-lg"></div>
+   <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-3 sm:-translate-y-4 z-20">
+              <div className="absolute top-[5px] sm:top-[5px] left-1/2 transform -translate-x-1/2 w-3 h-3 sm:w-4 sm:h-4 bg-white rounded-full shadow-lg"></div>
+              <div className="w-0 h-0 border-l-[15px] sm:border-l-[20px] border-r-[15px] sm:border-r-[20px] border-t-[30px] sm:border-t-[40px] border-l-transparent border-r-transparent border-t-[#16136D] drop-shadow-2xl shadow-black"></div>
             </div>
 
             {/* Wheel */}
@@ -101,7 +102,7 @@ const SpinWheel = ({
                       }}
                     >
                       {item.name === "No item won" || item.name === "Retry again"
-                        ? <span className="text-xs sm:text-xs">{item.name}</span>
+                        ? <span className="text-lg sm:text-xs">{item.name}</span>
                         : "?"
                       }
                     </div>
@@ -122,12 +123,12 @@ const SpinWheel = ({
   className="group relative block w-full sm:w-auto focus:outline-none font-bold uppercase cursor-pointer tracking-wider disabled:cursor-not-allowed"
 >
   <span
-    className="absolute left-0 top-0 block w-full h-[38px] bg-blue-600 text-white rounded-[8px] transition-transform duration-100 ease-in-out translate-y-[6px] group-active:translate-y-[3px] disabled:group-active:translate-y-[6px]"
+    className="absolute left-0 top-0 block w-full h-[38px] bg-[#EA7146CC] text-white rounded-[8px] transition-transform duration-100 ease-in-out translate-y-[6px] group-active:translate-y-[3px] disabled:group-active:translate-y-[6px]"
     aria-hidden="true"
   ></span>
 
   <span
-    className="relative text-base block leading-none px-10 py-[10px] h-[38px] box-border bg-blue-700 text-white rounded-[8px] transition-all duration-100 ease-in-out group-active:translate-y-[3px] opacity-100 disabled:opacity-70"
+    className="relative text-base block leading-none px-10 py-[10px] h-[38px] box-border bg-[#EA7146] text-white rounded-[8px] transition-all duration-100 ease-in-out group-active:translate-y-[3px] opacity-100 disabled:opacity-70"
   >
     {isSpinning ? 'Spinning...' : 'Spin Wheel'}
   </span>

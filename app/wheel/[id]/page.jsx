@@ -333,7 +333,8 @@ const win = (result)=>{
 
         <p className="text-md text-justify mb-5 text-gray-600 dark:text-gray-400">
           {/* ^ Adjusted text color */}
-          🎉 Spin to Win! Enter your email and give the wheel a spin for a chance to win exciting prizes! 🎁💫
+        🎉 Spin the MICA Wheel to Win! Enter your email address for a chance to win exciting prizes! 🎁💫
+
         </p>
         <form onSubmit={handleSubmit} className="w-full"> {/* Removed redundant padding/shadow, handled by parent */}
           <div className="mb-4">
@@ -355,7 +356,7 @@ const win = (result)=>{
             {/* Button styling is primarily inline via `brands` object, may need separate logic for dark mode colors if desired */}
             <span
               style={{
-                backgroundColor: brands['primaryColor'] + 'CC', // Opacity might need adjustment for dark bg
+                backgroundColor: '#EA7146'+ 'CC', // Opacity might need adjustment for dark bg
                 color: brands['secondaryColor'],
               }}
               className="absolute left-0 top-0 block w-full h-[38px] rounded-[8px] transition-transform duration-100 ease-in-out translate-y-[6px] group-active:translate-y-[3px]"
@@ -363,10 +364,10 @@ const win = (result)=>{
             ></span>
             <span
               style={{
-                backgroundColor: brands['primaryColor'],
+                backgroundColor: '#EA7146',
                 color: brands['secondaryColor'],
               }}
-              className="relative text-base block leading-none px-10 py-[10px] h-[38px] box-border rounded-[8px] transition-all duration-100 ease-in-out group-active:translate-y-[3px]"
+              className="relative text-base block  leading-none px-10 py-[10px] h-[38px] box-border rounded-[8px] transition-all duration-100 ease-in-out group-active:translate-y-[3px]"
             >
               GET STARTED
             </span>
