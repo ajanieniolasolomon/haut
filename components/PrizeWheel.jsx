@@ -123,7 +123,9 @@ const SpinWheel = ({
                       />
                       
                       {/* Text */}
-                      <text
+                     
+                        {item.name === "No item won" || item.name === "Retry again"
+                          ? <text
                         x={textX}
                         y={textY}
                         fill="white"
@@ -135,12 +137,24 @@ const SpinWheel = ({
                         stroke="black"
                         strokeWidth="0.3"
                         paintOrder="stroke fill"
-                      >
-                        {item.name === "No item won" || item.name === "Retry again"
-                          ?item.name
-                          : "?"
+                      >{item.name}
+                          </text>
+                          : <text
+                        x={textX}
+                        y={textY}
+                        fill="white"
+                        fontSize="5"
+                        fontWeight="900"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                      
+                        stroke="black"
+                        strokeWidth="0.3"
+                        paintOrder="stroke fill"
+                      >{'?'}
+                          </text>
                         }
-                      </text>
+                    
                     </g>
                   );
                 })}
