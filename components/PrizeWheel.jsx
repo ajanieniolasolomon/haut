@@ -137,7 +137,7 @@ const SpinWheel = ({
                         stroke="black"
                         strokeWidth="0.3"
                         paintOrder="stroke fill"
-                      >{item.name === "No item won" ?'' :'Oops 😅'}
+                      >{item.name === "No item won" ?'Nothing' :'Oops 🤭'}
                           </text>
                           : <text
                         x={textX}
