@@ -456,8 +456,7 @@ const win = (result)=>{
 
      {step === "wheel" && (
      <div className="min-h-screen  flex flex-col items-center justify-center p-4">
-      <h1 className="text-4xl md:text-5xl font-bold text-gray-100 mb-4">Spin the Wheel!</h1>
-      <p className="text-gray-300 mb-1">Click the Spin button to win a prize.</p>
+     
       
       <SpinWheel wheelData={dataList}  onItemSelected={handleSpinFinish} />
     </div>

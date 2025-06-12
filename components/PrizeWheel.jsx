@@ -11,12 +11,11 @@ const SpinWheel = ({
   const wheelRef = useRef(null);
 
   const segmentAngle = 360 / wheelData.length;
-//  'bg-[#161636d]', 'bg-[#9ec2cd]', 'bg-[#5b426c]',
-   // 'bg-[#ea7146]'
-  // Generate colors for segments
+
+  // Generate colors for segments (converted to hex values for SVG)
   const colors = [
-   'bg-[#161636d]', 'bg-[#9ec2cd]', 'bg-[#5b426c]','bg-[#ea7146]',
-   'bg-[#161636d]', 'bg-[#9ec2cd]', 'bg-[#5b426c]','bg-[#ea7146]'
+    '#161636', '#9ec2cd', '#5b426c', '#ea7146',
+    '#161636', '#9ec2cd', '#5b426c', '#ea7146'
   ];
 
   const spinWheel = () => {
@@ -42,8 +41,7 @@ const SpinWheel = ({
 
       const selectedItem = wheelData[segmentIndex];
 
-      
-     setResult(selectedItem);
+      setResult(selectedItem);
       setIsSpinning(false);
       if (onItemSelected) {
         onItemSelected(selectedItem);
@@ -56,59 +54,97 @@ const SpinWheel = ({
     setResult(null);
   };
 
-  return (
-    <div className="flex flex-col items-center justify-start min-h-screen p-2 sm:p-4">
-      <div className=" p-4 sm:p-8 max-w-2xl w-full mx-2">
+  // Function to create SVG path for each segment
+  const createSegmentPath = (index) => {
+    const startAngle = index * segmentAngle;
+    const endAngle = (index + 1) * segmentAngle;
+    
+    const startAngleRad = (startAngle * Math.PI) / 180;
+    const endAngleRad = (endAngle * Math.PI) / 180;
+    
+    const radius = 50; // 50% of the container
+    const centerX = 50;
+    const centerY = 50;
+    
+    const x1 = centerX + radius * Math.cos(startAngleRad);
+    const y1 = centerY + radius * Math.sin(startAngleRad);
+    const x2 = centerX + radius * Math.cos(endAngleRad);
+    const y2 = centerY + radius * Math.sin(endAngleRad);
+    
+    const largeArcFlag = segmentAngle > 180 ? 1 : 0;
+    
+    return `M ${centerX} ${centerY} L ${x1} ${y1} A ${radius} ${radius} 0 ${largeArcFlag} 1 ${x2} ${y2} Z`;
+  };
 
+  return (
+    <div className="flex flex-col items-center justify-center min-h-screen p-2 sm:p-4">
+      <div className="p-4 sm:p-8 max-w-2xl w-full mx-2">
+         <h1 className="text-4xl md:text-5xl font-bold text-gray-100 mb-4">Spin the Wheel!</h1>
+      <p className="text-gray-300 mb-5">Click the Spin button to win a prize.</p>
 
         <div className="relative flex justify-center mb-4 sm:mb-8">
           {/* Wheel Container */}
           <div className="relative">
             {/* Pointer/Stopper */}
-   <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-3 sm:-translate-y-4 z-20">
+            <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-3 sm:-translate-y-4 z-20">
               <div className="absolute top-[5px] sm:top-[5px] left-1/2 transform -translate-x-1/2 w-3 h-3 sm:w-4 sm:h-4 bg-white rounded-full shadow-lg"></div>
-              <div className="w-0 h-0 border-l-[15px] sm:border-l-[20px] border-r-[15px] sm:border-r-[20px] border-t-[30px] sm:border-t-[40px] border-l-transparent border-r-transparent border-t-[#16136D] drop-shadow-2xl shadow-black"></div>
+              <div className="w-0 h-0 border-l-[15px] sm:border-l-[20px] border-r-[15px] sm:border-r-[20px] border-t-[30px] sm:border-t-[40px] border-l-transparent border-r-transparent border-t-[#EA7146] drop-shadow-2xl shadow-black"></div>
             </div>
 
-            {/* Wheel */}
-            <div
-              ref={wheelRef}
-              className="w-64 h-64 sm:w-80 sm:h-80 rounded-full border-4 sm:border-8 border-gray-600 relative overflow-hidden shadow-2xl bg-gray-700"
-              style={{
-                transform: `rotate(${rotation}deg)`,
-                transition: isSpinning ? 'transform 3s cubic-bezier(0.25, 0.1, 0.25, 1)' : 'none'
-              }}
-            >
-              {wheelData.map((item, index) => {
-                const angle = index * segmentAngle;
-                const colorClass = colors[index % colors.length];
-
-                return (
-                  <div
-                    key={item.id + index}
-                    className={`absolute w-full h-full ${colorClass} flex items-center justify-center`}
-                    style={{
-                      clipPath: `polygon(50% 50%, 50% 0%, ${50 + 50 * Math.cos((segmentAngle * Math.PI) / 180)}% ${50 - 50 * Math.sin((segmentAngle * Math.PI) / 180)}%)`,
-                      transform: `rotate(${angle}deg)`,
-                      transformOrigin: '50% 50%'
-                    }}
-                  >
-                    <div
-                      className="text-white font-bold text-lg sm:text-xl text-center px-1 leading-tight"
-                      style={{
-                        transform: `rotate(${segmentAngle / 2}deg) translate(0, -60px) translate(0, ${window.innerWidth < 640 ? '-10px' : '-20px'})`,
-                        transformOrigin: '50% 50%',
-                        maxWidth: '60px'
-                      }}
-                    >
-                      {item.name === "No item won" || item.name === "Retry again"
-                        ? <span className="text-lg sm:text-xs">{item.name}</span>
-                        : "?"
-                      }
-                    </div>
-                  </div>
-                );
-              })}
+            {/* Wheel - SVG Implementation */}
+            <div className="relative">
+              <svg
+                ref={wheelRef}
+                className="w-64 h-64 sm:w-80 sm:h-80 rounded-full border-[12px] sm:border-8 border-[#EA7146CC] shadow-2xl"
+                viewBox="0 0 100 100"
+                style={{
+                  transform: `rotate(${rotation}deg)`,
+                  transition: isSpinning ? 'transform 3s cubic-bezier(0.25, 0.1, 0.25, 1)' : 'none'
+                }}
+              >
+                {wheelData.map((item, index) => {
+                  const segmentPath = createSegmentPath(index);
+                  const color = colors[index % colors.length];
+                  
+                  // Calculate text position - center of each segment
+                  const middleAngle = (index * segmentAngle + segmentAngle / 2) * Math.PI / 180;
+                  const textRadius = 28; // Distance from center
+                  const textX = 50 + textRadius * Math.cos(middleAngle);
+                  const textY = 50 + textRadius * Math.sin(middleAngle);
+                  
+                  return (
+                    <g key={item.id + index}>
+                      {/* Segment background */}
+                      <path
+                        d={segmentPath}
+                        fill={color}
+                        stroke="#ffffff"
+                        strokeWidth="0.3"
+                      />
+                      
+                      {/* Text */}
+                      <text
+                        x={textX}
+                        y={textY}
+                        fill="white"
+                        fontSize="5"
+                        fontWeight="900"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        transform={`rotate(${index * segmentAngle + segmentAngle / 2}, ${textX}, ${textY})`}
+                        stroke="black"
+                        strokeWidth="0.3"
+                        paintOrder="stroke fill"
+                      >
+                        {item.name === "No item won" || item.name === "Retry again"
+                          ?item.name
+                          : "?"
+                        }
+                      </text>
+                    </g>
+                  );
+                })}
+              </svg>
             </div>
           </div>
         </div>
@@ -117,24 +153,22 @@ const SpinWheel = ({
         <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center mb-4 sm:mb-6 px-4">
           
           <button
-  onClick={spinWheel}
-  disabled={isSpinning}
-  type="button"
-  className="group relative block w-full sm:w-auto focus:outline-none font-bold uppercase cursor-pointer tracking-wider disabled:cursor-not-allowed"
->
-  <span
-    className="absolute left-0 top-0 block w-full h-[38px] bg-[#EA7146CC] text-white rounded-[8px] transition-transform duration-100 ease-in-out translate-y-[6px] group-active:translate-y-[3px] disabled:group-active:translate-y-[6px]"
-    aria-hidden="true"
-  ></span>
+            onClick={spinWheel}
+            disabled={isSpinning}
+            type="button"
+            className="group relative block w-full sm:w-auto focus:outline-none font-bold uppercase cursor-pointer tracking-wider disabled:cursor-not-allowed"
+          >
+            <span
+              className="absolute left-0 top-0 block w-full h-[38px] bg-[#EA7146CC] text-white rounded-[8px] transition-transform duration-100 ease-in-out translate-y-[6px] group-active:translate-y-[3px] disabled:group-active:translate-y-[6px]"
+              aria-hidden="true"
+            ></span>
 
-  <span
-    className="relative text-base block leading-none px-10 py-[10px] h-[38px] box-border bg-[#EA7146] text-white rounded-[8px] transition-all duration-100 ease-in-out group-active:translate-y-[3px] opacity-100 disabled:opacity-70"
-  >
-    {isSpinning ? 'Spinning...' : 'Spin Wheel'}
-  </span>
-</button>
-
-         
+            <span
+              className="relative text-base block leading-none px-10 py-[10px] h-[38px] box-border bg-[#EA7146] text-white rounded-[8px] transition-all duration-100 ease-in-out group-active:translate-y-[3px] opacity-100 disabled:opacity-70"
+            >
+              {isSpinning ? 'Spinning...' : 'Spin Wheel'}
+            </span>
+          </button>
         </div>
 
         {/* Result Display */}
