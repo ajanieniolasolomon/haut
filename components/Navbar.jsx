@@ -72,7 +72,7 @@ const slideInOut =() =>{
         <img src={"/Logo.svg"} alt="" className="w-[50px]" />
       </a>
       <ul className="hidden md:flex space-x-8">
-        <li>
+        {/* <li>
           <a
                onClick={(e)=>{
                 e.preventDefault()
@@ -84,7 +84,7 @@ const slideInOut =() =>{
           href="/contact">
             <p className="hover:text-primary text-[#000202]">Our service</p>
           </a>
-        </li>
+        </li> */}
         <li>
           <a 
           

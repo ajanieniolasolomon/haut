@@ -40,12 +40,14 @@ export default function Home() {
           )}
         </h6>
         <div className="z-10">
-          <a
-            href="https://apps.apple.com/ng/app/demi-care-brand/id6741867226"
-            className="bg-secondary transition-colors duration-300 hover:bg-primary text-white font-[200] rounded-full py-4 px-12 "
-          >
-            Request a Demo
-          </a>
+     <a
+  href="https://apps.apple.com/ng/app/demi-care-brand/id6741867226"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="bg-secondary transition-colors duration-300 hover:bg-primary text-white font-[200] rounded-full py-4 px-12"
+>
+  Request a Demo
+</a>
         </div>
         {/* <AnimatedGridPattern /> */}
       </div>
@@ -197,7 +199,7 @@ export default function Home() {
             <p className="w-[1155px]  text-center md:text-[24px] text-[14px]">
               We equip your skincare brand with Human & Artificial Intelligence
               (AI) tools to deeply analyze user’s faces, recommend tailored
-              products to their skin concerns, access user insights, connects with
+              products to their skin concerns, access user insights, connect with
               users using hyperlocal content and boost marketing impact.
             </p>
           </div>
@@ -450,9 +452,17 @@ export default function Home() {
             Transform your skincare routine with human and artificial intelligence
           </p>
 
-          <button className="md:top-[78%] top-[75%] font-[200] text-[18px] md:w-[260px] w-[177px] md:h-[56px] h-[48px] text-white absolute left-[50%] translate-x-[-50%] translate-y-[-50%] bg-secondary rounded-[30px]">
+          {/* <button className="md:top-[78%] top-[75%] font-[200] text-[18px] md:w-[260px] w-[177px] md:h-[56px] h-[48px] text-white absolute left-[50%] translate-x-[-50%] translate-y-[-50%] bg-secondary rounded-[30px]">
             Request Demo
-          </button>
+          </button> */}
+               <a
+  href="https://apps.apple.com/ng/app/demi-care-brand/id6741867226"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="bg-secondary transition-colors duration-300 hover:bg-primary text-white font-[200] rounded-full py-4 px-12"
+>
+  Request  Demo
+</a>
 
         </div>
       </ScrollAnimation>

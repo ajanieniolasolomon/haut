@@ -22,7 +22,7 @@ export default function PrivacyPage() {
             <div className="flex flex-col gap-2">
               <h3 className="text-[24px] font-[500]">2. How We Use Your Information</h3>
               <div>
-              We use facial data to:
+        
               <ul class="list-disc  pl-5">
                 <li>Analyze skin conditions and provide tailored skincare insights.</li>
                 <li>Improve the accuracy of our AI-driven skin analysis.</li>
@@ -45,7 +45,7 @@ export default function PrivacyPage() {
               4. Data Retention and Deletion
               </h3>
               <div>
-              We use facial data to:
+          
               <ul class="list-disc pl-5">
                 <li>Facial data is stored securely and retained only as long as necessary for analysis and research purpose.</li>
                 <li>You can request deletion of your face data at any time by contacting demicareng@gmail.com</li>
